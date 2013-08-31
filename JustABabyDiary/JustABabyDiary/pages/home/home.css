@@ -16,3 +16,12 @@
         margin-right: 100px;
     }
 }
+
+#profiles-list
+{
+    left: 50px;
+    top: 50px;
+    width: 1200px;
+    height: 700px;
+    border: solid 2px rgba(0, 0, 0, 0.13);
+}
