@@ -47,9 +47,7 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    
     <PackageCertificateKeyFile>JustABabyDiary_TemporaryKey.pfx</PackageCertificateKeyFile>
-    
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
@@ -61,14 +59,31 @@
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
     <Content Include="js\default.js" />
+    <Content Include="js\models.js" />
     <Content Include="js\navigator.js" />
+    <Content Include="pages\addEvent\addEvent.css" />
+    <Content Include="pages\addEvent\addEvent.html" />
+    <Content Include="pages\addEvent\addEvent.js" />
+    <Content Include="pages\addProfile\addProfile.css" />
+    <Content Include="pages\addProfile\addProfile.html" />
+    <Content Include="pages\addProfile\addProfile.js" />
+    <Content Include="pages\detailBabyEvent\detailBabyEventl.css" />
+    <Content Include="pages\detailBabyEvent\detailBabyEventl.html" />
+    <Content Include="pages\detailBabyEvent\detailBabyEventl.js" />
+    <Content Include="pages\detailBabyProfile\detailBabyProfile.css" />
+    <Content Include="pages\detailBabyProfile\detailBabyProfile.html" />
+    <Content Include="pages\detailBabyProfile\detailBabyProfile.js" />
     <Content Include="pages\home\home.css" />
     <Content Include="pages\home\home.html" />
     <Content Include="pages\home\home.js" />
     <Content Include="default.html" />
-    
+    <Content Include="pages\updateBabyEvent\updateBabyEvent.css" />
+    <Content Include="pages\updateBabyEvent\updateBabyEvent.html" />
+    <Content Include="pages\updateBabyEvent\updateBabyEvent.js" />
+    <Content Include="pages\updateBabyProfile\updateBabyProfile.css" />
+    <Content Include="pages\updateBabyProfile\updateBabyProfile.html" />
+    <Content Include="pages\updateBabyProfile\updateBabyProfile.js" />
     <None Include="JustABabyDiary_TemporaryKey.pfx" />
-    
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
