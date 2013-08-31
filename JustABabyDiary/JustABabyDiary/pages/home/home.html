@@ -19,7 +19,7 @@
     <div class="fragment homepage">
         <div id="short-profile-template" data-win-control="WinJS.Binding.Template">
             <div>
-                <img src="#" data-win-bind="src: imageUrl" />
+                <img src="#" data-win-bind="src: imgUrl" />
                 <span data-win-bind="innerText: name"></span>
                 <span data-win-bind="innerText: birthDay"></span>
             </div>
@@ -45,6 +45,16 @@
                     selectionMode: 'none'
                 }">
             </div>
+
+            <div id="home-app-bar" data-win-control="WinJS.UI.AppBar">
+            <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{
+                label:'Add Computer', icon:'add', 
+                onclick: HomeCodeBehind.goToProfileAddPage
+                }"
+                type="button">
+            </button>
+    </div>
         </section>
     </div>
 </body>
