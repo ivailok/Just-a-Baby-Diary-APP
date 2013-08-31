@@ -1,6 +1,6 @@
 ﻿/// <reference path="models.js" />
 (function () {
-    var sampleImg = "http://www.google.bg/imgres?imgurl=&imgrefurl=http%3A%2F%2Fwww.fanpop.com%2Fclubs%2Fsweety-babies%2Fimages%2F25909592%2Ftitle%2Fsweet-baby&h=0&w=0&sz=1&tbnid=g04khntqt4FqIM&tbnh=177&tbnw=284&zoom=1&docid=_zdFQSXlD8SRVM&hl=bg&ei=6dkhUsSPGKTG0QWX-QE&ved=0CAEQsCU";
+    var sampleImg = "http://icons.iconarchive.com/icons/dapino/baby-boy/128/baby-idea-icon.png";
 
     var profiles = [
         new Models.ProfileModel("", "Baby1", new Date(), "Female", "mother", "father", sampleImg, "town", 3, 50),

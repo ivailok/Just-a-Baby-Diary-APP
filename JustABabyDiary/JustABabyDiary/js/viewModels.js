@@ -18,7 +18,7 @@
     var events = new WinJS.Binding.List([]);
 
     var loadEvents = function () {
-        var eventDTOs = Data.getProfiles();
+        var eventDTOs = Data.getEvents();
 
         var currentCount = events.dataSource.list.length
         events.dataSource.list.splice(0, currentCount);
@@ -42,7 +42,7 @@
         loadEvents: loadEvents,
         events: events,
         addEvent: function (id, title, date, description, pictures) {
-            Data.addEvent(new Models.ProfileModel(id, title, date, description, pictures));
+            Data.addEvent(new Models.EventModel(id, title, date, description, pictures));
         }
     });
 })();

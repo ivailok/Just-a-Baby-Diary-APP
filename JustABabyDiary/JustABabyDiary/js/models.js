@@ -31,11 +31,13 @@
         this.description = description;
         this.pictures = [];
         this.pictures = pictures;
+        this.firstPic = pictures[0];
     }, {
         id: "",
         title: "",
         date: "",
-        description: ""
+        description: "",
+        firstPic:""
     })
 
     WinJS.Namespace.define("Models", {

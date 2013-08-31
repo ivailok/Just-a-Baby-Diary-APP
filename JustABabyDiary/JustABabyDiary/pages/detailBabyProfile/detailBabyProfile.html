@@ -21,7 +21,7 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <img src="#" data-win-bind="src:pictureName" />
+            <img src="#" data-win-bind="src:imgUrl" />
             <div>
                 <dl>
                     <dt>Name: </dt>
@@ -39,6 +39,20 @@
                     <dt>Father: </dt>
                     <dd data-win-bind="innerText: father"></dd>
                 </dl>
+            </div>
+
+            <div id="events-list-template" data-win-control="WinJS.Binding.Template">
+                <div style="width: 150px; height: 100px;">
+
+                    <!-- Displays the "picture" field. -->
+                    <img src="#" style="width: 60px; height: 60px;"
+                        data-win-bind= "src: firstPic" alt="pic"/>
+                    <h4 data-win-bind="innerText: title"></h4>
+                </div>
+            </div>
+            <div id="basicListView" data-win-control="WinJS.UI.ListView"
+                data-win-options="{itemDataSource : ViewModels.Event.events.dataSource, 
+            itemTemplate: select('#events-list-template')}">
             </div>
         </section>
     </div>
