@@ -11,3 +11,12 @@ C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyD
 C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\pri.resfiles
 C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\LanguageQualifiers.txt
 C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\ProjectArchitectures.txt
+C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bin\Debug\resources.pri
+C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bin\Debug\AppxManifest.xml
+C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bin\Debug\JustABabyDiary.build.appxrecipe
+C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\priconfig.xml
+C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\layout.resfiles
+C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\resources.resfiles
+C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\pri.resfiles
+C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\LanguageQualifiers.txt
+C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\ProjectArchitectures.txt
