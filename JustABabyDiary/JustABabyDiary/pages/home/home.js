@@ -13,7 +13,10 @@
 
         ready: function (element, options) {
             // TODO: Initialize the page here.
-
+            var createButton = document.getElementById("create-new-profile-button");
+            createButton.addEventListener("click", function () {
+                HomeCodeBehind.goToProfileAddPage();
+            });
         }
     });
 })();

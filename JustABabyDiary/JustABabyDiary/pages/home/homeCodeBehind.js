@@ -7,6 +7,10 @@
         });
     }
 
+    var goToProfileAddPage = function () {
+        WinJS.Navigation.navigate("/pages/addProfile/addProfile.html");
+    }
+
     WinJS.Utilities.markSupportedForProcessing(goToProfileDetailsPage);
 
     WinJS.Namespace.define("HomeCodeBehind", {
@@ -14,6 +18,7 @@
             ViewModels.Profiles.loadProfiles();
         },
 
-        goToProfileDetailsPage: goToProfileDetailsPage
+        goToProfileDetailsPage: goToProfileDetailsPage,
+        goToProfileAddPage: goToProfileAddPage
     })
 })();
