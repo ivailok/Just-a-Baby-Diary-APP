@@ -1,0 +1,13 @@
+C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bin\Debug\resources.pri
+C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bin\Debug\AppxManifest.xml
+C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bin\Debug\JustABabyDiary.build.appxrecipe
+C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\priconfig.xml.intermediate
+C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\layout.resfiles.intermediate
+C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\resources.resfiles.intermediate
+C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\pri.resfiles.intermediate
+C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\priconfig.xml
+C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\layout.resfiles
+C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\resources.resfiles
+C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\pri.resfiles
+C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\LanguageQualifiers.txt
+C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\ProjectArchitectures.txt

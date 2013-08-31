@@ -62,6 +62,7 @@
     <Content Include="js\default.js" />
     <Content Include="js\models.js" />
     <Content Include="js\navigator.js" />
+    <Content Include="js\viewModels.js" />
     <Content Include="pages\addEvent\addEvent.css" />
     <Content Include="pages\addEvent\addEvent.html" />
     <Content Include="pages\addEvent\addEvent.js" />

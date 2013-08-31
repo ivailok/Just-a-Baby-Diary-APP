@@ -16,13 +16,6 @@
 <body>
     <!-- The content that will be loaded and displayed. -->
     <div class="fragment homepage">
-        <div id="short-computer-template" data-win-control="WinJS.Binding.Template">
-            <div>
-                <span data-win-bind="innerText: model"></span>, 
-                <span data-win-bind="innerText: manufacturer"></span>
-            </div>
-        </div>
-
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
             <h1 class="titlearea win-type-ellipsis">
@@ -33,15 +26,6 @@
             <div id="no-layout-responsive-container">
                 <p id="no-layout-responsive-message">You have no baby profiles at the moment. It's recommended to create one.</p>
                 <button id="create-new-profile-button">Create</button>
-            </div>
-
-            <div id="profiles-list" data-win-control="WinJS.UI.ListView"
-                data-win-options="{
-                    itemDataSource: ViewModels.Profiles.dataSource,
-                    itemTemplate: select('#short-computer-template'),
-                    oniteminvoked: HomeCodeBehind.goToComputerDetailsPage,
-                    selectionMode: 'none'
-                }">
             </div>
         </section>
     </div>
