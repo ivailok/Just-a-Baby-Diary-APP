@@ -7,8 +7,8 @@
     WinJS.UI.Pages.define("/pages/detailBabyProfile/detailBabyProfile.html", {
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
-        init:function(element, options){
-            ViewModels.Event.loadEvents();
+        init: function (element, options) {
+            DetailProfileCodeBehind.loadEvents();
         },
 
         ready: function (element, options) {

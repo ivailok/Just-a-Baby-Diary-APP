@@ -10,6 +10,7 @@
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
     <link href="detailBabyProfile.css" rel="stylesheet" />
+    <script src="detailBabyProfileCodeBehind.js"></script>
     <script src="detailBabyProfile.js"></script>
 </head>
 <body>
@@ -46,7 +47,7 @@
 
                     <!-- Displays the "picture" field. -->
                     <img src="#" style="width: 60px; height: 60px;"
-                        data-win-bind= "src: firstPic" alt="pic"/>
+                        data-win-bind="src: firstPic" alt="pic" />
                     <h4 data-win-bind="innerText: title"></h4>
                 </div>
             </div>
@@ -55,6 +56,18 @@
             itemTemplate: select('#events-list-template')}">
             </div>
         </section>
+        <div id="detail-profile-app-bar" data-win-control="WinJS.UI.AppBar" data-win-options="">
+            <button data-win-control="WinJS.UI.AppBarCommand"
+                 data-win-options="{id:'add-event',label:'Add event',
+                icon:'add',section:'global',tooltip:'Add new baby event',
+                 onclick: DetailProfileCodeBehind.addEvent}">
+            </button>
+            <button data-win-control="WinJS.UI.AppBarCommand"
+                 data-win-options="{id:'update-profile',label:'Update profile',
+                icon:'refresh',section:'global',tooltip:'Update baby profile',
+                 onclick: DetailProfileCodeBehind.updateProfile}">
+            </button>
+        </div>
     </div>
 </body>
 </html>
