@@ -21,12 +21,16 @@
         });
     }
 
-    var goToUpdateBabyProfilePage = function (invokeEvent) {
+    var currentProfileIndex = 0;
+
+    var goToUpdateBabyProfilePage = function () {
         var appBar = document.getElementById("detail-profile-app-bar").winControl;
         if (appBar) {
             appBar.hide();
         }
-        WinJS.Navigation.navigate("/pages/updateBabyProfile/updateBabyProfile.html");
+        WinJS.Navigation.navigate("/pages/updateBabyProfile/updateBabyProfile.html", {
+            currentProfileIndex: DetailProfileCodeBehind.currentProfileIndex
+        });
     }
 
     WinJS.Utilities.markSupportedForProcessing(goToAddBabyEventPage);
@@ -37,6 +41,7 @@
         addEvent: goToAddBabyEventPage,
         updateProfile: goToUpdateBabyProfilePage,
         loadEvents: loadEvents,
-        viewEventDetails:goToEventDetailsPage
+        viewEventDetails: goToEventDetailsPage,
+        currentProfileIndex: currentProfileIndex
     });
 })();

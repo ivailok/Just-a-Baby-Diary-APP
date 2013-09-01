@@ -12,8 +12,9 @@
         },
 
         ready: function (element, options) {
-            WinJS.Binding.processAll(element,
-                  ViewModels.Profiles.profiles.getAt(options.indexInProfilesList));
+            var currentProfileIndex = options.indexInProfilesList;
+            DetailProfileCodeBehind.currentProfileIndex = currentProfileIndex;
+            WinJS.Binding.processAll(element, ViewModels.Profiles.profiles.getAt(currentProfileIndex));
             var events = ViewModels.Event.events;
             WinJS.Binding.processAll(document.getElementById("basicListView"),events);
         },
