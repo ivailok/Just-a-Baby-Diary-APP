@@ -15,6 +15,12 @@
         ViewModels.Event.loadEvents();
     }
 
+    var goToEventDetailsPage = function (invokeEvent) {
+        WinJS.Navigation.navigate("/pages/detailBabyEvent/detailBabyEventl.html", {
+            indexInEventsList: invokeEvent.detail.itemIndex
+        });
+    }
+
     var goToUpdateBabyProfilePage = function (invokeEvent) {
         var appBar = document.getElementById("detail-profile-app-bar").winControl;
         if (appBar) {
@@ -25,11 +31,12 @@
 
     WinJS.Utilities.markSupportedForProcessing(goToAddBabyEventPage);
     WinJS.Utilities.markSupportedForProcessing(goToUpdateBabyProfilePage);
-
+    WinJS.Utilities.markSupportedForProcessing(goToEventDetailsPage);
 
     WinJS.Namespace.define("DetailProfileCodeBehind", {
         addEvent: goToAddBabyEventPage,
         updateProfile: goToUpdateBabyProfilePage,
-        loadEvents:loadEvents
+        loadEvents: loadEvents,
+        viewEventDetails:goToEventDetailsPage
     });
 })();

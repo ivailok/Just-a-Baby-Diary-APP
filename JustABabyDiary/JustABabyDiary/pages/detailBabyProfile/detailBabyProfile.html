@@ -53,17 +53,19 @@
             </div>
             <div id="basicListView" data-win-control="WinJS.UI.ListView"
                 data-win-options="{itemDataSource : ViewModels.Event.events.dataSource, 
-            itemTemplate: select('#events-list-template')}">
+            itemTemplate: select('#events-list-template'),
+                oniteminvoked: DetailProfileCodeBehind.viewEventDetails,
+                    selectionMode: 'none'}">
             </div>
         </section>
         <div id="detail-profile-app-bar" data-win-control="WinJS.UI.AppBar" data-win-options="">
             <button data-win-control="WinJS.UI.AppBarCommand"
-                 data-win-options="{id:'add-event',label:'Add event',
+                data-win-options="{id:'add-event',label:'Add event',
                 icon:'add',section:'global',tooltip:'Add new baby event',
                  onclick: DetailProfileCodeBehind.addEvent}">
             </button>
             <button data-win-control="WinJS.UI.AppBarCommand"
-                 data-win-options="{id:'update-profile',label:'Update profile',
+                data-win-options="{id:'update-profile',label:'Update profile',
                 icon:'refresh',section:'global',tooltip:'Update baby profile',
                  onclick: DetailProfileCodeBehind.updateProfile}">
             </button>
