@@ -7,7 +7,7 @@
             appBar.hide();
         }
         WinJS.Navigation.navigate("/pages/addEvent/addEvent.html", {
-            indexInProfilesList: invokeEvent.detail.itemIndex
+            currentProfileIndex: DetailProfileCodeBehind.currentProfileIndex
         });
     }
     
