@@ -7,7 +7,7 @@
             url: "http://justababydiarywebapi.apphb.com/api/babyprofiles",
             type: "GET",
             headers: {
-                "X-sessionKey": "testUsername4oELqBTbMsoGWjFUfohaXFlYmTMKLUtPdYeLzm"
+                "X-sessionKey": UserLoginData.getData().sessionKey
             }
         });
     }
@@ -17,7 +17,7 @@
             url: "http://justababydiarywebapi.apphb.com/api/babyprofiles",
             type: "POST",
             headers: {
-                "X-sessionKey": "testUsername4oELqBTbMsoGWjFUfohaXFlYmTMKLUtPdYeLzm",
+                "X-sessionKey": UserLoginData.getData().sessionKey,
                 "Content-Type": "application/json"
             },
             data: JSON.stringify({
