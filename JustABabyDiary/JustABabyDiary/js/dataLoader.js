@@ -84,7 +84,7 @@
         });
     }
 
-    var updateEvent = function (id) {
+    var updateEvent = function (babyProfileId, eventId) {
         return WinJS.xhr({
             url: "http://justababydiarywebapi.apphb.com/api/babyevents?babyProfileId=" + id + "&eventId=" + eventId,
             type: "POST",
@@ -101,7 +101,32 @@
         });
     }
 
-    var addImageToEvent = function () {
+    var addImageToEvent = function (babyProfileId, eventId, imageUrl) {
+        return WinJS.xhr({
+            url: "http://justababydiarywebapi.apphb.com/api/babyevents/addpicture/" + babyProfileId + "/" + eventId,
+            type: "PUT",
+            headers: {
+                "X-sessionKey": UserLoginData.getData().sessionKey,
+                "Content-Type": "application/json"
+            },
+            data: JSON.stringify({
+                "urlName": imageUrl,
+            })
+        });
+    }
+
+    var removeImageFromEvent = function (babyProfileId, eventId, imageUrl) {
+        return WinJS.xhr({
+            url: "http://justababydiarywebapi.apphb.com/api/babyevents/removepicture/" + babyProfileId + "/" + eventId,
+            type: "PUT",
+            headers: {
+                "X-sessionKey": UserLoginData.getData().sessionKey,
+                "Content-Type": "application/json"
+            },
+            data: JSON.stringify({
+                "urlName": imageUrl,
+            })
+        });
     }
 
     var login = function (username, authCode) {
@@ -156,5 +181,13 @@
         getProfiles: getProfiles,
         addProfile: addProfile,
         updateProfile: updateProfile
+    });
+
+    WinJS.Namespace.defineWithParent(Loader, "Events", {
+        getEvents: getEvents,
+        addEvent: addEvent,
+        updateEvent: updateEvent,
+        addImageToEvent: addImageToEvent,
+        removeImageFromEvent: removeImageFromEvent
     });
 })();
