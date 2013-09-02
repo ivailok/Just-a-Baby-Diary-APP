@@ -20,15 +20,15 @@
 
             var vault = new Windows.Security.Credentials.PasswordVault();
 
-            var username, password;
+            var username, authCode;
 
             try {
                 var credential = vault.findAllByResource("login").first();
                 if (credential != null) {
                     // Retrieves the actual userName and password.
                     username = credential.current.userName;
-                    password = vault.retrieve("login", username).password;
-
+                    authCode = vault.retrieve("login", username).password;
+                    ViewModels.Users.login(username, authCode);
                 }
             } catch (WinRTError) {
                 var listWithProfiles = document.getElementById("profiles-list");
