@@ -24,10 +24,12 @@
                 filePicker.fileTypeFilter.append(".png");
                 filePicker.suggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.picturesLibrary;
                 filePicker.pickSingleFileAsync().then(function (file) {
-                    var fileUrl = URL.createObjectURL(file);
-                    var token = storagePermissions.futureAccessList.add(file);
-                    profileImage.src = fileUrl;
-                    imagePath = file.path;
+                    if (file) {
+                        var fileUrl = URL.createObjectURL(file);
+                        var token = storagePermissions.futureAccessList.add(file);
+                        profileImage.src = fileUrl;
+                        imagePath = file.path;
+                    }
                 }, function (error) {
                     var messageDialog = new Windows.UI.Popups.MessageDialog("The selected image failed to load properly.");
                     messageDialog.showAsync();

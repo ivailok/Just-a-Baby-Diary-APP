@@ -10,7 +10,7 @@
             var indexInEventsList = options.indexInEventsList;
             DetailEventCodeBehind.indexInEventsList = indexInEventsList;
             WinJS.Binding.processAll(element, ViewModels.Events.events.getAt(indexInEventsList));
-            if (ViewModels.Events.pictures.dataSource.list.length===0) {
+            if (ViewModels.Events.pictures.dataSource.list.length === 0) {
                 ViewModels.Events.loadPictures(indexInEventsList);
             }
 
@@ -21,7 +21,11 @@
             removePictureBtn.addEventListener("click", DetailEventCodeBehind.removePicture);
 
             var updateEventBtn = document.getElementById("update-event");
-            updateEventBtn.addEventListener("click", DetailEventCodeBehind.updateEvent);
+            updateEventBtn.addEventListener("click", function () {
+
+                WinJS.Navigation.navigate("/pages/updateBabyEvent/updateBabyEvent.html",
+                    { indexInEventsList: DetailEventCodeBehind.indexInEventsList });
+            });
         },
 
         unload: function () {

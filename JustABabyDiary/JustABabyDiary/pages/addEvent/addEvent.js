@@ -23,10 +23,12 @@
                 filePicker.fileTypeFilter.append(".png");
                 filePicker.suggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.picturesLibrary;
                 filePicker.pickSingleFileAsync().then(function (file) {
-                    var fileUrl = URL.createObjectURL(file);
-                    var token = storagePermissions.futureAccessList.add(file);
-                    eventImage.src = fileUrl;
-                    currentLoadedImagePath = file.path;
+                    if (file) {
+                        var fileUrl = URL.createObjectURL(file);
+                        var token = storagePermissions.futureAccessList.add(file);
+                        eventImage.src = fileUrl;
+                        currentLoadedImagePath = file.path;
+                    }
                 }, function (error) {
                     var messageDialog = new Windows.UI.Popups.MessageDialog("The selected image failed to load properly.");
                     messageDialog.showAsync();
@@ -35,8 +37,10 @@
 
             var imageAttacher = document.getElementById("image-attacher");
             imageAttacher.addEventListener("click", function () {
-                AddEventCodeBehind.addImage({ "UrlName": eventImage.src });
-                images.push({ "UrlName": currentLoadedImagePath });
+                if (currentLoadedImagePath) {
+                    AddEventCodeBehind.addImage({ "UrlName": eventImage.src });
+                    images.push({ "UrlName": currentLoadedImagePath });
+                }
             });
 
             var createEventButton = document.getElementById("create-event-button");
