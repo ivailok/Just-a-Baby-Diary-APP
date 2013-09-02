@@ -7,7 +7,9 @@
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         ready: function (element, options) {
-            // TODO: Initialize the page here.
+            var indexInEventsList = options.indexInEventsList;
+            DetailEventCodeBehind.indexInEventsList = indexInEventsList;
+            WinJS.Binding.processAll(element, ViewModels.Events.events.getAt(indexInEventsList));
         },
 
         unload: function () {
