@@ -13,6 +13,7 @@
     <link href="/pages/home/home.css" rel="stylesheet" />
     <script src="../../js/navigator.js"></script>
     <script src="../../js/sha1.js"></script>
+    <script src="../../js/dataLoader.js"></script>
     <script src="homeCodeBehind.js"></script>
     <script src="/pages/home/home.js"></script>
 </head>
@@ -38,7 +39,7 @@
                 <p id="no-layout-responsive-message">You have no baby profiles at the moment. It's recommended to create one.</p>
                 <button id="create-new-profile-button">Create profile</button>
             </div>
-
+              <button id="go-to-login">Go to login page</button>
             <div id="profiles-list" data-win-control="WinJS.UI.ListView"
                 data-win-options="{
                     itemDataSource: ViewModels.Profiles.profiles.dataSource,
@@ -47,7 +48,6 @@
                     selectionMode: 'none'
                 }">
             </div>
-
             <div id="home-app-bar" data-win-control="WinJS.UI.AppBar">
                 <button data-win-control="WinJS.UI.AppBarCommand"
                     data-win-options="{

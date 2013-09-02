@@ -13,7 +13,7 @@
             loginBtn.addEventListener("click", LoginCodeBehind.login);
 
             var showRegisterBtn = document.getElementById("show-register-form-button");
-            showRegisterBtn.addEventListener("click", LoginCodeBehind.showRegister);
+            showRegisterBtn.addEventListener("click", LoginCodeBehind.goToRegisterPage);
         },
 
         unload: function () {

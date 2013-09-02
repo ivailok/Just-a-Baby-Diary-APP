@@ -17,12 +17,11 @@
     }
 
     var goToLoginPage = function () {
-        try {
-            WinJS.Navigation.navigate("/pages/login/login.html", {});
-        }
-        catch (WinJSError) {
-            console.log();
-        }
+        var goToLoginBtn = document.getElementById("go-to-login");
+        goToLoginBtn.style.display = "block";
+        goToLoginBtn.addEventListener("click", function () {
+            WinJS.Navigation.navigate("/pages/login/login.html");
+        })
     }
 
     WinJS.Utilities.markSupportedForProcessing(goToProfileDetailsPage);

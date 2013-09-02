@@ -1,14 +1,14 @@
 ﻿/// <reference path="models.js" />
 /// <reference path="//Microsoft.WinJS.1.0/js/base.js" />
 (function () {
-    var logged;
+    var loggedUser = {};
 
     var setData = function (value) {
-        logged = value;
+        loggedUser = value;
     }
 
     var getData = function () {
-        return logged;
+        return loggedUser;
     }
 
     WinJS.Namespace.define("UserLoginData", {
