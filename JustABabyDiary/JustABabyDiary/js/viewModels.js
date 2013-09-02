@@ -71,12 +71,7 @@
         return new WinJS.Promise(function (complete, error) {
             Data.Users.login(username, authCode).then(function (request) {
                 var user = JSON.parse(request.responseText);
-                UserLoginData.setData(new Models.UserLoggedModel(
-                    {
-                        id: user.id,
-                        nickname: user.nickname,
-                        sessionKey: user.sessionKey,
-                    }));
+                UserLoginData.setData(new Models.UserLoggedModel(user.Id, user.Nickname, user.SessionKey));
                 complete();
             }, function (innerError) {
                 error(innerError);
@@ -88,7 +83,7 @@
         return new WinJS.Promise(function (complete, error) {
             Data.Users.register(username, nickname, authCode, email).then(function (request) {
                 var user = JSON.parse(request.responseText);
-                UserLoginData.setData(new Models.UserLoggedModel(user.id, user.nickname, user.sessionKey));
+                UserLoginData.setData(new Models.UserLoggedModel(user.Id, user.Nickname, user.SessionKey));
                 complete();
             }, function (innerError) {
                 error(innerError);
