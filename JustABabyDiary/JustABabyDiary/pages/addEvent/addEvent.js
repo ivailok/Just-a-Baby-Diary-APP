@@ -9,6 +9,18 @@
         ready: function (element, options) {
             var currentProfileIndex = options.currentProfileIndex;
             WinJS.Binding.processAll(element, ViewModels.Profiles.profiles.getAt(currentProfileIndex));
+
+            var images = [];
+            var createEventButton = document.getElementById("create-event-button");
+            createEventButton.addEventListener("click", function () {
+
+                var title = document.getElementById("title-input").value;
+                var date = document.getElementById("event-date-input").winControl.current;
+                var time = document.getElementById("event-time-input").winControl.current;
+                var eventDate = new Date(date.getYear(), date.getMonth(), date.getDate(), time.getHours(), time.getMinutes());
+                var description = document.getElementById("description-input").value;
+                AddEventCodeBehind.createEvent(currentProfileIndex, title, eventDate, description, images);
+            });
         },
 
         unload: function () {

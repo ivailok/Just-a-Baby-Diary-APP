@@ -3,11 +3,6 @@
 (function () {
     var sampleImg = "http://icons.iconarchive.com/icons/dapino/baby-boy/128/baby-idea-icon.png";
 
-    var events = [
-        new Models.EventModel("", "Title1", new Date(), "desc1", [sampleImg, sampleImg]),
-        new Models.EventModel("", "Title2", new Date(), "desc2", [sampleImg, sampleImg]),
-    ]
-
     var getProfiles = function () {
         //return profiles;
 

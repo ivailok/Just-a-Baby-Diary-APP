@@ -37,7 +37,7 @@
         title: "",
         date: "",
         description: "",
-        firstPic:""
+        firstPic: ""
     })
 
     var UserLoggedModel = WinJS.Class.define(function (id, nickname, sessionKey) {

@@ -11,7 +11,6 @@
             vault.add(credential);
             goBackToHomePage();
         }, function (error) {
-            console.log(error);
             var object = JSON.parse(error.responseText);
             var messageDialog = new Windows.UI.Popups.MessageDialog(object.Message);
             messageDialog.showAsync();
