@@ -7,7 +7,7 @@
     }
 
     var createEvent = function (currentProfileIndex, title, eventDate, description, images) {
-        ViewModels.Events.addEvent(currentProfileIndex, new Models.EventModel("", title, eventDate, description, images)).then(function () {
+        ViewModels.Events.addEvent(currentProfileIndex, "", title, eventDate, description, images).then(function () {
             goBackToProfile();
         }, function (error) {
             var object = JSON.parse(error.responseText);

@@ -13,7 +13,7 @@
             var images = [];
             var createEventButton = document.getElementById("create-event-button");
             createEventButton.addEventListener("click", function () {
-
+                console.log("here");
                 var title = document.getElementById("title-input").value;
                 var date = document.getElementById("event-date-input").winControl.current;
                 var time = document.getElementById("event-time-input").winControl.current;
