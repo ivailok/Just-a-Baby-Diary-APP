@@ -67,6 +67,16 @@
         return false;
     }
 
+    var login = function (username, authCode) {
+        Loader.Users.login(username, authCode);
+    }
+
+    var register = function () {
+    }
+
+    var logout = function () {
+    }
+
     WinJS.Namespace.define("ViewModels");
 
     WinJS.Namespace.defineWithParent(ViewModels, "Profiles", {
@@ -82,4 +92,10 @@
             Data.Events.addEvent(new Models.EventModel(id, title, date, description, pictures));
         }
     });
+
+    WinJS.Namespace.defineWithParent(ViewModels, "Users", {
+        login: login,
+        register: register,
+        logout:logout
+    })
 })();

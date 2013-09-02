@@ -33,7 +33,22 @@
         });
     }
 
+    var login = function (username, authCode) {
+    }
+
+    var logout = function () {
+    }
+
+    var register = function () {
+    }
+
     WinJS.Namespace.define("Loader");
+
+    WinJS.Namespace.defineWithParent(Loader, "Users", {
+        login: login,
+        register: register,
+        logout:logout
+    });
 
     WinJS.Namespace.defineWithParent(Loader, "Profiles", {
         getProfiles: getProfiles,

@@ -6,9 +6,8 @@
     WinJS.UI.Pages.define("/pages/home/home.html", {
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
-        
-        init: function (element, options)
-        {
+
+        init: function (element, options) {
             HomeCodeBehind.callLoadProfiles();
         },
 
@@ -22,18 +21,31 @@
             var vault = new Windows.Security.Credentials.PasswordVault();
 
             var username, password;
-            var credential = vault.findAllByResource("login").first();
-            if (credential != null)
-            {
-                // Retrieves the actual userName and password.
-                username = credential.current.userName;
-                password = vault.retrieve("login", username).password;
 
-                var usernameField = document.getElementById("username");
-                var passwordField = document.getElementById("password");
-                usernameField.innerText = username;
-                passwordField.innerText = password;
+            try {
+                var credential = vault.findAllByResource("login").first();
+                if (credential != null) {
+                    // Retrieves the actual userName and password.
+                    username = credential.current.userName;
+                    password = vault.retrieve("login", username).password;
+
+                }
+            } catch (WinRTError) {
+                var listWithProfiles = document.getElementById("profiles-list");
+                listWithProfiles.style.display = "none";
+                var message = document.getElementById("no-layout-responsive-container");
+                message.style.display = "none";
+                var loginForm = document.getElementById("login-form");
+                loginForm.style.display = "block";
+
+                var loginBtn = document.getElementById("login-button");
+                loginBtn.addEventListener("click", HomeCodeBehind.login);
+
+                var registerBtn = document.getElementById("register-button");
+                registerBtn.addEventListener("click", HomeCodeBehind.register);
+              
             }
+
 
             var createButton = document.getElementById("create-new-profile-button");
             createButton.addEventListener("click", function () {
@@ -41,10 +53,7 @@
             });
 
             var saveToVaultButton = document.getElementById("save-to-vault");
-            saveToVaultButton.addEventListener("click", function () {
-                var credential = new Windows.Security.Credentials.PasswordCredential("login", "username", "something");
-                vault.add(credential);
-            });
+            
         }
     });
 })();

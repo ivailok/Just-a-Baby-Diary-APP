@@ -1,4 +1,5 @@
-﻿/// <reference path="../../js/viewModels.js" />
+﻿/// <reference path="../../js/sha1.js" />
+/// <reference path="../../js/viewModels.js" />
 
 (function () {
     var goToProfileDetailsPage = function (invokeEvent) {
@@ -15,6 +16,21 @@
         WinJS.Navigation.navigate("/pages/addProfile/addProfile.html");
     }
 
+    var register = function () {
+        //TODO:
+        var userName = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var authCode=Crypto.sha1(password);
+        ViewModels.Users.register();
+    }
+
+    var login = function () {
+        var userName = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var authCode = Crypto.sha1(password);
+        ViewModels.Users.login(username, authCode);
+    }
+
     WinJS.Utilities.markSupportedForProcessing(goToProfileDetailsPage);
     WinJS.Utilities.markSupportedForProcessing(goToProfileAddPage);
 
@@ -24,6 +40,7 @@
         },
 
         goToProfileDetailsPage: goToProfileDetailsPage,
-        goToProfileAddPage: goToProfileAddPage
+        goToProfileAddPage: goToProfileAddPage,
+        register:register
     })
 })();
