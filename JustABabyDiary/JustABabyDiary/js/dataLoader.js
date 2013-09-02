@@ -3,7 +3,7 @@
 
 (function () {
     var getProfiles = function () {
-        var sessionKey=UserLoginData.getData().sessionKey;
+        var sessionKey = UserLoginData.getData().sessionKey;
         return WinJS.xhr({
             url: "http://justababydiarywebapi.apphb.com/api/babyprofiles",
             type: "GET",

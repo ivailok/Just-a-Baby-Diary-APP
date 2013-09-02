@@ -7,6 +7,9 @@
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
       
+        init: function () {
+        },
+
         ready: function (element, options) {
             // TODO: Initialize the page here.
             //if (result === true) {
@@ -25,7 +28,8 @@
                     username = credential.current.userName;
                     authCode = vault.retrieve("babyDiary", username).password;
 
-                    if (!UserLoginData.getData()) {
+                    var data = UserLoginData.getData();
+                    if (!data) {
                         ViewModels.Users.login(username, authCode).then(function () {
                             HomeCodeBehind.callLoadProfiles();
                         });

@@ -21,6 +21,7 @@
     }
 
     var goBackToHomePage = function () {
+        HomeCodeBehind.callLoadProfiles();
         WinJS.Navigation.back(2);
     }
 
