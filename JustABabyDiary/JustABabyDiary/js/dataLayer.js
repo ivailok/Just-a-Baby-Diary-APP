@@ -34,15 +34,15 @@
     }
 
     var login = function (username, authCode) {
-        Loader.Users.login(username, authCode);
+        return Loader.Users.login(username, authCode);
     }
 
     var register = function (username, nickname, authCode, email) {
-        Loader.Users.register(username, nickname, authCode, email);
+        return Loader.Users.register(username, nickname, authCode, email);
     }
 
     var logout = function () {
-        Loader.Users.logout();
+        return Loader.Users.logout();
     }
 
     WinJS.Namespace.define("Data");

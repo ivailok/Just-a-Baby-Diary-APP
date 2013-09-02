@@ -40,16 +40,14 @@
         firstPic:""
     })
 
-    var UserLoggedModel = WinJS.Class.define(function (id, nickname, sessionKey, email) {
+    var UserLoggedModel = WinJS.Class.define(function (id, nickname, sessionKey) {
         this.id = id;
         this.nickname = nickname;
         this.sessionKey = sessionKey;
-        this.email = email;
     }, {
         id: "",
         nickname: "",
-        sessionKey: "",
-        email: "",
+        sessionKey: ""
     })
 
     WinJS.Namespace.define("Models", {

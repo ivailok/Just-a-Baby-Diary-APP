@@ -23,12 +23,16 @@
             var username, authCode;
 
             try {
-                var credential = vault.findAllByResource("login").first();
+                var credential = vault.findAllByResource("user-login").first();
                 if (credential != null) {
                     // Retrieves the actual userName and password.
                     username = credential.current.userName;
-                    authCode = vault.retrieve("login", username).password;
+                    authCode = vault.retrieve("user-login", username).password;
                     ViewModels.Users.login(username, authCode);
+                    if (ViewModels.Profiles.profiles.dataSource.list.length === 0) {
+                        var message = document.getElementById("no-layout-responsive-container");
+                        message.style.display = "block";
+                    }
                 }
             } catch (WinRTError) {
                 var listWithProfiles = document.getElementById("profiles-list");
@@ -53,9 +57,6 @@
             createButton.addEventListener("click", function () {
                 HomeCodeBehind.goToProfileAddPage();
             });
-
-            var saveToVaultButton = document.getElementById("save-to-vault");
-            
         }
     });
 })();

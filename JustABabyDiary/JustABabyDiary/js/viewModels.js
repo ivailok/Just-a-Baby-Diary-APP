@@ -68,11 +68,37 @@
     }
 
     var login = function (username, authCode) {
-        Data.Users.login(username, authCode);
+        return new WinJS.Promise(function (complete, error) {
+            Data.Users.login(username, authCode).then(function (request) {
+                var user = JSON.parse(request.responseText);
+                UserLoginData.setData(new Models.UserLoggedModel(
+                    {
+                        id: user.id,
+                        nickname: user.nickname,
+                        sessionKey: user.sessionKey,
+                    }));
+                complete();
+            }, function () {
+                error();
+            });
+        });
     }
 
     var register = function (username, nickname, authCode, email) {
-        Data.Users.register(username, nickname, authCode, email);
+        return new WinJS.Promise(function (complete, error) {
+            Data.Users.register(username, nickname, authCode, email).then(function (request) {
+                var user = JSON.parse(request.responseText);
+                UserLoginData.setData(new Models.UserLoggedModel(
+                    {
+                        id: user.id,
+                        nickname: user.nickname,
+                        sessionKey: user.sessionKey,
+                    }));
+                complete();
+            }, function (innerError) {
+                error(innerError);
+            });
+        });
     }
 
     var logout = function () {

@@ -18,6 +18,10 @@
     }
 }
 
+#no-layout-responsive-message {
+display:none;
+}
+
 #profiles-list
 {
     left: 50px;
