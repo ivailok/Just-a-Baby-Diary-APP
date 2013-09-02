@@ -15,7 +15,7 @@
             var currentProfileIndex = options.indexInProfilesList;
             DetailProfileCodeBehind.currentProfileIndex = currentProfileIndex;
             WinJS.Binding.processAll(element, ViewModels.Profiles.profiles.getAt(currentProfileIndex));
-            var events = ViewModels.Event.events;
+            var events = ViewModels.Events.events;
             WinJS.Binding.processAll(document.getElementById("basicListView"),events);
         },
 

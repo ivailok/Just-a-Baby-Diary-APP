@@ -9,13 +9,15 @@
 
 #profile-image {
     position: absolute;
-    height: 180px;
-    width: 180px;
+    height: 339.46px;
+    width: 312.97px;
+    left: 1.3px;
+    top: 126.23px;
 }
 
 #input-container {
     position: relative;
-    left: 200px;
+    left: 400px;
 }
 
 #create-profile-button {

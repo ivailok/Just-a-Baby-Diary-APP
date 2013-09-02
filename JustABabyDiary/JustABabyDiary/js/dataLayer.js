@@ -1,4 +1,5 @@
-﻿/// <reference path="models.js" />
+﻿/// <reference path="dataLoader.js" />
+/// <reference path="models.js" />
 (function () {
     var sampleImg = "http://icons.iconarchive.com/icons/dapino/baby-boy/128/baby-idea-icon.png";
 
@@ -13,11 +14,15 @@
     ]
 
     var getProfiles = function () {
-        return profiles;
+        //return profiles;
+
+        return Loader.Profiles.getProfiles();
     }
 
     var addProfile = function (profileModel) {
-        profiles.push(profileModel);
+        //profiles.push(profileModel);
+
+        return Loader.Profiles.addProfile(profileModel);
     }
 
     var getEvents = function () {
@@ -28,9 +33,14 @@
         events.push(eventModel);
     }
 
-    WinJS.Namespace.define("Data", {
+    WinJS.Namespace.define("Data");
+
+    WinJS.Namespace.defineWithParent(Data, "Profiles", {
         getProfiles: getProfiles,
-        addProfile: addProfile,
+        addProfile: addProfile
+    });
+
+    WinJS.Namespace.defineWithParent(Data, "Events", {
         addEvent: addEvent,
         getEvents: getEvents
     });

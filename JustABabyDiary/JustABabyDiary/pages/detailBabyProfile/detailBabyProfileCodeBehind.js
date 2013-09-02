@@ -12,7 +12,7 @@
     }
     
     var loadEvents = function () {
-        ViewModels.Event.loadEvents();
+        ViewModels.Events.loadEvents();
     }
 
     var goToEventDetailsPage = function (invokeEvent) {

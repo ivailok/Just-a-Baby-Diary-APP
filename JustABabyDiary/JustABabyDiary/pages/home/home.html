@@ -19,7 +19,7 @@
     <div class="fragment homepage">
         <div id="short-profile-template" data-win-control="WinJS.Binding.Template">
             <div>
-                <img src="#" data-win-bind="src: imgUrl" />
+                <img height="100" width="100" src="#" data-win-bind="src: imgUrl" />
                 <span data-win-bind="innerText: name"></span>
                 <span data-win-bind="innerText: birthDay"></span>
             </div>
@@ -32,10 +32,8 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <div id="no-layout-responsive-container">
-                <p id="no-layout-responsive-message">You have no baby profiles at the moment. It's recommended to create one.</p>
-                <button id="create-new-profile-button">Create</button>
-            </div>
+            <p id="no-layout-responsive-message">You have no baby profiles at the moment. It's recommended to create one.</p>
+            <button id="create-new-profile-button">Create profile</button>
 
             <div id="profiles-list" data-win-control="WinJS.UI.ListView"
                 data-win-options="{
@@ -49,12 +47,16 @@
             <div id="home-app-bar" data-win-control="WinJS.UI.AppBar">
             <button data-win-control="WinJS.UI.AppBarCommand"
                 data-win-options="{
-                label:'Add Computer', icon:'add', 
+                label:'Add profile', icon:'add', 
                 onclick: HomeCodeBehind.goToProfileAddPage
                 }"
                 type="button">
             </button>
-    </div>
+            </div>
+
+            <button id="save-to-vault">Save to vault</button>
+            <textarea id="username"></textarea>
+            <textarea id="password"></textarea>
         </section>
     </div>
 </body>
