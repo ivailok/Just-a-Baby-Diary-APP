@@ -3,7 +3,9 @@
     margin-right: 120px;
 }
 
-
+#go-to-login{
+    display:none;
+}
 @media screen and (-ms-view-state: snapped) {
     .homepage section[role=main] {
         margin-left: 20px;

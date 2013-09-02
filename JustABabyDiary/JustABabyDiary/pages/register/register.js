@@ -10,7 +10,7 @@
             // TODO: Initialize the page here.
 
             var registerBtn = document.getElementById("register-button");
-            registerBtn.addEventListener("click", HomeCodeBehind.register);
+            registerBtn.addEventListener("click", RegisterCodeBehind.register);
         },
 
         unload: function () {

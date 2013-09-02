@@ -30,7 +30,6 @@
 
     WinJS.Namespace.define("LoginCodeBehind", {
         login: login,
-
         goToRegisterPage: goToRegisterPage
     });
 })();
