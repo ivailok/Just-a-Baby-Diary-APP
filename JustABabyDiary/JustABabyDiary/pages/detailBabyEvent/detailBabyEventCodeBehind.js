@@ -3,7 +3,17 @@
 
     var indexInEventsList = 0;
 
+    var addPicture = function () {
+
+    }
+
+    var removePicture = function () {
+
+    }
+
     WinJS.Namespace.define("DetailEventCodeBehind", {
-        indexInEventsList: indexInEventsList
+        indexInEventsList: indexInEventsList,
+        addPicture: addPicture,
+        removePicture:removePicture
     });
 })();
