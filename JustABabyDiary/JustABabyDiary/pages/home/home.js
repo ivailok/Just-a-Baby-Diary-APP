@@ -41,9 +41,11 @@
                 var loginBtn = document.getElementById("login-button");
                 loginBtn.addEventListener("click", HomeCodeBehind.login);
 
+                var showRegisterBtn = document.getElementById("show-register-form-button");
+                showRegisterBtn.addEventListener("click", HomeCodeBehind.showRegister);
+
                 var registerBtn = document.getElementById("register-button");
                 registerBtn.addEventListener("click", HomeCodeBehind.register);
-              
             }
 
 
