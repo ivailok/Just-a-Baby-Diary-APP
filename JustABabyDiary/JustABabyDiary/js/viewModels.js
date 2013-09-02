@@ -78,8 +78,8 @@
                         sessionKey: user.sessionKey,
                     }));
                 complete();
-            }, function () {
-                error();
+            }, function (innerError) {
+                error(innerError);
             });
         });
     }

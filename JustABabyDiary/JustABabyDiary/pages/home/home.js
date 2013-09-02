@@ -50,6 +50,11 @@
 
                 var registerBtn = document.getElementById("register-button");
                 registerBtn.addEventListener("click", HomeCodeBehind.register);
+
+                var appBar = document.getElementById("home-app-bar");
+                if (appBar) {
+                    appBar.style.display = "none";
+                }
             }
 
 

@@ -26,7 +26,15 @@
             var registerForm = document.getElementById("register-form");
             registerForm.style.display = "none";
             var profilesList = document.getElementById("profiles-list");
-            profilesList.style.display = "block";
+            profilesList.style.display = "block"; profilesList.winControl.forceLayout();
+            if (ViewModels.Profiles.profiles.dataSource.list.length === 0) {
+                var message = document.getElementById("no-layout-responsive-container");
+                message.style.display = "block";
+            }
+
+            var vault = Windows.Security.Credentials.PasswordVault();
+            var credential = Windows.Security.Credentials.PasswordCredential("user-login", username, authCode);
+            vault.add(credential);
         }, function (error) {
             var object = JSON.parse(error.responseText);
             var messageDialog = new Windows.UI.Popups.MessageDialog(object.Message);
@@ -49,10 +57,12 @@
                 var message = document.getElementById("no-layout-responsive-container");
                 message.style.display = "block";
             }
+
             var vault = Windows.Security.Credentials.PasswordVault();
             var credential = Windows.Security.Credentials.PasswordCredential("user-login", username, authCode);
             vault.add(credential);
         }, function (error) {
+            console.log(error);
             var object = JSON.parse(error.responseText);
             var messageDialog = new Windows.UI.Popups.MessageDialog(object.Message);
             messageDialog.showAsync();
