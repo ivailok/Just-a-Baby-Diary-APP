@@ -29,7 +29,7 @@
                     authCode = vault.retrieve("babyDiary", username).password;
 
                     var data = UserLoginData.getData();
-                    if (!data) {
+                    if (!data.sessionKey) {
                         ViewModels.Users.login(username, authCode).then(function () {
                             HomeCodeBehind.callLoadProfiles();
                         });
