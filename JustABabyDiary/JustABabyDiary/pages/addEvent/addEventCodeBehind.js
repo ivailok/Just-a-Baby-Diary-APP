@@ -16,7 +16,15 @@
         });
     }
 
+    var bindingArray = new WinJS.Binding.List([]);
+
+    var addImage = function (image) {
+        bindingArray.push(image);
+    }
+
     WinJS.Namespace.define("AddEventCodeBehind", {
-        createEvent: createEvent
+        createEvent: createEvent,
+        images: bindingArray,
+        addImage: addImage
     });
 })();

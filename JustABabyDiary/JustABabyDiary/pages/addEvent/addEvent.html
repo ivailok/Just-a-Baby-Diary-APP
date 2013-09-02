@@ -15,6 +15,10 @@
 </head>
 <body>
     <div class="addEvent fragment">
+        <div id="short-image-template" data-win-control="WinJS.Binding.Template">
+            <img height="100" width="100" src="#" data-win-bind="src: UrlName" />
+        </div>
+
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
             <h1 class="titlearea win-type-ellipsis">
@@ -38,12 +42,20 @@
                     <textarea id="description-input"></textarea>
                 </div>
 
-                <img id="event-image" src="#" style="width: 60px; height: 60px;"/>
+                <img id="event-image" src="#" style="width: 120px; height: 120px;"/>
                 <div>
                      <button id="image-loader">Add image to event</button>
                 </div>
-                <button id="image-attacher">Attacg image to the event</button>
+                <button id="image-attacher">Attach image to the event</button>
                 <button id="create-event-button">Add event to diary</button>
+            </div>
+
+            <div id="images-list" data-win-control="WinJS.UI.ListView"
+                data-win-options="{
+                    itemDataSource: AddEventCodeBehind.images.dataSource,
+                    itemTemplate: select('#short-image-template'),
+                    selectionMode: 'none'
+                }">
             </div>
         </section>
     </div>

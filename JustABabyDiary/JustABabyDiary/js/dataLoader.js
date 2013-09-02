@@ -79,14 +79,14 @@
                 "title": eventModel.title,
                 "date": eventModel.date,
                 "description": eventModel.description,
-                "pictureNames": JSON.stringify(eventModel.pictures)
+                "pictureNames": eventModel.pictures
             })
         });
     }
 
     var updateEvent = function (babyProfileId, eventId) {
         return WinJS.xhr({
-            url: "http://justababydiarywebapi.apphb.com/api/babyevents?babyProfileId=" + id + "&eventId=" + eventId,
+            url: "http://justababydiarywebapi.apphb.com/api/babyevents?babyProfileId=" + babyProfileId + "&eventId=" + eventId,
             type: "POST",
             headers: {
                 "X-sessionKey": UserLoginData.getData().sessionKey,
