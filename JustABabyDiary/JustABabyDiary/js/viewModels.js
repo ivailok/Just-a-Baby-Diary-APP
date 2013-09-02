@@ -56,21 +56,24 @@
 
     var events = new WinJS.Binding.List([]);
 
-    var loadEvents = function () {
-        var eventDTOs = Data.Events.getEvents();
+    var loadEvents = function (indexInProfileArray) {
+        Data.Events.getEvents(profiles.dataSource.list.getAt(indexInProfileArray).id).then(function (request) {
+            var object = JSON.parse(request.responseText);
+            var eventDTOs = object;
 
-        var currentCount = events.dataSource.list.length
-        events.dataSource.list.splice(0, currentCount);
+            var currentCount = events.dataSource.list.length
+            events.dataSource.list.splice(0, currentCount);
 
-        for (var i = 0; i < eventDTOs.length; i++) {
-            events.push(eventDTOs[i]);
-        }
-
-        if (eventDTOs.length > 0) {
-            return true;
-        }
-
-        return false;
+            for (var i = 0; i < eventDTOs.length; i++) {
+                var model = new Models.EventModel(
+                    eventDTOs[i].Id,
+                    eventDTOs[i].Title,
+                    eventDTOs[i].Date,
+                    eventDTOs[i].Description,
+                    eventDTOs[i].PictureNames);
+                events.push(model);
+            }
+        });
     }
 
     var login = function (username, authCode) {
