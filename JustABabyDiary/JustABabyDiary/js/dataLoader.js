@@ -34,6 +34,28 @@
         });
     }
 
+    var updateProfile = function (profileModel) {
+        return WinJS.xhr({
+            url: "http://justababydiarywebapi.apphb.com/api/babyprofiles",
+            type: "PUT",
+            headers: {
+                "X-sessionKey": UserLoginData.getData().sessionKey,
+                "Content-Type": "application/json"
+            },
+            data: JSON.stringify({
+                "name": profileModel.name,
+                "birthDay": profileModel.birthDay.toString(),
+                "gender": profileModel.gender,
+                "mother": profileModel.mother,
+                "father": profileModel.father,
+                "pictureName": profileModel.imgUrl,
+                "townOfBirth": profileModel.townOfBirth,
+                "birthWeight": profileModel.weight,
+                "height": profileModel.height
+            })
+        });
+    }
+
     var login = function (username, authCode) {
         return WinJS.xhr({
             url: "http://justababydiarywebapi.apphb.com/api/users/login",

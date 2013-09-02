@@ -16,70 +16,13 @@
         WinJS.Navigation.navigate("/pages/addProfile/addProfile.html");
     }
 
-    var register = function () {
-        var username = document.getElementById("register-username").value;
-        var nickname = document.getElementById("nickname").value;
-        var email = document.getElementById("email").value;
-        var password = document.getElementById("register-password").value;
-        var authCode=Crypto.sha1(password);
-        ViewModels.Users.register(username, nickname, authCode, email).then(function () {
-            var registerForm = document.getElementById("register-form");
-            registerForm.style.display = "none";
-            var profilesList = document.getElementById("profiles-list");
-            profilesList.style.display = "block"; profilesList.winControl.forceLayout();
-            if (ViewModels.Profiles.profiles.dataSource.list.length === 0) {
-                var message = document.getElementById("no-layout-responsive-container");
-                message.style.display = "block";
-            }
-
-            var vault = Windows.Security.Credentials.PasswordVault();
-            var credential = Windows.Security.Credentials.PasswordCredential("user-login", username, authCode);
-            vault.add(credential);
-        }, function (error) {
-            var object = JSON.parse(error.responseText);
-            var messageDialog = new Windows.UI.Popups.MessageDialog(object.Message);
-            messageDialog.showAsync();
-        });
-    }
-
-    var login = function () {
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-        var authCode = Crypto.sha1(password);
-        authCode = Crypto.sha1(password);
-        ViewModels.Users.login(username, authCode).then(function () {
-            var loginForm = document.getElementById("login-form");
-            loginForm.style.display = "none";
-            var profilesList = document.getElementById("profiles-list");
-            profilesList.style.display = "block";
-            profilesList.winControl.forceLayout();
-            if (ViewModels.Profiles.profiles.dataSource.list.length === 0) {
-                var message = document.getElementById("no-layout-responsive-container");
-                message.style.display = "block";
-            }
-
-            var vault = Windows.Security.Credentials.PasswordVault();
-            var credential = Windows.Security.Credentials.PasswordCredential("user-login", username, authCode);
-            vault.add(credential);
-        }, function (error) {
-            console.log(error);
-            var object = JSON.parse(error.responseText);
-            var messageDialog = new Windows.UI.Popups.MessageDialog(object.Message);
-            messageDialog.showAsync();
-        });
-    }
-
-    var showRegister = function () {
-
-        var loginForm = document.getElementById("login-form");
-        loginForm.style.display = "none";
-
-        var registerForm = document.getElementById("register-form");
-        registerForm.style.display = "block";
+    var goToLoginPage = function () {
+        WinJS.Navigation.navigate("/pages/login/login.html", {});
     }
 
     WinJS.Utilities.markSupportedForProcessing(goToProfileDetailsPage);
     WinJS.Utilities.markSupportedForProcessing(goToProfileAddPage);
+    WinJS.Utilities.markSupportedForProcessing(goToLoginPage);
 
     WinJS.Namespace.define("HomeCodeBehind", {
         callLoadProfiles: function () {
@@ -88,8 +31,6 @@
 
         goToProfileDetailsPage: goToProfileDetailsPage,
         goToProfileAddPage: goToProfileAddPage,
-        register: register,
-        login: login,
-        showRegister:showRegister
+        goToLoginPage: goToLoginPage
     })
 })();

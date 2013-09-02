@@ -88,6 +88,14 @@
     <Content Include="pages\home\home.js" />
     <Content Include="default.html" />
     <Content Include="pages\home\homeCodeBehind.js" />
+    <Content Include="pages\login\login.css" />
+    <Content Include="pages\login\login.html" />
+    <Content Include="pages\login\login.js" />
+    <Content Include="pages\login\loginCodeBehind.js" />
+    <Content Include="pages\register\register.css" />
+    <Content Include="pages\register\register.html" />
+    <Content Include="pages\register\register.js" />
+    <Content Include="pages\register\registerCodeBehind.js" />
     <Content Include="pages\updateBabyEvent\updateBabyEvent.css" />
     <Content Include="pages\updateBabyEvent\updateBabyEvent.html" />
     <Content Include="pages\updateBabyEvent\updateBabyEvent.js" />
