@@ -32,15 +32,15 @@
         });
     }
 
-    var addToBindingArray = function (model) {
+    var addToProfilesBindingArray = function (model) {
         profiles.push(model);
     }
 
     var addProfile = function (id, name, birthDay, gender, mother, father, imgUrl, townOfBirth, weight, height) {
         return new WinJS.Promise(function (complete, error) {
-            var model = new Models.ProfileModel(id, name, birthDay, gender, mother, father, imgUrl, townOfBirth, weight, height)
+            var model = new Models.ProfileModel(id, name, birthDay, gender, mother, father, imgUrl, townOfBirth, weight, height);
             Data.Profiles.addProfile(model).then(function (request) {
-                addToBindingArray(model);
+                addToProfilesBindingArray(model);
                 var messageDialog = new Windows.UI.Popups.MessageDialog("The profile is successfully registered.");
                 messageDialog.showAsync().done(function () {
                     complete();
@@ -73,6 +73,28 @@
                     eventDTOs[i].PictureNames);
                 events.push(model);
             }
+        });
+    }
+
+    var addToEvenetsBindingArray = function (model) {
+        events.push(model);
+    }
+
+    var addEvent = function (profileId, id, title, date, description, pictures) {
+        return new WinJS.Promise(function (complete, error) {
+            var model = new Models.EventModel(id, title, date, description, pictures);
+            Data.Events.addEvent(profiles.dataSource.list.getAt(profileId).id, model).then(function (request) {
+                addToEvenetsBindingArray(model);
+                var messageDialog = new Windows.UI.Popups.MessageDialog("The event is successfully registered.");
+                messageDialog.showAsync().done(function () {
+                    complete();
+                });
+            }, function (error) {
+                var messageDialog = new Windows.UI.Popups.MessageDialog("The event is not registered.");
+                messageDialog.showAsync().done(function () {
+                    error("Try again");
+                });
+            });
         });
     }
 
@@ -115,9 +137,7 @@
     WinJS.Namespace.defineWithParent(ViewModels, "Events", {
         loadEvents: loadEvents,
         events: events,
-        addEvent: function (id, title, date, description, pictures) {
-            Data.Events.addEvent(new Models.EventModel(id, title, date, description, pictures));
-        }
+        addEvent: addEvent
     });
 
     WinJS.Namespace.defineWithParent(ViewModels, "Users", {

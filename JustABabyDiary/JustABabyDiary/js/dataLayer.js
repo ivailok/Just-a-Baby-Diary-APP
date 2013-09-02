@@ -24,8 +24,8 @@
         return Loader.Events.getEvents(id);
     }
 
-    var addEvent = function (eventModel) {
-        events.push(eventModel);
+    var addEvent = function (id, eventModel) {
+        return Loader.Events.addEvent(id, eventModel);
     }
 
     var login = function (username, authCode) {
