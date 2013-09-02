@@ -11,8 +11,8 @@
         });
     }
     
-    var loadEvents = function () {
-        ViewModels.Events.loadEvents();
+    var loadEvents = function (indexInProfilesArray) {
+        ViewModels.Events.loadEvents(indexInProfilesArray);
     }
 
     var goToEventDetailsPage = function (invokeEvent) {
