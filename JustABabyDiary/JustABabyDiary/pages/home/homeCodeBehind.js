@@ -9,20 +9,26 @@
     }
 
     var goToProfileAddPage = function () {
-        var appBar = document.getElementById("home-app-bar").winControl;
-        if (appBar) {
-            appBar.hide();
-        }
+        //var appBar = document.getElementById("home-app-bar").winControl;
+        //if (appBar) {
+        //    appBar.hide();
+        //}
         WinJS.Navigation.navigate("/pages/addProfile/addProfile.html");
     }
 
     var goToLoginPage = function () {
-        WinJS.Navigation.navigate("/pages/login/login.html", {});
+        try {
+            WinJS.Navigation.navigate("/pages/login/login.html", {});
+        }
+        catch (WinJSError) {
+            console.log();
+        }
     }
 
     WinJS.Utilities.markSupportedForProcessing(goToProfileDetailsPage);
     WinJS.Utilities.markSupportedForProcessing(goToProfileAddPage);
     WinJS.Utilities.markSupportedForProcessing(goToLoginPage);
+    WinJS.Utilities.requireSupportedForProcessing(goToLoginPage);
 
     WinJS.Namespace.define("HomeCodeBehind", {
         callLoadProfiles: function () {

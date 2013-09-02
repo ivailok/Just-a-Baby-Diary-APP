@@ -9,28 +9,28 @@
 
         init: function (element, options)
         {
-            var vault = new Windows.Security.Credentials.PasswordVault();
+            //var vault = new Windows.Security.Credentials.PasswordVault();
 
-            var username, authCode;
+            //var username, authCode;
 
-            try {
-                var credential = vault.findAllByResource("babyDiary").first();
-                if (credential != null) {
-                    // Retrieves the actual userName and password.
-                    username = credential.current.userName;
-                    authCode = vault.retrieve("babyDiary", username).password;
+            //try {
+            //    var credential = vault.findAllByResource("babyDiary").first();
+            //    if (credential != null) {
+            //        // Retrieves the actual userName and password.
+            //        username = credential.current.userName;
+            //        authCode = vault.retrieve("babyDiary", username).password;
 
-                    if (!UserLoginData.getData()) {
-                        ViewModels.Users.login(username, authCode);
-                    }
-                }
-            } catch (WinRTError) {
-                // navigate to login page
+            //        if (!UserLoginData.getData()) {
+            //            ViewModels.Users.login(username, authCode);
+            //        }
+            //    }
+            //} catch (WinRTError) {
+            //    // navigate to login page
+                
+            //    HomeCodeBehind.goToLoginPage();
+            //}
 
-                HomeCodeBehind.goToLoginPage();
-            }
-
-            HomeCodeBehind.callLoadProfiles();
+            //HomeCodeBehind.callLoadProfiles();
         },
 
         ready: function (element, options) {
@@ -39,6 +39,10 @@
             //    var element = document.getElementById("no-layout-responsive-message");
             //    element.style.visibility = "collapse";
             //}
+
+            HomeCodeBehind.goToLoginPage();
+
+            //HomeCodeBehind.goToProfileAddPage();
 
             if (ViewModels.Profiles.profiles.dataSource.list.length === 0) {
                 var message = document.getElementById("no-layout-responsive-container");

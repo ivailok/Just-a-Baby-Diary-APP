@@ -10,10 +10,10 @@
             // TODO: Initialize the page here.
 
             var loginBtn = document.getElementById("login-button");
-            loginBtn.addEventListener("click", HomeCodeBehind.login);
+            loginBtn.addEventListener("click", LoginCodeBehind.login);
 
             var showRegisterBtn = document.getElementById("show-register-form-button");
-            showRegisterBtn.addEventListener("click", HomeCodeBehind.showRegister);
+            showRegisterBtn.addEventListener("click", LoginCodeBehind.showRegister);
         },
 
         unload: function () {
