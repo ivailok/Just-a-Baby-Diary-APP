@@ -30,8 +30,10 @@
         this.date = date;
         this.description = description;
         this.pictures = [];
-        this.pictures = pictures;
-        this.firstPic = pictures[0];
+        if (pictures) {
+            this.pictures = pictures;
+        }
+        this.firstPic = this.pictures[0];
     }, {
         id: "",
         title: "",
