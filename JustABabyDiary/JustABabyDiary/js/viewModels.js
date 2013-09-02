@@ -76,6 +76,15 @@
         });
     }
 
+    var pictures = new WinJS.Binding.List([]);
+
+    var loadPictures = function (indexOfEventInProfile) {
+        var picturesToPush = events.dataSource.list.getAt(indexOfEventInProfile).pictures;
+        for (var i = 0; i < picturesToPush.length; i++) {
+            pictures.dataSource.list.push(picturesToPush[i]);
+        }
+    }
+
     var addToEvenetsBindingArray = function (model) {
         events.push(model);
     }
@@ -131,13 +140,16 @@
     WinJS.Namespace.defineWithParent(ViewModels, "Profiles", {
         loadProfiles: loadProfiles,
         profiles: profiles,
-        addProfile: addProfile
+        addProfile: addProfile,
+        
     });
 
     WinJS.Namespace.defineWithParent(ViewModels, "Events", {
         loadEvents: loadEvents,
         events: events,
-        addEvent: addEvent
+        addEvent: addEvent,
+        pictures: pictures,
+        loadPictures: loadPictures
     });
 
     WinJS.Namespace.defineWithParent(ViewModels, "Users", {

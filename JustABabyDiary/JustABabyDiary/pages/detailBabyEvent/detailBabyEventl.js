@@ -10,6 +10,9 @@
             var indexInEventsList = options.indexInEventsList;
             DetailEventCodeBehind.indexInEventsList = indexInEventsList;
             WinJS.Binding.processAll(element, ViewModels.Events.events.getAt(indexInEventsList));
+            if (ViewModels.Events.pictures.dataSource.list.length===0) {
+                ViewModels.Events.loadPictures(indexInEventsList);
+            }
 
             var addPictureBtn = document.getElementById("add-picture");
             addPictureBtn.addEventListener("click", DetailEventCodeBehind.addPicture);

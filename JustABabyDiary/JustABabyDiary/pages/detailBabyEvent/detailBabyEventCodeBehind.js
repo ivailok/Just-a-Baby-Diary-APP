@@ -14,7 +14,7 @@
 
     var updateEvent = function () {
         WinJS.Navigation.navigate("/pages/updateBabyEvent/updateBabyEvent.html",
-            ViewModels.Events.events.getAt(indexInEventsList));
+            { indexInEventsList: indexInEventsList });
     }
 
     WinJS.Namespace.define("DetailEventCodeBehind", {

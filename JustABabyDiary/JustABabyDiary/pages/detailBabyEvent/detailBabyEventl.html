@@ -34,12 +34,12 @@
             <div id="pistures-list-view" data-win-control="WinJS.Binding.Template">
                 <div style="width: 150px; height: 100px;">
                     <img src="#" style="width: 100px; height: 100px;"
-                        data-win-bind="alt: title; src: imgUrl" />
+                        data-win-bind="src: UrlName" alt="title"/>
                 </div>
             </div>
 
             <div id="basicListView" data-win-control="WinJS.UI.ListView"
-                data-win-options="{itemDataSource : ViewModels.Events.events.pictures, 
+                data-win-options="{itemDataSource : ViewModels.Events.pictures.dataSource, 
             itemTemplate: select('#pistures-list-view')}">
             </div>
 
