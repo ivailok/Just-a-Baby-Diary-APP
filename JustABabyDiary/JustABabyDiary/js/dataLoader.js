@@ -1,4 +1,5 @@
-﻿/// <reference path="//Microsoft.WinJS.1.0/js/base.js" />
+﻿/// <reference path="userLoginData.js" />
+/// <reference path="//Microsoft.WinJS.1.0/js/base.js" />
 
 (function () {
     var getProfiles = function () {
@@ -34,12 +35,43 @@
     }
 
     var login = function (username, authCode) {
+        return WinJS.xhr({
+            url: "http://justababydiarywebapi.apphb.com/api/users/login",
+            type: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            data: JSON.stringify({
+                "username": username,
+                "authCode": authCode
+            })
+        });
     }
 
     var logout = function () {
+        return WinJS.xhr({
+            url: "http://justababydiarywebapi.apphb.com/api/users/logout",
+            type: "PUT",
+            headers: {
+                "X-sessionKey": UserLoginData.getData().sessionKey
+            }
+        });
     }
 
-    var register = function () {
+    var register = function (username, nickname, authCode, email) {
+        return WinJS.xhr({
+            url: "http://justababydiarywebapi.apphb.com/api/users/register",
+            type: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            data: JSON.stringify({
+                "username": username,
+                "displayName": nickname,
+                "authCode": authCode,
+                "email": email
+            })
+        });
     }
 
     WinJS.Namespace.define("Loader");

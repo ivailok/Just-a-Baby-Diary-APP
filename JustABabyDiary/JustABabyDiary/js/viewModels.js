@@ -68,13 +68,15 @@
     }
 
     var login = function (username, authCode) {
-        Loader.Users.login(username, authCode);
+        Data.Users.login(username, authCode);
     }
 
-    var register = function () {
+    var register = function (username, nickname, authCode, email) {
+        Data.Users.register(username, nickname, authCode, email);
     }
 
     var logout = function () {
+        Data.Users.logout();
     }
 
     WinJS.Namespace.define("ViewModels");

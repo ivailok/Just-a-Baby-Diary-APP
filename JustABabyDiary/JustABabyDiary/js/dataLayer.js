@@ -33,6 +33,18 @@
         events.push(eventModel);
     }
 
+    var login = function (username, authCode) {
+        Loader.Users.login(username, authCode);
+    }
+
+    var register = function (username, nickname, authCode, email) {
+        Loader.Users.register(username, nickname, authCode, email);
+    }
+
+    var logout = function () {
+        Loader.Users.logout();
+    }
+
     WinJS.Namespace.define("Data");
 
     WinJS.Namespace.defineWithParent(Data, "Profiles", {
@@ -43,5 +55,11 @@
     WinJS.Namespace.defineWithParent(Data, "Events", {
         addEvent: addEvent,
         getEvents: getEvents
+    });
+
+    WinJS.Namespace.defineWithParent(Data, "Users", {
+        register: register,
+        login: login,
+        logout: logout
     });
 })()

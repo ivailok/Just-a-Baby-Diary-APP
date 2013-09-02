@@ -40,8 +40,21 @@
         firstPic:""
     })
 
+    var UserLoggedModel = WinJS.Class.define(function (id, nickname, sessionKey, email) {
+        this.id = id;
+        this.nickname = nickname;
+        this.sessionKey = sessionKey;
+        this.email = email;
+    }, {
+        id: "",
+        nickname: "",
+        sessionKey: "",
+        email: "",
+    })
+
     WinJS.Namespace.define("Models", {
         ProfileModel: ProfileModel,
-        EventModel: EventModel
+        EventModel: EventModel,
+        UserLoggedModel: UserLoggedModel
     })
 })()
