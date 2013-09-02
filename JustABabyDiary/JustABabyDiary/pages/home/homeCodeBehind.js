@@ -31,6 +31,15 @@
         ViewModels.Users.login(username, authCode);
     }
 
+    var showRegister = function () {
+
+        var loginForm = document.getElementById("login-form");
+        loginForm.style.display = "none";
+
+        var registerForm = document.getElementById("register-form");
+        registerForm.style.display = "block";
+    }
+
     WinJS.Utilities.markSupportedForProcessing(goToProfileDetailsPage);
     WinJS.Utilities.markSupportedForProcessing(goToProfileAddPage);
 
@@ -41,6 +50,8 @@
 
         goToProfileDetailsPage: goToProfileDetailsPage,
         goToProfileAddPage: goToProfileAddPage,
-        register:register
+        register: register,
+        login: login,
+        showRegister:showRegister
     })
 })();
