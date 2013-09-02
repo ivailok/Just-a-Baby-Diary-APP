@@ -32,9 +32,15 @@
         });
     }
 
+    var addToBindingArray = function (model) {
+        profiles.push(model);
+    }
+
     var addProfile = function (id, name, birthDay, gender, mother, father, imgUrl, townOfBirth, weight, height) {
         return new WinJS.Promise(function (complete, error) {
-            Data.Profiles.addProfile(new Models.ProfileModel(id, name, birthDay, gender, mother, father, imgUrl, townOfBirth, weight, height)).then(function (request) {
+            var model = new Models.ProfileModel(id, name, birthDay, gender, mother, father, imgUrl, townOfBirth, weight, height)
+            Data.Profiles.addProfile(model).then(function (request) {
+                addToBindingArray(model);
                 var messageDialog = new Windows.UI.Popups.MessageDialog("The profile is successfully registered.");
                 messageDialog.showAsync().done(function () {
                     complete();
