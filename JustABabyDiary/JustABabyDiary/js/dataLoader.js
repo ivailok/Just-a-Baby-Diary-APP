@@ -56,6 +56,53 @@
         });
     }
 
+    var getEvents = function (id) {
+        return WinJS.xhr({
+            url: "http://justababydiarywebapi.apphb.com/api/babyevents?babyProfileId=" + id,
+            type: "GET",
+            headers: {
+                "X-sessionKey": UserLoginData.getData().sessionKey,
+            },
+        });
+    }
+
+    var addEvent = function (id, eventModel) {
+        return WinJS.xhr({
+            url: "http://justababydiarywebapi.apphb.com/api/babyevents?babyProfileId=" + id,
+            type: "POST",
+            headers: {
+                "X-sessionKey": UserLoginData.getData().sessionKey,
+                "Content-Type": "application/json"
+            },
+            data: JSON.stringify({
+                "title": eventModel.title,
+                "date": eventModel.date,
+                "description": eventModel.description,
+                "pictureNames": JSON.stringify(eventModel.pictures)
+            })
+        });
+    }
+
+    var updateEvent = function (id) {
+        return WinJS.xhr({
+            url: "http://justababydiarywebapi.apphb.com/api/babyevents?babyProfileId=" + id + "&eventId=" + eventId,
+            type: "POST",
+            headers: {
+                "X-sessionKey": UserLoginData.getData().sessionKey,
+                "Content-Type": "application/json"
+            },
+            data: JSON.stringify({
+                "title": eventModel.title,
+                "date": eventModel.date,
+                "description": eventModel.description,
+                "pictureNames": JSON.stringify(eventModel.pictures)
+            })
+        });
+    }
+
+    var addImageToEvent = function () {
+    }
+
     var login = function (username, authCode) {
         return WinJS.xhr({
             url: "http://justababydiarywebapi.apphb.com/api/users/login",
@@ -106,6 +153,7 @@
 
     WinJS.Namespace.defineWithParent(Loader, "Profiles", {
         getProfiles: getProfiles,
-        addProfile: addProfile
+        addProfile: addProfile,
+        updateProfile: updateProfile
     });
 })();
