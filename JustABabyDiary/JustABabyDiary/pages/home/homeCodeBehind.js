@@ -17,15 +17,16 @@
     }
 
     var register = function () {
-        //TODO:
-        var userName = document.getElementById("username").value;
+        var username = document.getElementById("username").value;
+        var nickname = document.getElementById("nickname").value;
+        var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
         var authCode=Crypto.sha1(password);
-        ViewModels.Users.register();
+        ViewModels.Users.register(username, nickname, authCode, email);
     }
 
     var login = function () {
-        var userName = document.getElementById("username").value;
+        var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
         var authCode = Crypto.sha1(password);
         ViewModels.Users.login(username, authCode);
