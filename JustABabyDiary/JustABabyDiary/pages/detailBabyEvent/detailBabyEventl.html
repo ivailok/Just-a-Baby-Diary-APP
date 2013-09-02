@@ -42,6 +42,13 @@
                 data-win-options="{itemDataSource : ViewModels.Events.events.pictures, 
             itemTemplate: select('#pistures-list-view')}">
             </div>
+
+            <div id="event-detail-app-bar" data-win-control="WinJS.UI.AppBar" data-win-options="">
+                <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'add-picture',label:'Add picture',icon:'add',section:'global',tooltip:'Add picture to event'}">
+                </button>
+                <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'remove-picture',label:'Remove picture',icon:'remove',section:'global',tooltip:'Remove picture from event'}">
+                </button>
+            </div>
         </section>
     </div>
 </body>
