@@ -81,7 +81,7 @@
     var loadPictures = function (indexOfEventInProfile) {
         var picturesToPush = events.dataSource.list.getAt(indexOfEventInProfile).pictures;
         for (var i = 0; i < picturesToPush.length; i++) {
-            pictures.dataSource.list.push(picturesToPush[i]);
+            pictures.push(picturesToPush[i]);
         }
     }
 
@@ -141,7 +141,7 @@
         loadProfiles: loadProfiles,
         profiles: profiles,
         addProfile: addProfile,
-        
+
     });
 
     WinJS.Namespace.defineWithParent(ViewModels, "Events", {
@@ -155,6 +155,6 @@
     WinJS.Namespace.defineWithParent(ViewModels, "Users", {
         login: login,
         register: register,
-        logout:logout
+        logout: logout
     })
 })();
