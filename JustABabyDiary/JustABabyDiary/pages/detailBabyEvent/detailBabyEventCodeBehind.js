@@ -1,4 +1,5 @@
-﻿/// <reference path="//Microsoft.WinJS.1.0/js/base.js" />
+﻿/// <reference path="../../js/viewModels.js" />
+/// <reference path="//Microsoft.WinJS.1.0/js/base.js" />
 (function () {
 
     var indexInEventsList = 0;
@@ -11,9 +12,15 @@
 
     }
 
+    var updateEvent = function () {
+        WinJS.Navigation.navigate("/pages/updateBabyEvent/updateBabyEvent.html",
+            ViewModels.Events.events.getAt(indexInEventsList));
+    }
+
     WinJS.Namespace.define("DetailEventCodeBehind", {
         indexInEventsList: indexInEventsList,
         addPicture: addPicture,
-        removePicture:removePicture
+        removePicture: removePicture,
+        updateEvent: updateEvent
     });
 })();

@@ -16,6 +16,9 @@
 
             var removePictureBtn = document.getElementById("remove-picture");
             removePictureBtn.addEventListener("click", DetailEventCodeBehind.removePicture);
+
+            var updateEventBtn = document.getElementById("update-event");
+            updateEventBtn.addEventListener("click", DetailEventCodeBehind.updateEvent);
         },
 
         unload: function () {
