@@ -8,13 +8,14 @@
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         init: function (element, options) {
-            DetailProfileCodeBehind.loadEvents();
+          
         },
 
         ready: function (element, options) {
             var currentProfileIndex = options.indexInProfilesList;
             DetailProfileCodeBehind.currentProfileIndex = currentProfileIndex;
             WinJS.Binding.processAll(element, ViewModels.Profiles.profiles.getAt(currentProfileIndex));
+            DetailProfileCodeBehind.loadEvents(currentProfileIndex);
             var events = ViewModels.Events.events;
             WinJS.Binding.processAll(document.getElementById("basicListView"),events);
         },
