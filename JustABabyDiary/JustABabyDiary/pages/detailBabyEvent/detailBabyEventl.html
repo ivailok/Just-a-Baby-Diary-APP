@@ -10,6 +10,7 @@
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
     <link href="detailBabyEventl.css" rel="stylesheet" />
+    <script src="detailBabyEventCodeBehind.js"></script>
     <script src="detailBabyEventl.js"></script>
 </head>
 <body>
@@ -17,11 +18,30 @@
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Welcome to detailBabyEventl</span>
+                <span class="pagetitle">Details for event "<span data-win-bind="innerText:title"></span>"</span>
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <p>Content goes here.</p>
+            <dl>
+                <dt>Title: </dt>
+                <dd data-win-bind="innerText:title"></dd>
+                <dt>Date: </dt>
+                <dd data-win-bind="innerText:date"></dd>
+                <dt>Description: </dt>
+                <dd data-win-bind="innerText:description"></dd>
+            </dl>
+
+            <div id="pistures-list-view" data-win-control="WinJS.Binding.Template">
+                <div style="width: 150px; height: 100px;">
+                    <img src="#" style="width: 100px; height: 100px;"
+                        data-win-bind="alt: title; src: imgUrl" />
+                </div>
+            </div>
+
+            <div id="basicListView" data-win-control="WinJS.UI.ListView"
+                data-win-options="{itemDataSource : ViewModels.Events.events.pictures, 
+            itemTemplate: select('#pistures-list-view')}">
+            </div>
         </section>
     </div>
 </body>

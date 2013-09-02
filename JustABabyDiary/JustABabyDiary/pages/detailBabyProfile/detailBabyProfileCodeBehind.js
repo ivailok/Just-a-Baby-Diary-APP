@@ -1,7 +1,7 @@
 ﻿/// <reference path="//Microsoft.WinJS.1.0/js/base.js" />
 (function () {
 
-    var goToAddBabyEventPage = function (invokeEvent) {
+    var goToAddBabyEventPage = function () {
         var appBar = document.getElementById("detail-profile-app-bar").winControl;
         if (appBar) {
             appBar.hide();
