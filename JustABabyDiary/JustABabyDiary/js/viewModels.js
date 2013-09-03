@@ -34,7 +34,7 @@
                 normalProfiles.push(newModel);
             }
 
-            ImageLoader.afterLoad(normalProfiles);
+            ImageLoader.afterProfileLoad(normalProfiles);
 
             // must think how to load images correctly
         });
@@ -43,7 +43,7 @@
     var addToProfilesBindingArray = function (model) {
         model.path = model.imgUrl;
         model.imgUrl = "#";
-        ImageLoader.loadSingle(model);
+        ImageLoader.loadSingleProfile(model);
         profiles.push(model);
     }
 
@@ -88,9 +88,10 @@
                 model.path = model.firstPic;
                 model.firstPic = "#";
 
-
                 events.push(model);
                 normalEvents.push(model);
+
+
             }
         });
     }
