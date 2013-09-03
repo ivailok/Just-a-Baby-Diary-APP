@@ -48,7 +48,7 @@
         var request = e.request;
 
         // Title is required
-        var dataPackageTitle = document.getElementById("pagetitle").innerText;
+        var dataPackageTitle = document.getElementById("title").innerText;
         if ((typeof dataPackageTitle === "string") && (dataPackageTitle !== "")) {
             var dataPackageText = document.getElementById("description").innerText;
             if ((typeof dataPackageText === "string") && (dataPackageText !== "")) {
