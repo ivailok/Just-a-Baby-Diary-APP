@@ -91,7 +91,7 @@
                 events.push(model);
                 normalEvents.push(model);
 
-
+                ImageLoader.afterEventLoad(normalEvents);
             }
         });
     }
@@ -106,6 +106,9 @@
     }
 
     var addToEvenetsBindingArray = function (model) {
+        model.path = model.firstPic;
+        model.firstPic = "#";
+        ImageLoader.loadSingleEvent(model);
         events.push(model);
     }
 

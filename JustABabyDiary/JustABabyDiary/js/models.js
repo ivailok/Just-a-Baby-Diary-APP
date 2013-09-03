@@ -35,7 +35,10 @@
         if (pictures) {
             this.pictures = pictures;
         }
-        this.firstPic = this.pictures[0];
+        this.firstPic = "";
+        if (this.pictures[0]) {
+            this.firstPic = this.pictures[0].UrlName;
+        }
         this.path = "" || path;
     }, {
         id: "",
