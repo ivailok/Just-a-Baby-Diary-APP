@@ -13,6 +13,7 @@
             var currentCount = profiles.dataSource.list.length
             profiles.dataSource.list.splice(0, currentCount);
 
+            var normalProfiles = [];
             for (var i = 0; i < profileDTOs.length; i++) {
                 var newModel = new Models.ProfileModel(
                     profileDTOs[i].Id,
@@ -26,10 +27,13 @@
                     profileDTOs[i].BirthWeight,
                     profileDTOs[i].Height);
 
-                profiles.push(newModel);
+                normalProfiles.push(newModel);
             }
-
-            profiles.dataSource.list.forEach(ImageLoader.load);
+            normalProfiles.forEach(ImageLoader.load);
+            
+            for (var i = 0 ; i < normalProfiles.length; i++) {
+                profiles.push(normalProfiles);
+            }
 
             // must think how to load images correctly
         });
