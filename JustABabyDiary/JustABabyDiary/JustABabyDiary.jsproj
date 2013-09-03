@@ -63,6 +63,7 @@
     <Content Include="js\dataLoader.js" />
     <Content Include="js\default.js" />
     <Content Include="js\defaultCodeBehindjs.js" />
+    <Content Include="js\imageLoader.js" />
     <Content Include="js\models.js" />
     <Content Include="js\navigator.js" />
     <Content Include="js\sha1.js" />

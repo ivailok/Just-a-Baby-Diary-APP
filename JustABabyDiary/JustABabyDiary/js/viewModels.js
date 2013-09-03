@@ -1,4 +1,5 @@
 ﻿/// <reference path="//Microsoft.WinJS.1.0/js/ui.js" />
+/// <reference path="imageLoader.js" />
 /// <reference path="//Microsoft.WinJS.1.0/js/base.js" />
 /// <reference path="dataLayer.js" />
 
@@ -27,6 +28,8 @@
 
                 profiles.push(newModel);
             }
+
+            profiles.dataSource.list.forEach(ImageLoader.load);
 
             // must think how to load images correctly
         });
