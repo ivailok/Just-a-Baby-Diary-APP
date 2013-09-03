@@ -22,9 +22,9 @@
     <div class="fragment homepage">
         <div id="short-profile-template" data-win-control="WinJS.Binding.Template">
             <div>
-                <img height="100" width="100" src="#" data-win-bind="src: imgUrl" />
-                <span data-win-bind="innerText: name"></span>
-                <span data-win-bind="innerText: birthDay"></span>
+                <img height="200" width="350" src="#" data-win-bind="src: imgUrl" />
+                <div data-win-bind="innerText: name"></div>
+                <div data-win-bind="innerText: birthDay"></div>
             </div>
         </div>
 
@@ -39,7 +39,7 @@
                 <p id="no-layout-responsive-message">You have no baby profiles at the moment. It's recommended to create one.</p>
                 <button id="create-new-profile-button">Create profile</button>
             </div>
-              <button id="go-to-login">Go to login page</button>
+            <button id="go-to-login">Go to login page</button>
             <div id="profiles-list" data-win-control="WinJS.UI.ListView"
                 data-win-options="{
                     itemDataSource: ViewModels.Profiles.profiles.dataSource,

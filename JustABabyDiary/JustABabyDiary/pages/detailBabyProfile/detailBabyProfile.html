@@ -22,29 +22,36 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <img src="#" data-win-bind="src:imgUrl" />
             <div>
-                <dl>
-                    <dt>Name: </dt>
-                    <dd data-win-bind="innerText: name"></dd>
-                    <dt>Birthday: </dt>
-                    <dd data-win-bind="innerText: birthDay"></dd>
-                    <dt>Gender: </dt>
-                    <dd data-win-bind="innerText: gender"></dd>
-                    <dt>Weight: </dt>
-                    <dd data-win-bind="innerText: weight"></dd>
-                    <dt>Height: </dt>
-                    <dd data-win-bind="innerText: height"></dd>
-                    <dt>Mother: </dt>
-                    <dd data-win-bind="innerText: mother"></dd>
-                    <dt>Father: </dt>
-                    <dd data-win-bind="innerText: father"></dd>
-                </dl>
+                <img src="#" data-win-bind="src:imgUrl" width="400" height="300" />
+                <div id="info-holder">
+                    <div class="inner-info-holder">
+                        <h3>Name: <span data-win-bind="innerText: name"></span></h3>
+                        
+                        <br />
+                        <h3>Birthday: </h3>
+                        <p data-win-bind="innerText: birthDay"></p>
+                        <br />
+                        <h3>Gender: </h3>
+                        <p data-win-bind="innerText: gender"></p>
+                        <br />
+                        <h3>Weight: </h3>
+                        <p data-win-bind="innerText: weight"></p>
+                    </div>
+                    <div class="inner-info-holder">
+                        <h3>Height: </h3>
+                        <p data-win-bind="innerText: height"></p>
+                        <br />
+                        <h3>Mother: </h3>
+                        <p data-win-bind="innerText: mother"></p>
+                        <br />
+                        <h3>Father: </h3>
+                        <p data-win-bind="innerText: father"></p>
+                    </div>
+                </div>
             </div>
-
             <div id="events-list-template" data-win-control="WinJS.Binding.Template">
                 <div style="width: 150px; height: 100px;">
-
                     <!-- Displays the "picture" field. -->
                     <img src="#" style="width: 60px; height: 60px;"
                         data-win-bind="src: firstPic" alt="pic" />

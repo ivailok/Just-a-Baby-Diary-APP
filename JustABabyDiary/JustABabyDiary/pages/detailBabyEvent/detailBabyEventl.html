@@ -22,19 +22,26 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <dl>
-                <dt>Title: </dt>
-                <dd data-win-bind="innerText:title"></dd>
-                <dt>Date: </dt>
-                <dd data-win-bind="innerText:date"></dd>
-                <dt>Description: </dt>
-                <dd data-win-bind="innerText:description"></dd>
-            </dl>
+            <div>
+                <div>
+                    <h3>Title: </h3>
+                    <p data-win-bind="innerText:title"></p>
+                </div>
+                <div>
+                    <h3>Date: </h3>
+                    <p data-win-bind="innerText:date"></p>
+                </div>
+                <div>
+                    <h3>Description: </h3>
+                    <p data-win-bind="innerText:description"></p>
+                </div>
+
+            </div>
 
             <div id="pistures-list-view" data-win-control="WinJS.Binding.Template">
                 <div style="width: 150px; height: 100px;">
                     <img src="#" style="width: 100px; height: 100px;"
-                        data-win-bind="src: UrlName" alt="title"/>
+                        data-win-bind="src: UrlName" alt="title" />
                 </div>
             </div>
 
