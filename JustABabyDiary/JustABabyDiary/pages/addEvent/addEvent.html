@@ -57,6 +57,12 @@
                     selectionMode: 'none'
                 }">
             </div>
+
+            <div id="picture-menu" data-win-control="WinJS.UI.Menu">
+                    <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'take-picture',label:'Take picture with camera',type:'toggle'}"></button>
+                    <hr data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'separator',type:'separator'}" />
+                    <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'upload-picture', label:'Upload picture from file'}"></button>
+                </div>
         </section>
     </div>
 </body>

@@ -15,6 +15,8 @@
 
             var normalProfiles = [];
             for (var i = 0; i < profileDTOs.length; i++) {
+                var url = profileDTOs[i].PictureName;
+
                 var newModel = new Models.ProfileModel(
                     profileDTOs[i].Id,
                     profileDTOs[i].Name,
@@ -22,24 +24,26 @@
                     profileDTOs[i].Gender,
                     profileDTOs[i].Mother,
                     profileDTOs[i].Father,
-                    profileDTOs[i].PictureName,
+                    "#",
                     profileDTOs[i].TownOfBirth,
                     profileDTOs[i].BirthWeight,
-                    profileDTOs[i].Height);
+                    profileDTOs[i].Height,
+                    url);
 
+                profiles.push(newModel);
                 normalProfiles.push(newModel);
             }
-            normalProfiles.forEach(ImageLoader.load);
-            
-            for (var i = 0 ; i < normalProfiles.length; i++) {
-                profiles.push(normalProfiles);
-            }
+
+            ImageLoader.afterLoad(normalProfiles);
 
             // must think how to load images correctly
         });
     }
 
     var addToProfilesBindingArray = function (model) {
+        model.path = model.imgUrl;
+        model.imgUrl = "#";
+        ImageLoader.loadSingle(model);
         profiles.push(model);
     }
 
@@ -71,6 +75,8 @@
             var currentCount = events.dataSource.list.length
             events.dataSource.list.splice(0, currentCount);
 
+            var normalEvents = [];
+
             for (var i = 0; i < eventDTOs.length; i++) {
                 var model = new Models.EventModel(
                     eventDTOs[i].Id,
@@ -78,7 +84,13 @@
                     eventDTOs[i].Date,
                     eventDTOs[i].Description,
                     eventDTOs[i].PictureNames);
+                    
+                model.path = model.firstPic;
+                model.firstPic = "#";
+
+
                 events.push(model);
+                normalEvents.push(model);
             }
         });
     }

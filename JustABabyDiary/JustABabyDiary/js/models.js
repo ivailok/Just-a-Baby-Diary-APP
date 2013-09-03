@@ -1,6 +1,6 @@
 ﻿/// <reference path="//Microsoft.WinJS.1.0/js/base.js" />
 (function () {
-    var ProfileModel = WinJS.Class.define(function (id, name, birthDay, gender, mother, father, imgUrl, townOfBirth, weight, height) {
+    var ProfileModel = WinJS.Class.define(function (id, name, birthDay, gender, mother, father, imgUrl, townOfBirth, weight, height, path) {
         this.id = id;
         this.name = name;
         this.birthDay = birthDay;
@@ -11,6 +11,7 @@
         this.townOfBirth = townOfBirth;
         this.weight = weight;
         this.height = height;
+        this.path = "" || path;
     }, {
         id: "",
         name: "",
@@ -22,9 +23,10 @@
         townOfBirth: "",
         weight: 0,
         height: 0,
+        path: ""
     })
 
-    var EventModel = WinJS.Class.define(function (id, title, date, description, pictures) {
+    var EventModel = WinJS.Class.define(function (id, title, date, description, pictures, path) {
         this.id = id;
         this.title = title;
         this.date = date;
@@ -34,6 +36,7 @@
             this.pictures = pictures;
         }
         this.firstPic = this.pictures[0];
+        this.path = "" || path;
     }, {
         id: "",
         title: "",

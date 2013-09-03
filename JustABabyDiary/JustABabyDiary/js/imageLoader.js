@@ -1,16 +1,25 @@
 ﻿/// <reference path="//Microsoft.WinJS.1.0/js/base.js" />
 (function () {
-    
     var loadImage = function (object) {
-        Windows.Storage.StorageFile.getFileFromPathAsync(object.imgUrl).then(function (file) {
+        Windows.Storage.StorageFile.getFileFromPathAsync(object.path).then(function (file) {
             var url = URL.createObjectURL(file);
-            return url;
+            object.imgUrl = url;
         }, function () {
-            return "/images/baby-idea-icon.png";
+            object.imgUrl = "/images/baby-idea-icon.png";
         })
     }
 
+    var afterLoad = function (array) {
+        array.forEach(loadImage);
+    }
+
+    var loadSingle = function (single) {
+        loadImage(single)
+    }
+
     WinJS.Namespace.define("ImageLoader", {
-        load: loadImage
+        load: loadImage,
+        afterLoad: afterLoad,
+        loadSingle: loadSingle
     })
 })();
