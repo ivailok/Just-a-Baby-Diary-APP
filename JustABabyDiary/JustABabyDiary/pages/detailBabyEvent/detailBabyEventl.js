@@ -26,10 +26,15 @@
                 WinJS.Navigation.navigate("/pages/updateBabyEvent/updateBabyEvent.html",
                     { indexInEventsList: DetailEventCodeBehind.indexInEventsList });
             });
+
+            var dataTransferManager = Windows.ApplicationModel.DataTransfer.DataTransferManager.getForCurrentView();
+            dataTransferManager.addEventListener("datarequested", dataRequested);
+            document.getElementById("shareButton").addEventListener("click", showShareUI, false);
         },
 
         unload: function () {
-            // TODO: Respond to navigations away from this page.
+            var dataTransferManager = Windows.ApplicationModel.DataTransfer.DataTransferManager.getForCurrentView();
+            dataTransferManager.removeEventListener("datarequested", dataRequested);
         },
 
         updateLayout: function (element, viewState, lastViewState) {
@@ -38,4 +43,32 @@
             // TODO: Respond to changes in viewState.
         }
     });
+
+    function dataRequested(e) {
+        var request = e.request;
+
+        // Title is required
+        var dataPackageTitle = document.getElementById("pagetitle").innerText;
+        if ((typeof dataPackageTitle === "string") && (dataPackageTitle !== "")) {
+            var dataPackageText = document.getElementById("description").innerText;
+            if ((typeof dataPackageText === "string") && (dataPackageText !== "")) {
+                request.data.properties.title = dataPackageTitle;
+
+                // The description is optional.
+                var dataPackageDescription = document.getElementById("date").value;
+                if ((typeof dataPackageDescription === "string") && (dataPackageDescription !== "")) {
+                    request.data.properties.description = dataPackageDescription;
+                }
+                request.data.setText(dataPackageText);
+            } else {
+                request.failWithDisplayText("Enter the text you would like to share and try again.");
+            }
+        } else {
+            request.failWithDisplayText(SdkSample.missingTitleError);
+        }
+    }
+
+    function showShareUI() {
+        Windows.ApplicationModel.DataTransfer.DataTransferManager.showShareUI();
+    }
 })();
