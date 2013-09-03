@@ -101,6 +101,7 @@
     var loadPictures = function (indexOfEventInProfile) {
         var picturesToPush = events.dataSource.list.getAt(indexOfEventInProfile).pictures;
         for (var i = 0; i < picturesToPush.length; i++) {
+            picturesToPush[i].UrlName = "/images/baby-idea-icon.png";
             pictures.push(picturesToPush[i]);
         }
     }
