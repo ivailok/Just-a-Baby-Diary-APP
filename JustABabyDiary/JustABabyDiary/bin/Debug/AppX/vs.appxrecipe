@@ -5,7 +5,7 @@
     <WindowsUser>Lina</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>487C1AA9F5386B098AE1AB22EF58F43EBB90FC69D7910EB440752873A01ED055</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>E9E575221F92D8872BDFA2A9E7CBAC94FCABD5C59B4215EF83078A7238453001</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.0_neutral__zx5rf1w1p0xxg</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>1ff9412e-31a3-4d53-b78e-09df9439d997_zx5rf1w1p0xxg!App</RegisteredUserModeAppID>
     <RegisteredPackageID>1ff9412e-31a3-4d53-b78e-09df9439d997</RegisteredPackageID>
@@ -16,7 +16,7 @@
     <AppXManifest Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-09-03T07:56:24.899</Modified>
+      <Modified>2013-09-03T09:52:37.530</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -62,7 +62,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\search\searchEvents.css">
       <PackagePath>search\searchEvents.css</PackagePath>
-      <Modified>2013-09-03T07:53:05.186</Modified>
+      <Modified>2013-09-03T09:46:13.981</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\images\baby-idea-icon.png">
       <PackagePath>images\baby-idea-icon.png</PackagePath>
@@ -198,7 +198,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\search\searchEvents.js">
       <PackagePath>search\searchEvents.js</PackagePath>
-      <Modified>2013-09-03T09:13:33.192</Modified>
+      <Modified>2013-09-03T09:40:13.154</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addEvent\addEvent.html">
       <PackagePath>pages\addEvent\addEvent.html</PackagePath>
@@ -242,11 +242,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\search\searchEvents.html">
       <PackagePath>search\searchEvents.html</PackagePath>
-      <Modified>2013-09-03T07:53:05.108</Modified>
+      <Modified>2013-09-03T09:44:48.539</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-09-03T07:56:24.836</Modified>
+      <Modified>2013-09-03T09:52:37.464</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

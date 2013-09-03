@@ -32,18 +32,28 @@
     <div class="searchEvents fragment">
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
-            <div class="titlearea">
-                <h1 class="pagetitle win-type-ellipsis"></h1>
+            <div id="header-div" class="titlearea">
+                <h1 class="pagetitle win-type-ellipsis">Search Results: <span data-win-bind="innerText: searchQuery.queryText"></span></h1>
                 <h2 class="pagesubtitle win-type-ellipsis"></h2>
             </div>
         </header>
         <section aria-label="Main content" role="main">
-            <div class="resultsmessage win-type-x-large">No results match your search.</div>
-            <div class="filterarea">
-                <ul class="filterbar"></ul>
-                <select class="filterselect"></select>
+            <div id="search-item-template" data-win-control="WinJS.Binding.Template">
+                <div style="width: 150px; height: 100px;">
+                    <!-- Displays the "picture" field. -->
+                    <img src="#" style="width: 60px; height: 60px;"
+                        data-win-bind="src: firstPic" alt="pic" />
+                    <h4 data-win-bind="innerText: title"></h4>
+                </div>
             </div>
-            <div class="resultslist win-selectionstylefilled" aria-label="Search results" data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'none' }"></div>
+            <div id="search-results" data-win-control="WinJS.UI.ListView"
+                data-win-options="{
+                    itemTemplate: select('#search-item-template'),
+                    itemDataSource: ViewModels.Search.searchEvnt.dataSource
+                }">
+            </div>
+            <div class="resultslist win-selectionstylefilled" aria-label="Search results" 
+                data-win-control="WinJS.UI.ListView" data-win-options="{ selectionMode: 'none' }"></div>
         </section>
     </div>
 </body>

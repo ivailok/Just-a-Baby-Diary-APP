@@ -24,7 +24,7 @@
 
     ui.Pages.define(searchPageURI, {
         ready: function (element, options) {
-            WinJS.Binding.processAll(element, ViewModels.Events.events);
+            WinJS.Binding.processAll(element, ViewModels);
             ViewModels.Search.submitSearchText(options.queryText);
             //this._searchData(options.queryText);
         },
