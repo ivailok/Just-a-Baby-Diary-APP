@@ -23,12 +23,12 @@
         </header>
         <section aria-label="Main content" role="main">
             <div id="create-profile-form">
-                <img id="profile-image" src="#"/>
+                <img id="profile-image" src="#" />
 
                 <div id="input-container">
                     <div>
                         <label for="name-input">Name:</label>
-                        <input id="name-input" type="text"/>
+                        <input id="name-input" type="text" />
                     </div>
 
                     <label for="birthday-input">Birthday:</label>
@@ -42,36 +42,42 @@
                         <select id="gender-input">
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
-                        </select> 
+                        </select>
                     </div>
 
                     <div>
                         <label for="mother-name-input">Mother:</label>
-                        <input id="mother-name-input" type="text"/>
+                        <input id="mother-name-input" type="text" />
                     </div>
 
                     <div>
                         <label for="father-name-input">Father:</label>
-                        <input id="father-name-input" type="text"/>
+                        <input id="father-name-input" type="text" />
                     </div>
 
                     <div>
                         <label for="town-of-birth-input">Town of birth:</label>
-                        <input id="town-of-birth-input" type="text"/>
+                        <input id="town-of-birth-input" type="text" />
                     </div>
 
                     <div>
                         <label for="height-input">Height:</label>
-                        <input id="height-input" type="number"/>
+                        <input id="height-input" type="number" />
                     </div>
 
                     <div>
                         <label for="weight-input">Weight:</label>
-                        <input id="weight-input" type="number"/>
+                        <input id="weight-input" type="number" />
                     </div>
                 </div>
 
                 <button id="image-loader">Load image</button>
+
+                <div id="picture-menu" data-win-control="WinJS.UI.Menu">
+                    <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'take-picture',label:'Take picture with camera',type:'toggle'}"></button>
+                    <hr data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'separator',type:'separator'}" />
+                    <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'upload-picture', label:'Upload picture from file'}"></button>
+                </div>
                 <button id="create-profile-button">Submit</button>
             </div>
         </section>

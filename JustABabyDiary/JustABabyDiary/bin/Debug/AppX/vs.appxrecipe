@@ -16,7 +16,7 @@
     <AppXManifest Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-09-03T09:52:37.530</Modified>
+      <Modified>2013-09-03T10:51:44.345</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -122,7 +122,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\viewModels.js">
       <PackagePath>js\viewModels.js</PackagePath>
-      <Modified>2013-09-03T09:14:49.117</Modified>
+      <Modified>2013-09-03T10:51:23.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addEvent\addEvent.js">
       <PackagePath>pages\addEvent\addEvent.js</PackagePath>
@@ -134,7 +134,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addProfile\addProfile.js">
       <PackagePath>pages\addProfile\addProfile.js</PackagePath>
-      <Modified>2013-09-02T22:19:36.607</Modified>
+      <Modified>2013-09-03T10:33:51.665</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addProfile\addProfileCodeBehind.js">
       <PackagePath>pages\addProfile\addProfileCodeBehind.js</PackagePath>
@@ -150,7 +150,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyProfile\detailBabyProfile.js">
       <PackagePath>pages\detailBabyProfile\detailBabyProfile.js</PackagePath>
-      <Modified>2013-09-02T18:28:36.791</Modified>
+      <Modified>2013-09-03T10:47:52.796</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyProfile\detailBabyProfileCodeBehind.js">
       <PackagePath>pages\detailBabyProfile\detailBabyProfileCodeBehind.js</PackagePath>
@@ -198,7 +198,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\search\searchEvents.js">
       <PackagePath>search\searchEvents.js</PackagePath>
-      <Modified>2013-09-03T09:40:13.154</Modified>
+      <Modified>2013-09-03T10:38:13.032</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addEvent\addEvent.html">
       <PackagePath>pages\addEvent\addEvent.html</PackagePath>
@@ -206,7 +206,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addProfile\addProfile.html">
       <PackagePath>pages\addProfile\addProfile.html</PackagePath>
-      <Modified>2013-09-02T06:23:52.338</Modified>
+      <Modified>2013-09-03T10:15:36.694</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyEvent\detailBabyEventl.html">
       <PackagePath>pages\detailBabyEvent\detailBabyEventl.html</PackagePath>
@@ -242,11 +242,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\search\searchEvents.html">
       <PackagePath>search\searchEvents.html</PackagePath>
-      <Modified>2013-09-03T09:44:48.539</Modified>
+      <Modified>2013-09-03T10:41:57.350</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-09-03T09:52:37.464</Modified>
+      <Modified>2013-09-03T10:51:44.215</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

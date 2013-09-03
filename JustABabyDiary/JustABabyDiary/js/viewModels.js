@@ -20,7 +20,7 @@
                     profileDTOs[i].Gender,
                     profileDTOs[i].Mother,
                     profileDTOs[i].Father,
-                    "#",
+                    profileDTOs[i].PictureName,
                     profileDTOs[i].TownOfBirth,
                     profileDTOs[i].BirthWeight,
                     profileDTOs[i].Height);
@@ -138,7 +138,7 @@
     var searchQuery = WinJS.Binding.as({ queryText: ""});
 
     var filteredEvents = events.createFiltered(function (item) {
-        var queryIndexInItemString = item.title.indexOf(searchQuery.queryText);
+        var queryIndexInItemString = item.title.toLowerCase().indexOf(searchQuery.queryText);
             //JSON.stringify(item.title).indexOf(searchQuery.queryText);
         
         var isSelected = queryIndexInItemString > -1;

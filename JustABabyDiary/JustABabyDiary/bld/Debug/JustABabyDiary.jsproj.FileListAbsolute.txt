@@ -20,3 +20,7 @@ C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDia
 C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\pri.resfiles
 C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\LanguageQualifiers.txt
 C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\ProjectArchitectures.txt
+C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\priconfig.xml.intermediate
+C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\layout.resfiles.intermediate
+C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\resources.resfiles.intermediate
+C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bld\Debug\pri.resfiles.intermediate

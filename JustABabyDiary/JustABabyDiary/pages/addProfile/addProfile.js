@@ -18,6 +18,28 @@
 
             var loadButton = document.getElementById("image-loader");
             loadButton.addEventListener("click", function () {
+                var menu = document.getElementById("picture-menu").winControl;
+                menu.show(loadButton);
+            });
+
+            var takePicBtn = document.getElementById("take-picture");
+            takePicBtn.addEventListener("click", function () {
+                var captureUI = new Windows.Media.Capture.CameraCaptureUI();
+                captureUI.captureFileAsync(Windows.Media.Capture.CameraCaptureUIMode.photo).then(function (capturedItem) {
+                    if (capturedItem) {
+                        var fileUrl = URL.createObjectURL(capturedItem);
+                        var token = storagePermissions.futureAccessList.add(capturedItem);
+                        profileImage.src = fileUrl;
+                        imagePath = capturedItem.path;
+                    }
+                    //else {
+                    //    document.getElementById("message").innerHTML = "User didn't capture a photo."
+                    //}
+                });
+            })
+
+            var uploadPic = document.getElementById("upload-picture");
+            uploadPic.addEventListener("click", function () {
                 var filePicker = new Windows.Storage.Pickers.FileOpenPicker();
                 filePicker.commitButtonText = "Load image";
                 filePicker.fileTypeFilter.append(".jpg");
