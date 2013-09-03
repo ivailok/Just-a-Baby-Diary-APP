@@ -10,6 +10,7 @@
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
     <link href="addProfile.css" rel="stylesheet" />
+    <script src="addProfileCodeBehind.js"></script>
     <script src="addProfile.js"></script>
 </head>
 <body>
@@ -17,11 +18,62 @@
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Welcome to addProfile</span>
+                <span class="pagetitle">Create new baby profile</span>
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <p>Content goes here.</p>
+            <div id="create-profile-form">
+                <img id="profile-image" src="#"/>
+
+                <div id="input-container">
+                    <div>
+                        <label for="name-input">Name:</label>
+                        <input id="name-input" type="text"/>
+                    </div>
+
+                    <label for="birthday-input">Birthday:</label>
+                    <div id="birthday-input">
+                        <div id="birthday-date-input" data-win-control="WinJS.UI.DatePicker"></div>
+                        <div id="birthday-time-input" data-win-control="WinJS.UI.TimePicker"></div>
+                    </div>
+
+                    <div>
+                        <label for="gender-input">Gender:</label>
+                        <select id="gender-input">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select> 
+                    </div>
+
+                    <div>
+                        <label for="mother-name-input">Mother:</label>
+                        <input id="mother-name-input" type="text"/>
+                    </div>
+
+                    <div>
+                        <label for="father-name-input">Father:</label>
+                        <input id="father-name-input" type="text"/>
+                    </div>
+
+                    <div>
+                        <label for="town-of-birth-input">Town of birth:</label>
+                        <input id="town-of-birth-input" type="text"/>
+                    </div>
+
+                    <div>
+                        <label for="height-input">Height:</label>
+                        <input id="height-input" type="number"/>
+                    </div>
+
+                    <div>
+                        <label for="weight-input">Weight:</label>
+                        <input id="weight-input" type="number"/>
+                    </div>
+                </div>
+
+                <button id="image-loader">Load image</button>
+                <button id="create-profile-button">Submit</button>
+            </div>
         </section>
     </div>
 </body>

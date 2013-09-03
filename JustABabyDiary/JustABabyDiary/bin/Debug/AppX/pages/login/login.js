@@ -3,14 +3,17 @@
 (function () {
     "use strict";
 
-    WinJS.UI.Pages.define("/pages/updateBabyProfile/updateBabyProfile.html", {
+    WinJS.UI.Pages.define("/pages/login/login.html", {
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         ready: function (element, options) {
-            var currentProfileIndex = options.currentProfileIndex;
-            WinJS.Binding.processAll(element, ViewModels.Profiles.profiles.getAt(currentProfileIndex));
-            var birthdayChangeBtn = document.getElementById("birthday-change");
-            birthdayChangeBtn.addEventListener("click", UpdateProfileCodeBehind.changeBirthday);
+            // TODO: Initialize the page here.
+
+            var loginBtn = document.getElementById("login-button");
+            loginBtn.addEventListener("click", LoginCodeBehind.login);
+
+            var showRegisterBtn = document.getElementById("show-register-form-button");
+            showRegisterBtn.addEventListener("click", LoginCodeBehind.goToRegisterPage);
         },
 
         unload: function () {

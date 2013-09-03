@@ -30,16 +30,31 @@
         this.date = date;
         this.description = description;
         this.pictures = [];
-        this.pictures = pictures;
+        if (pictures) {
+            this.pictures = pictures;
+        }
+        this.firstPic = this.pictures[0];
     }, {
         id: "",
         title: "",
         date: "",
-        description: ""
+        description: "",
+        firstPic: ""
+    })
+
+    var UserLoggedModel = WinJS.Class.define(function (id, nickname, sessionKey) {
+        this.id = id;
+        this.nickname = nickname;
+        this.sessionKey = sessionKey;
+    }, {
+        id: "",
+        nickname: "",
+        sessionKey: ""
     })
 
     WinJS.Namespace.define("Models", {
         ProfileModel: ProfileModel,
-        EventModel: EventModel
+        EventModel: EventModel,
+        UserLoggedModel: UserLoggedModel
     })
 })()

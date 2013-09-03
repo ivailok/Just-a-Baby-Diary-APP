@@ -7,7 +7,25 @@
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         ready: function (element, options) {
-            // TODO: Initialize the page here.
+            var indexInEventsList = options.indexInEventsList;
+            DetailEventCodeBehind.indexInEventsList = indexInEventsList;
+            WinJS.Binding.processAll(element, ViewModels.Events.events.getAt(indexInEventsList));
+            if (ViewModels.Events.pictures.length===0) {
+                ViewModels.Events.loadPictures(indexInEventsList);
+            }
+
+            var addPictureBtn = document.getElementById("add-picture");
+            addPictureBtn.addEventListener("click", DetailEventCodeBehind.addPicture);
+
+            var removePictureBtn = document.getElementById("remove-picture");
+            removePictureBtn.addEventListener("click", DetailEventCodeBehind.removePicture);
+
+            var updateEventBtn = document.getElementById("update-event");
+            updateEventBtn.addEventListener("click", function () {
+
+                WinJS.Navigation.navigate("/pages/updateBabyEvent/updateBabyEvent.html",
+                    { indexInEventsList: DetailEventCodeBehind.indexInEventsList });
+            });
         },
 
         unload: function () {

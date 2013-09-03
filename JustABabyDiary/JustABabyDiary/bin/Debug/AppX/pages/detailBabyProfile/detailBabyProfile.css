@@ -1,3 +1,59 @@
 ﻿.detailBabyProfile p {
     margin-left: 120px;
 }
+
+section {
+    padding: 40px;
+}
+
+#info-holder, img, .inner-info-holder {
+    display: inline-block;
+}
+
+#basicListView.win-listview {
+    height: 30%;
+    padding: 30px;
+}
+
+    #basicListView.win-listview .win-item {
+        width: 250px;
+        height: 90px;
+        padding: 10px;
+        display: inline-block;
+        background-color: #FFC980;
+        padding: 10px;
+    }
+
+        /*#basicListView.win-listview .win-item h4, #basicListView.win-listview .win-item img {
+            display: inline-block;
+        }*/
+
+        #basicListView.win-listview .win-item h4 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+.inner-info-holder {
+    margin-left: 40px;
+}
+
+#info-holder {
+    margin-left: 50px;
+}
+
+.inner-info-holder:first-of-type h3:first-of-type {
+    font-size: 30px;
+}
+
+h3, p {
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 18px;
+}

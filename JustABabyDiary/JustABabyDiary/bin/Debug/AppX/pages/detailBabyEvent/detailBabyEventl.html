@@ -10,6 +10,7 @@
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
     <link href="detailBabyEventl.css" rel="stylesheet" />
+    <script src="detailBabyEventCodeBehind.js"></script>
     <script src="detailBabyEventl.js"></script>
 </head>
 <body>
@@ -17,11 +18,47 @@
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Welcome to detailBabyEventl</span>
+                <span class="pagetitle">Details for event "<span data-win-bind="innerText:title"></span>"</span>
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <p>Content goes here.</p>
+            <div>
+                <div>
+                    <h3>Title: </h3>
+                    <p data-win-bind="innerText:title"></p>
+                </div>
+                <div>
+                    <h3>Date: </h3>
+                    <p data-win-bind="innerText:date"></p>
+                </div>
+                <div>
+                    <h3>Description: </h3>
+                    <p data-win-bind="innerText:description"></p>
+                </div>
+
+            </div>
+
+            <div id="pistures-list-view" data-win-control="WinJS.Binding.Template">
+                <div style="width: 150px; height: 100px;">
+                    <img src="#" style="width: 100px; height: 100px;"
+                        data-win-bind="src: UrlName" alt="title" />
+                </div>
+            </div>
+
+            <div id="basicListView" data-win-control="WinJS.UI.ListView"
+                data-win-options="{itemDataSource : ViewModels.Events.pictures.dataSource, 
+            itemTemplate: select('#pistures-list-view')}">
+            </div>
+
+            <div id="event-detail-app-bar" data-win-control="WinJS.UI.AppBar" data-win-options="">
+                <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'update-event',label:'Update event',icon:'refresh',section:'global',tooltip:'Update event'}">
+                </button>
+                <hr data-win-control="WinJS.UI.AppBarCommand" data-win-options="{type:'separator',section:'global'}" />
+                <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'add-picture',label:'Add picture',icon:'add',section:'global',tooltip:'Add picture to event'}">
+                </button>
+                <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'remove-picture',label:'Remove picture',icon:'remove',section:'global',tooltip:'Remove picture from event'}">
+                </button>
+            </div>
         </section>
     </div>
 </body>

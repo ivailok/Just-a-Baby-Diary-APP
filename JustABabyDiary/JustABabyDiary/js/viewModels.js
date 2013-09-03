@@ -135,7 +135,35 @@
         Data.Users.logout();
     }
 
+    var searchQuery = WinJS.Binding.as({ queryText: ""});
+
+    var filteredEvents = events.createFiltered(function (item) {
+        var queryIndexInItemString = item.title.indexOf(searchQuery.queryText);
+            //JSON.stringify(item.title).indexOf(searchQuery.queryText);
+        
+        var isSelected = queryIndexInItemString > -1;
+
+        return isSelected;
+    });
+
+    var changeSearchQuery = function (text) {
+        searchQuery.queryText = text;
+        events.notifyReload();
+    }
+
+    var submitQuery = function (query) {
+        searchQuery.queryText = query.queryText;
+        events.notifyReload();
+    }
+
+
     WinJS.Namespace.define("ViewModels");
+
+    WinJS.Namespace.defineWithParent(ViewModels, "Search", {
+        searchEvnt: filteredEvents,
+        submitSearchText: changeSearchQuery,
+        submitSearchQuery: submitQuery,
+    });
 
     WinJS.Namespace.defineWithParent(ViewModels, "Profiles", {
         loadProfiles: loadProfiles,

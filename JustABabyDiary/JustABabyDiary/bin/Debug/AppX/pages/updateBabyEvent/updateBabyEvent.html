@@ -10,6 +10,7 @@
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
     <link href="updateBabyEvent.css" rel="stylesheet" />
+    <script src="updateBabyEventCodeBehind.js"></script>
     <script src="updateBabyEvent.js"></script>
 </head>
 <body>
@@ -17,11 +18,28 @@
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Welcome to updateBabyEvent</span>
+                <span class="pagetitle">Update BabyEvent "<span data-win-bind="innerText:title"></span>"</span>
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <p>Content goes here.</p>
+            <div id="input-container">
+                <div>
+                    <label for="title-input">Title:</label>
+                    <input id="title-input" type="text" data-win-bind="value:title" />
+                </div>
+
+                <button id="date-change">Change Date</button>
+                <div id="date-input" style="display: none">
+                    <div id="birthday-date-input" data-win-control="WinJS.UI.DatePicker"></div>
+                    <div id="birthday-time-input" data-win-control="WinJS.UI.TimePicker"></div>
+                </div>
+
+                <div>
+                    <label for="description-textarea">Description:</label>
+                    <textarea id="description-textarea" data-win-bind="value:description"></textarea>
+                </div>
+                <button id="update-profile-button">Update</button>
+            </div>
         </section>
     </div>
 </body>

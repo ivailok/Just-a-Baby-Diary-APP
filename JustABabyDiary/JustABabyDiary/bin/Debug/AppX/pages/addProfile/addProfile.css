@@ -1,3 +1,26 @@
 ﻿.addProfile p {
     margin-left: 120px;
 }
+
+#form-name {
+    position: relative;
+    left: 100px;
+}
+
+#profile-image {
+    position: absolute;
+    height: 339.46px;
+    width: 312.97px;
+    left: 1.3px;
+    top: 126.23px;
+}
+
+#input-container {
+    position: relative;
+    left: 400px;
+}
+
+#create-profile-button {
+    position: relative;
+    left: 500px;
+}

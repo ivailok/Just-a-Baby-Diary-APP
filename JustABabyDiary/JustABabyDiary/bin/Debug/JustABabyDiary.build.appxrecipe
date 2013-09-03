@@ -31,11 +31,23 @@
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\home\home.css">
       <PackagePath>pages\home\home.css</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\login\login.css">
+      <PackagePath>pages\login\login.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\register\register.css">
+      <PackagePath>pages\register\register.css</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyEvent\updateBabyEvent.css">
       <PackagePath>pages\updateBabyEvent\updateBabyEvent.css</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyProfile\updateBabyProfile.css">
       <PackagePath>pages\updateBabyProfile\updateBabyProfile.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\search\searchEvents.css">
+      <PackagePath>search\searchEvents.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\images\baby-idea-icon.png">
+      <PackagePath>images\baby-idea-icon.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\images\logo.png">
       <PackagePath>images\logo.png</PackagePath>
@@ -56,6 +68,9 @@
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\dataLayer.js">
       <PackagePath>js\dataLayer.js</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\dataLoader.js">
+      <PackagePath>js\dataLoader.js</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\default.js">
       <PackagePath>js\default.js</PackagePath>
     </AppxPackagedFile>
@@ -67,6 +82,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\navigator.js">
       <PackagePath>js\navigator.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\sha1.js">
+      <PackagePath>js\sha1.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\userLoginData.js">
+      <PackagePath>js\userLoginData.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\viewModels.js">
       <PackagePath>js\viewModels.js</PackagePath>
@@ -101,6 +122,18 @@
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\home\homeCodeBehind.js">
       <PackagePath>pages\home\homeCodeBehind.js</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\login\login.js">
+      <PackagePath>pages\login\login.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\login\loginCodeBehind.js">
+      <PackagePath>pages\login\loginCodeBehind.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\register\register.js">
+      <PackagePath>pages\register\register.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\register\registerCodeBehind.js">
+      <PackagePath>pages\register\registerCodeBehind.js</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyEvent\updateBabyEvent.js">
       <PackagePath>pages\updateBabyEvent\updateBabyEvent.js</PackagePath>
     </AppxPackagedFile>
@@ -112,6 +145,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyProfile\updateBabyProfileCodeBehind.js">
       <PackagePath>pages\updateBabyProfile\updateBabyProfileCodeBehind.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\search\searchEvents.js">
+      <PackagePath>search\searchEvents.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addEvent\addEvent.html">
       <PackagePath>pages\addEvent\addEvent.html</PackagePath>
@@ -131,11 +167,20 @@
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\default.html">
       <PackagePath>default.html</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\login\login.html">
+      <PackagePath>pages\login\login.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\register\register.html">
+      <PackagePath>pages\register\register.html</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyEvent\updateBabyEvent.html">
       <PackagePath>pages\updateBabyEvent\updateBabyEvent.html</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyProfile\updateBabyProfile.html">
       <PackagePath>pages\updateBabyProfile\updateBabyProfile.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\search\searchEvents.html">
+      <PackagePath>search\searchEvents.html</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

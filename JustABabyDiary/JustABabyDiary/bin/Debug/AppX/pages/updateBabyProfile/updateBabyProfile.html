@@ -10,6 +10,7 @@
     <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
 
     <link href="updateBabyProfile.css" rel="stylesheet" />
+    <script src="updateBabyProfileCodeBehind.js"></script>
     <script src="updateBabyProfile.js"></script>
 </head>
 <body>
@@ -17,11 +18,58 @@
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Welcome to updateBabyProfile</span>
+                <span class="pagetitle">Update profile of <span data-win-bind="innerText:name"></span></span>
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <p>Content goes here.</p>
+            <div id="create-profile-form">
+                <img id="profile-image" src="#" style="width: 60px; height: 60px;" data-win-bind="src:imgUrl"/>
+                <button id="image-loader">Load image</button>
+                <div id="input-container">
+                    <div>
+                        <label for="name-input" >Name:</label>
+                        <input id="name-input" type="text" data-win-bind="value:name"/>
+                    </div>
+
+                    <button id="birthday-change">Change Birthday</button>
+                    <div id="birthday-input" style="display:none">
+                        <div id="birthday-date-input" data-win-control="WinJS.UI.DatePicker"></div>
+                        <div id="birthday-time-input" data-win-control="WinJS.UI.TimePicker"></div>
+                    </div>
+
+                    <div>
+                        <label for="gender-input">Gender:</label>
+                        <input type="text" id="gender-input" data-win-bind="value:gender">
+                    </div>
+
+                    <div>
+                        <label for="mother-input">Mother:</label>
+                        <input id="mother-input" type="text" data-win-bind="value:mother" />
+                    </div>
+
+                    <div>
+                        <label for="father-input">Father:</label>
+                        <input id="father-input" type="text" data-win-bind="value:father" />
+                    </div>
+
+                    <div>
+                        <label for="weight-input">Weight:</label>
+                        <input id="weight-input" type="text" data-win-bind="value:weight" />
+                    </div>
+
+                    <div>
+                        <label for="height-input">Height:</label>
+                        <input id="height-input" type="text" data-win-bind="value:height"  />
+                    </div>
+
+                    <div>
+                        <label for="town-input">Town of birth:</label>
+                        <input id="town-input" type="text" data-win-bind="value:townOfBirth" />
+                    </div>
+                </div>
+
+                <button id="update-profile-button">Update</button>
+            </div>
         </section>
     </div>
 </body>

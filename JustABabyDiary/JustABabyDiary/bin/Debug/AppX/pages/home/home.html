@@ -11,15 +11,20 @@
 
     <link href="/css/default.css" rel="stylesheet" />
     <link href="/pages/home/home.css" rel="stylesheet" />
+    <script src="../../js/navigator.js"></script>
+    <script src="../../js/sha1.js"></script>
+    <script src="../../js/dataLoader.js"></script>
+    <script src="homeCodeBehind.js"></script>
     <script src="/pages/home/home.js"></script>
 </head>
 <body>
     <!-- The content that will be loaded and displayed. -->
     <div class="fragment homepage">
-        <div id="short-computer-template" data-win-control="WinJS.Binding.Template">
+        <div id="short-profile-template" data-win-control="WinJS.Binding.Template">
             <div>
-                <span data-win-bind="innerText: model"></span>, 
-                <span data-win-bind="innerText: manufacturer"></span>
+                <img height="200" width="350" src="#" data-win-bind="src: imgUrl" />
+                <div data-win-bind="innerText: name"></div>
+                <div data-win-bind="innerText: birthDay"></div>
             </div>
         </div>
 
@@ -32,15 +37,25 @@
         <section aria-label="Main content" role="main">
             <div id="no-layout-responsive-container">
                 <p id="no-layout-responsive-message">You have no baby profiles at the moment. It's recommended to create one.</p>
-                <button id="create-new-profile-button">Create</button>
+                <button id="create-new-profile-button">Create profile</button>
             </div>
-
+            <button id="go-to-login">Go to login page</button>
             <div id="profiles-list" data-win-control="WinJS.UI.ListView"
                 data-win-options="{
-                    itemDataSource: ViewModels.Profiles.dataSource,
-                    itemTemplate: select('#short-computer-template'),
+                    itemDataSource: ViewModels.Profiles.profiles.dataSource,
+                    itemTemplate: select('#short-profile-template'),
+                    oniteminvoked: HomeCodeBehind.goToProfileDetailsPage,
                     selectionMode: 'none'
                 }">
+            </div>
+            <div id="home-app-bar" data-win-control="WinJS.UI.AppBar">
+                <button data-win-control="WinJS.UI.AppBarCommand"
+                    data-win-options="{
+                label:'Add profile', icon:'add', 
+                onclick: HomeCodeBehind.goToProfileAddPage
+                }"
+                    type="button">
+                </button>
             </div>
         </section>
     </div>
