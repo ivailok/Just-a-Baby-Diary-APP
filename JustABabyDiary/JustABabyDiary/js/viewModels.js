@@ -5,6 +5,8 @@
 
 (function () {
     // profile func
+    var currentProfileIndex;
+
     var profiles = new WinJS.Binding.List([]);
 
     var loadProfileImage = function (value, index, array) {
@@ -158,12 +160,39 @@
         });
     }
 
-    var updateEvent = function (indexInProfileArray, eventId, title, date, description) {
-        Data.Events.updateEvent();
+    var updateEvent = function (indexInProfileArray, indexInEventArray, title, date, description) {
+        var oldEvent = events.dataSource.list.getAt(indexInEventArray);
+        var pictures = oldEvent.pictures;
+        var eventId = oldEvent.id;
+        var profileId = profiles.dataSource.list.getAt(indexInProfileArray).id;
+        var path = oldEvent.path;
+        var newModel = new Models.EventModel(eventId, title, date, description, pictures, path)
 
-        if (title != null) {
+        return Data.Events.updateEvent(profileId, eventId, newModel).then(function () {
 
-        }
+            newModel.firstPic = oldEvent.firstPic;
+            newModel.date = oldEvent.date;
+            newModel.description = oldEvent.description;
+            newModel.title = oldEvent.title;
+
+            if (title !== null) {
+                newModel.title = title;
+            }
+
+            if (description !== null) {
+                newModel.description = description;
+            }
+
+            if (date !== null) {
+                newModel.date = date;
+            }
+
+            events.dataSource.list.setAt(eventId, newModel);
+        }, function (error) {
+            var object = JSON.parse(error.responseText);
+            var messageDialog = new Windows.UI.Popups.MessageDialog(object.Message);
+            messageDialog.showAsync();
+        });
     }
 
 
@@ -267,6 +296,7 @@
         loadProfiles: loadProfiles,
         profiles: profiles,
         addProfile: addProfile,
+        currentProfileIndex: currentProfileIndex
     });
 
     WinJS.Namespace.defineWithParent(ViewModels, "Events", {

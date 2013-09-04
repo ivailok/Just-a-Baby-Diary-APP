@@ -84,10 +84,10 @@
         });
     }
 
-    var updateEvent = function (babyProfileId, eventId) {
+    var updateEvent = function (babyProfileId, eventId, eventModel) {
         return WinJS.xhr({
-            url: "http://justababydiarywebapi.apphb.com/api/babyevents?babyProfileId=" + babyProfileId + "&eventId=" + eventId,
-            type: "POST",
+            url: "http://justababydiarywebapi.apphb.com/api/babyevents/update/" + babyProfileId + "/" + eventId,
+            type: "PUT",
             headers: {
                 "X-sessionKey": UserLoginData.getData().sessionKey,
                 "Content-Type": "application/json"

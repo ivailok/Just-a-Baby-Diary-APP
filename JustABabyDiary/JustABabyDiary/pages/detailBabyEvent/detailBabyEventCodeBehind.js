@@ -4,6 +4,8 @@
 
     var indexInEventsList = 0;
 
+    var indexInProfilesList = 0;
+
     var addPicture = function () {
         var currentLoadedImagePath;
             var filePicker = new Windows.Storage.Pickers.FileOpenPicker();
@@ -23,16 +25,20 @@
     }
 
     var removePicture = function () {
-
+        
     }
 
     var updateEvent = function () {
         WinJS.Navigation.navigate("/pages/updateBabyEvent/updateBabyEvent.html",
-            { indexInEventsList: indexInEventsList });
+            {
+                indexInEventsList: indexInEventsList,
+                indexInProfilesList: indexInProfilesList
+            });
     }
 
     WinJS.Namespace.define("DetailEventCodeBehind", {
         indexInEventsList: indexInEventsList,
+        indexInProfilesList: indexInProfilesList,
         addPicture: addPicture,
         removePicture: removePicture,
         updateEvent: updateEvent

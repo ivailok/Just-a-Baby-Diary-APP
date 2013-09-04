@@ -17,6 +17,7 @@
 
     var goToEventDetailsPage = function (invokeEvent) {
         WinJS.Navigation.navigate("/pages/detailBabyEvent/detailBabyEventl.html", {
+            indexInProfilesList: currentProfileIndex,
             indexInEventsList: invokeEvent.detail.itemIndex
         });
     }

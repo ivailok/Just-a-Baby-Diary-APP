@@ -23,8 +23,8 @@
         return Loader.Events.addEvent(id, eventModel);
     }
 
-    var updateEvent = function (babyProfileId, eventId) {
-        return Loader.Events.updateEvent(babyProfileId, eventId);
+    var updateEvent = function (babyProfileId, eventId, eventModel) {
+        return Loader.Events.updateEvent(babyProfileId, eventId, eventModel);
     }
 
     var login = function (username, authCode) {

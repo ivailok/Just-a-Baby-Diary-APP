@@ -9,26 +9,44 @@
         // populates the page elements with the app's data.
         ready: function (element, options) {
             var indexInEventsList = options.indexInEventsList;
+            var indexInProfilesList = options.indexInProfilesList;
             WinJS.Binding.processAll(element, ViewModels.Events.events.getAt(indexInEventsList));
             var dateChangeBtn = document.getElementById("date-change");
             dateChangeBtn.addEventListener("click", UpdateBabyCodeBehind.showChangeDateInput);
 
             var updateBtn = document.getElementById("update-profile-button");
-            var titleInput = document.getElementById("title-input").value;
-            var dateInput = document.getElementById("date-input").value;
-            var descriptionInput = document.getElementById("description-textarea").value;
-
+            
             updateBtn.addEventListener("click", function () {
-                if (titleInput=="") {
+                var titleInput = document.getElementById("title-input").value;
+                var date = document.getElementById("event-date-input").winControl.current;
+                var time = document.getElementById("event-time-input").winControl.current;
+                var dateInput = new Date(date.getYear(), date.getMonth(), date.getDate(), time.getHours(), time.getMinutes());
+                var descriptionInput = document.getElementById("description-textarea").value;
+
+                if (titleInput === "" || titleInput === undefined) {
                     titleInput = null;
                 }
-                if (dateInput=="") {
+
+                if (document.getElementById("date-input").style.display === "none") {
                     dateInput = null;
                 }
-                if (descriptionInput=="") {
+
+                if (dateInput === "" || dateInput === undefined) {
+                    dateInput = null;
+                }
+
+                if (descriptionInput === "" || descriptionInput === undefined) {
                     descriptionInput = null;
                 }
-                ViewModels.Events.updateEvent(indexInEventsList, titleInput, dateInput, descriptionInput);
+
+                ViewModels.Events.updateEvent(indexInProfilesList, indexInEventsList, titleInput, dateInput, descriptionInput).then(function () {
+                    //var messageDialog = new Windows.UI.Popups.MessageDialog("Baby event successfully updated");
+                    //messageDialog.showAsync().then(function () {
+                        //WinJS.Navigation.back();
+                    //});
+                }, function (error) {
+                    
+                });
             });
         },
 
