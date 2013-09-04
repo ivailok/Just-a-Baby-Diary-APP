@@ -133,12 +133,10 @@
     }
 
     var addToEventsBindingArray = function (model) {
-
-
         model.path = model.firstPic;
         model.firstPic = "#";
         events.push(model);
-        loadProfileImage(model, events.length - 1, events.dataSource.list);
+        loadEventImage(model, events.length - 1, events.dataSource.list);
     }
 
     var addEvent = function (profileId, id, title, date, description, pictures) {
