@@ -169,7 +169,6 @@
         var newModel = new Models.EventModel(eventId, title, date, description, pictures, path)
 
         return Data.Events.updateEvent(profileId, eventId, newModel).then(function () {
-
             newModel.firstPic = oldEvent.firstPic;
             newModel.date = oldEvent.date;
             newModel.description = oldEvent.description;
@@ -187,7 +186,7 @@
                 newModel.date = date;
             }
 
-            events.dataSource.list.setAt(eventId, newModel);
+            events.dataSource.list.setAt(indexInEventArray, newModel);
         }, function (error) {
             var object = JSON.parse(error.responseText);
             var messageDialog = new Windows.UI.Popups.MessageDialog(object.Message);

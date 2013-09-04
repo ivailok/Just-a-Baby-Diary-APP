@@ -14,11 +14,19 @@
         ready: function (element, options) {
             var currentProfileIndex = options.indexInProfilesList;
             DetailProfileCodeBehind.currentProfileIndex = currentProfileIndex;
-            var currProfile=ViewModels.Profiles.profiles.getAt(currentProfileIndex);
+            var currProfile = ViewModels.Profiles.profiles.getAt(currentProfileIndex);
             WinJS.Binding.processAll(element, currProfile);
             DetailProfileCodeBehind.loadEvents(currentProfileIndex);
             var events = ViewModels.Events.events;
-            WinJS.Binding.processAll(document.getElementById("basicListView"),events);
+            WinJS.Binding.processAll(document.getElementById("basicListView"), events);
+
+            var listView = document.getElementById("basicListView").winControl;
+            listView.oniteminvoked = function (invokeEvent) {
+                WinJS.Navigation.navigate("/pages/detailBabyEvent/detailBabyEventl.html", {
+                    indexInProfilesList: currentProfileIndex,
+                    indexInEventsList: invokeEvent.detail.itemIndex
+                });
+            }
         },
 
         unload: function () {

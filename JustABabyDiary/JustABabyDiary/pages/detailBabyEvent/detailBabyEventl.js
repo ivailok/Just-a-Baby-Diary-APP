@@ -9,6 +9,7 @@
         ready: function (element, options) {
             var indexInEventsList = options.indexInEventsList;
             DetailEventCodeBehind.indexInEventsList = indexInEventsList;
+            var indexInProfilesList = options.indexInProfilesList;
             DetailEventCodeBehind.indexInProfilesList = options.indexInProfilesList;
             WinJS.Binding.processAll(element, ViewModels.Events.events.getAt(indexInEventsList));
             ViewModels.Events.loadPictures(indexInEventsList);
@@ -21,7 +22,10 @@
 
             var updateEventBtn = document.getElementById("update-event");
             updateEventBtn.addEventListener("click", function () {
-                DetailEventCodeBehind.updateEvent();
+                WinJS.Navigation.navigate("/pages/updateBabyEvent/updateBabyEvent.html", {
+                    indexInEventsList: indexInEventsList,
+                    indexInProfilesList: indexInProfilesList
+                });
             });
 
             var dataTransferManager = Windows.ApplicationModel.DataTransfer.DataTransferManager.getForCurrentView();

@@ -40,10 +40,10 @@
                 }
 
                 ViewModels.Events.updateEvent(indexInProfilesList, indexInEventsList, titleInput, dateInput, descriptionInput).then(function () {
-                    //var messageDialog = new Windows.UI.Popups.MessageDialog("Baby event successfully updated");
-                    //messageDialog.showAsync().then(function () {
-                        //WinJS.Navigation.back();
-                    //});
+                    var messageDialog = new Windows.UI.Popups.MessageDialog("Baby event successfully updated");
+                    messageDialog.showAsync().then(function () {
+                        WinJS.Navigation.back();
+                    });
                 }, function (error) {
                     
                 });

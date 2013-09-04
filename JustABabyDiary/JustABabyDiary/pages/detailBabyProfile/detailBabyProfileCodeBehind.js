@@ -22,7 +22,7 @@
         });
     }
 
-    var currentProfileIndex = 0;
+    var currentProfileIndex = currentProfileIndex || -1;
 
     var goToUpdateBabyProfilePage = function () {
         var appBar = document.getElementById("detail-profile-app-bar").winControl;
