@@ -34,7 +34,10 @@
                 normalProfiles.push(newModel);
             }
 
-            ImageLoader.afterProfileLoad(normalProfiles);
+            if (profileDTOs.length > 0)
+            {
+                ImageLoader.afterProfileLoad(normalProfiles);
+            }
 
             // must think how to load images correctly
         });
@@ -51,6 +54,7 @@
         return new WinJS.Promise(function (complete, error) {
             var model = new Models.ProfileModel(id, name, birthDay, gender, mother, father, imgUrl, townOfBirth, weight, height);
             Data.Profiles.addProfile(model).then(function (request) {
+                model.id = request.responseText;
                 addToProfilesBindingArray(model);
                 var messageDialog = new Windows.UI.Popups.MessageDialog("The profile is successfully registered.");
                 messageDialog.showAsync().done(function () {
@@ -68,6 +72,12 @@
     var events = new WinJS.Binding.List([]);
 
     var loadEvents = function (indexInProfileArray) {
+        if (events.length != 0) {
+            while (events.length > 0) {
+                events.pop();
+            }
+        }
+
         Data.Events.getEvents(profiles.dataSource.list.getAt(indexInProfileArray).id).then(function (request) {
             var object = JSON.parse(request.responseText);
             var eventDTOs = object;
@@ -91,7 +101,9 @@
                 events.push(model);
                 normalEvents.push(model);
 
-                ImageLoader.afterEventLoad(normalEvents);
+                if (eventDTOs.length > 0) {
+                    ImageLoader.afterEventLoad(normalEvents);
+                }
             }
         });
     }
