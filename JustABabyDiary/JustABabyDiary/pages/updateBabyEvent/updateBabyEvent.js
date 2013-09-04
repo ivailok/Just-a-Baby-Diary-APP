@@ -28,7 +28,7 @@
                 if (descriptionInput=="") {
                     descriptionInput = null;
                 }
-                ViewModels.Events.updateEvent(titleInput, dateInput, descriptionInput);
+                ViewModels.Events.updateEvent(indexInEventsList, titleInput, dateInput, descriptionInput);
             });
         },
 
