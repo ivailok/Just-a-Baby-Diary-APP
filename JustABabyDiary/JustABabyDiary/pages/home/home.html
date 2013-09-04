@@ -45,7 +45,8 @@
                     itemDataSource: ViewModels.Profiles.profiles.dataSource,
                     itemTemplate: select('#short-profile-template'),
                     oniteminvoked: HomeCodeBehind.goToProfileDetailsPage,
-                    selectionMode: 'none'
+                    layout : {type: WinJS.UI.GridLayout},
+                    selectionMode: 'none',
                 }">
             </div>
             <div id="home-app-bar" data-win-control="WinJS.UI.AppBar">

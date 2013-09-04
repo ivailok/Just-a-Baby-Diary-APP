@@ -139,10 +139,10 @@
         loadEventImage(model, events.length - 1, events.dataSource.list);
     }
 
-    var addEvent = function (profileId, id, title, date, description, pictures) {
+    var addEvent = function (indexInProfileArray, id, title, date, description, pictures) {
         return new WinJS.Promise(function (complete, error) {
             var model = new Models.EventModel(id, title, date, description, pictures);
-            Data.Events.addEvent(profiles.dataSource.list.getAt(profileId).id, model).then(function (request) {
+            Data.Events.addEvent(profiles.dataSource.list.getAt(indexInProfileArray).id, model).then(function (request) {
                 model.id = JSON.parse(request.responseText);
                 addToEventsBindingArray(model);
                 var messageDialog = new Windows.UI.Popups.MessageDialog("The event is successfully registered.");
@@ -158,6 +158,13 @@
         });
     }
 
+    var updateEvent = function (indexInProfileArray, eventId, title, date, description) {
+        Data.Events.updateEvent();
+
+        if (title != null) {
+
+        }
+    }
 
 
     // pictures of event func
@@ -260,7 +267,6 @@
         loadProfiles: loadProfiles,
         profiles: profiles,
         addProfile: addProfile,
-
     });
 
     WinJS.Namespace.defineWithParent(ViewModels, "Events", {
@@ -268,7 +274,8 @@
         events: events,
         addEvent: addEvent,
         pictures: pictures,
-        loadPictures: loadPictures
+        loadPictures: loadPictures,
+        updateEvent: updateEvent,
     });
 
     WinJS.Namespace.defineWithParent(ViewModels, "Users", {

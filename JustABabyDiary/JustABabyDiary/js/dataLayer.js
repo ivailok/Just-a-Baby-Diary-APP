@@ -23,6 +23,10 @@
         return Loader.Events.addEvent(id, eventModel);
     }
 
+    var updateEvent = function (babyProfileId, eventId) {
+        return Loader.Events.updateEvent(babyProfileId, eventId);
+    }
+
     var login = function (username, authCode) {
         return Loader.Users.login(username, authCode);
     }
@@ -44,7 +48,8 @@
 
     WinJS.Namespace.defineWithParent(Data, "Events", {
         addEvent: addEvent,
-        getEvents: getEvents
+        getEvents: getEvents,
+        updateEvent: updateEvent
     });
 
     WinJS.Namespace.defineWithParent(Data, "Users", {
