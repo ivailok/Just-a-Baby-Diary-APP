@@ -44,10 +44,18 @@
                 message.style.display = "block";
             }
 
-            var createButton = document.getElementById("create-new-profile-button");
-            createButton.addEventListener("click", function () {
-                HomeCodeBehind.goToProfileAddPage();
+            var logOutBtn = document.getElementById("log-out-button");
+            logOutBtn.addEventListener("click", function () {
+                ViewModels.Users.logout().then(function () {
+                    WinJS.Navigation.navigate("/pages/login/login.html");
+                }, function (error) {
+                    var object = JSON.parse(error.responseText);
+                    var messageDialog = new Windows.UI.Popups.MessageDialog(object.Message);
+                    messageDialog.showAsync();
+                });
             });
         }
+
+     
     });
 })();
