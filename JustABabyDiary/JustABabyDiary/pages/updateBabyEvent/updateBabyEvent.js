@@ -12,6 +12,24 @@
             WinJS.Binding.processAll(element, ViewModels.Events.events.getAt(indexInEventsList));
             var dateChangeBtn = document.getElementById("date-change");
             dateChangeBtn.addEventListener("click", UpdateBabyCodeBehind.showChangeDateInput);
+
+            var updateBtn = document.getElementById("update-profile-button");
+            var titleInput = document.getElementById("title-input").value;
+            var dateInput = document.getElementById("date-input").value;
+            var descriptionInput = document.getElementById("description-textarea").value;
+
+            updateBtn.addEventListener("click", function () {
+                if (titleInput=="") {
+                    titleInput = null;
+                }
+                if (dateInput=="") {
+                    dateInput = null;
+                }
+                if (descriptionInput=="") {
+                    descriptionInput = null;
+                }
+                ViewModels.Events.updateEvent(titleInput, dateInput, descriptionInput);
+            });
         },
 
         unload: function () {
