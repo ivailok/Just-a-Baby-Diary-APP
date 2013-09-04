@@ -7,6 +7,12 @@
     var profiles = new WinJS.Binding.List([]);
 
     var loadProfiles = function () {
+        if (profiles.length != 0) {
+            while (profiles.length > 0) {
+                profiles.pop();
+            }
+        }
+
         Data.Profiles.getProfiles().then(function (request) {
             var object = JSON.parse(request.responseText);
             var profileDTOs = object;
@@ -111,6 +117,12 @@
     var pictures = new WinJS.Binding.List([]);
 
     var loadPictures = function (indexOfEventInProfile) {
+        if (pictures.length != 0) {
+            while (pictures.length > 0) {
+                pictures.pop();
+            }
+        }
+
         var picturesToPush = events.dataSource.list.getAt(indexOfEventInProfile).pictures;
         for (var i = 0; i < picturesToPush.length; i++) {
             picturesToPush[i].UrlName = "/images/baby-idea-icon.png";
@@ -129,6 +141,7 @@
         return new WinJS.Promise(function (complete, error) {
             var model = new Models.EventModel(id, title, date, description, pictures);
             Data.Events.addEvent(profiles.dataSource.list.getAt(profileId).id, model).then(function (request) {
+                model.id = request.responseText;
                 addToEvenetsBindingArray(model);
                 var messageDialog = new Windows.UI.Popups.MessageDialog("The event is successfully registered.");
                 messageDialog.showAsync().done(function () {
