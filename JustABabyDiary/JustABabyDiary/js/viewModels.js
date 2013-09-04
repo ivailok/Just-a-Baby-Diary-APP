@@ -218,7 +218,7 @@
     }
 
     var logout = function () {
-        Data.Users.logout();
+        return Data.Users.logout();
     }
 
 
