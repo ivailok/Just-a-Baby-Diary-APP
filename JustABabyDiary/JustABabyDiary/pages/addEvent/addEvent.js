@@ -13,6 +13,8 @@
             var storagePermissions = Windows.Storage.AccessCache.StorageApplicationPermissions;
 
             var images = [];
+            AddEventCodeBehind.clearImagesList();
+
             var currentLoadedImagePath;
             var eventImage = document.getElementById("event-image");
             //var imageLoader = document.getElementById("image-loader");

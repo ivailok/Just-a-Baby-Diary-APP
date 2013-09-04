@@ -22,9 +22,16 @@
         bindingArray.push(image);
     }
 
+    var clearImagesList = function () {
+        while (bindingArray.length > 0) {
+            bindingArray.pop();
+        }
+    }
+
     WinJS.Namespace.define("AddEventCodeBehind", {
         createEvent: createEvent,
         images: bindingArray,
+        clearImagesList: clearImagesList,
         addImage: addImage
     });
 })();

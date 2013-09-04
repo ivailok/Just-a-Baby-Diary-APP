@@ -112,8 +112,6 @@
             var currentCount = events.dataSource.list.length
             events.dataSource.list.splice(0, currentCount);
 
-            var normalEvents = [];
-
             for (var i = 0; i < eventDTOs.length; i++) {
                 var model = new Models.EventModel(
                     eventDTOs[i].Id,
@@ -135,6 +133,8 @@
     }
 
     var addToEventsBindingArray = function (model) {
+
+
         model.path = model.firstPic;
         model.firstPic = "#";
         events.push(model);
