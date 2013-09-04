@@ -4,7 +4,19 @@
 /// <reference path="dataLayer.js" />
 
 (function () {
+    // profile func
     var profiles = new WinJS.Binding.List([]);
+
+    var loadProfileImage = function (value, index, array) {
+        Windows.Storage.StorageFile.getFileFromPathAsync(value.path).then(function (file) {
+            var url = URL.createObjectURL(file);
+            value.imgUrl = url;
+            profiles.dataSource.list.setAt(index, value);
+        }, function () {
+            value.imgUrl = "/images/baby-idea-icon.png";
+            profiles.dataSource.list.setAt(index, value);
+        });
+    }
 
     var loadProfiles = function () {
         if (profiles.length != 0) {
@@ -19,7 +31,6 @@
             var currentCount = profiles.dataSource.list.length
             profiles.dataSource.list.splice(0, currentCount);
 
-            var normalProfiles = [];
             for (var i = 0; i < profileDTOs.length; i++) {
                 var url = profileDTOs[i].PictureName;
 
@@ -37,30 +48,26 @@
                     url);
 
                 profiles.push(newModel);
-                normalProfiles.push(newModel);
             }
 
-            if (profileDTOs.length > 0)
-            {
-                ImageLoader.afterProfileLoad(normalProfiles);
+            if (profileDTOs.length > 0) {
+                profiles.forEach(loadProfileImage);
             }
-
-            // must think how to load images correctly
         });
     }
 
     var addToProfilesBindingArray = function (model) {
         model.path = model.imgUrl;
         model.imgUrl = "#";
-        ImageLoader.loadSingleProfile(model);
         profiles.push(model);
+        loadProfileImage(model, profiles.length - 1, profiles.dataSource.list);
     }
 
     var addProfile = function (id, name, birthDay, gender, mother, father, imgUrl, townOfBirth, weight, height) {
         return new WinJS.Promise(function (complete, error) {
             var model = new Models.ProfileModel(id, name, birthDay, gender, mother, father, imgUrl, townOfBirth, weight, height);
             Data.Profiles.addProfile(model).then(function (request) {
-                model.id = request.responseText;
+                model.id = JSON.parse(request.responseText);
                 addToProfilesBindingArray(model);
                 var messageDialog = new Windows.UI.Popups.MessageDialog("The profile is successfully registered.");
                 messageDialog.showAsync().done(function () {
@@ -75,7 +82,21 @@
         });
     }
 
+
+
+    // events of profile func
     var events = new WinJS.Binding.List([]);
+
+    var loadEventImage = function (value, index, array) {
+        Windows.Storage.StorageFile.getFileFromPathAsync(value.path).then(function (file) {
+            var url = URL.createObjectURL(file);
+            value.firstPic = url;
+            events.dataSource.list.setAt(index, value);
+        }, function () {
+            value.firstPic = "/images/baby-idea-icon.png";
+            events.dataSource.list.setAt(index, value);
+        })
+    }
 
     var loadEvents = function (indexInProfileArray) {
         if (events.length != 0) {
@@ -105,44 +126,27 @@
                 model.firstPic = "#";
 
                 events.push(model);
-                normalEvents.push(model);
+            }
 
-                if (eventDTOs.length > 0) {
-                    ImageLoader.afterEventLoad(normalEvents);
-                }
+            if (eventDTOs.length > 0) {
+                events.forEach(loadEventImage);
             }
         });
     }
 
-    var pictures = new WinJS.Binding.List([]);
-
-    var loadPictures = function (indexOfEventInProfile) {
-        if (pictures.length != 0) {
-            while (pictures.length > 0) {
-                pictures.pop();
-            }
-        }
-
-        var picturesToPush = events.dataSource.list.getAt(indexOfEventInProfile).pictures;
-        for (var i = 0; i < picturesToPush.length; i++) {
-            picturesToPush[i].UrlName = "/images/baby-idea-icon.png";
-            pictures.push(picturesToPush[i]);
-        }
-    }
-
-    var addToEvenetsBindingArray = function (model) {
+    var addToEventsBindingArray = function (model) {
         model.path = model.firstPic;
         model.firstPic = "#";
-        ImageLoader.loadSingleEvent(model);
         events.push(model);
+        loadProfileImage(model, events.length - 1, events.dataSource.list);
     }
 
     var addEvent = function (profileId, id, title, date, description, pictures) {
         return new WinJS.Promise(function (complete, error) {
             var model = new Models.EventModel(id, title, date, description, pictures);
             Data.Events.addEvent(profiles.dataSource.list.getAt(profileId).id, model).then(function (request) {
-                model.id = request.responseText;
-                addToEvenetsBindingArray(model);
+                model.id = JSON.parse(request.responseText);
+                addToEventsBindingArray(model);
                 var messageDialog = new Windows.UI.Popups.MessageDialog("The event is successfully registered.");
                 messageDialog.showAsync().done(function () {
                     complete();
@@ -156,6 +160,41 @@
         });
     }
 
+
+
+    // pictures of event func
+    var pictures = new WinJS.Binding.List([]);
+
+    var loadEventInnerImage = function (value, index, array) {
+        Windows.Storage.StorageFile.getFileFromPathAsync(value.path).then(function (file) {
+            var url = URL.createObjectURL(file);
+            value.url = url;
+            pictures.dataSource.list.setAt(index, value);
+        }, function () {
+            value.url = "/images/baby-idea-icon.png";
+            pictures.dataSource.list.setAt(index, value);
+        })
+    }
+
+    var loadPictures = function (indexOfEventInProfile) {
+        if (pictures.length != 0) {
+            while (pictures.length > 0) {
+                pictures.pop();
+            }
+        }
+
+        var picturesToPush = events.dataSource.list.getAt(indexOfEventInProfile).pictures;
+        for (var i = 0; i < picturesToPush.length; i++) {
+            var pictureModel = new Models.EventPictureModel("", picturesToPush[i].UrlName);
+            pictures.push(pictureModel);
+        }
+
+        pictures.forEach(loadEventInnerImage)
+    }
+
+
+
+    // user func
     var login = function (username, authCode) {
         return new WinJS.Promise(function (complete, error) {
             Data.Users.login(username, authCode).then(function (request) {
@@ -184,6 +223,9 @@
         Data.Users.logout();
     }
 
+
+
+    // search events func
     var searchQuery = WinJS.Binding.as({ queryText: ""});
 
     var filteredEvents = events.createFiltered(function (item) {
@@ -206,6 +248,8 @@
     }
 
 
+
+    // namespaces
     WinJS.Namespace.define("ViewModels");
 
     WinJS.Namespace.defineWithParent(ViewModels, "Search", {

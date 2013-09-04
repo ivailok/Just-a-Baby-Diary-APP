@@ -48,6 +48,14 @@
         firstPic: ""
     })
 
+    var EventPictureModel = WinJS.Class.define(function (url, path) {
+        this.url = url;
+        this.path = "" || path;
+    }, {
+        url: "",
+        path: ""
+    });
+
     var UserLoggedModel = WinJS.Class.define(function (id, nickname, sessionKey) {
         this.id = id;
         this.nickname = nickname;
@@ -61,6 +69,7 @@
     WinJS.Namespace.define("Models", {
         ProfileModel: ProfileModel,
         EventModel: EventModel,
-        UserLoggedModel: UserLoggedModel
+        UserLoggedModel: UserLoggedModel,
+        EventPictureModel: EventPictureModel
     })
 })()
