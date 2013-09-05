@@ -31,14 +31,17 @@ button {
     color: #FFC980;
     border: 2px solid #FFC980;
     font-family:cursive;
-} 
+}
 
+div {
+    
+}
 #profiles-list.win-listview {
     background-color:transparent;
-    width: 70%;
-    height: 50%;
+    height: 60%;
+    width:90%;
     border:none;
-    padding: 30px;
+    padding: 20px;
 }
 
 .win-container {
@@ -52,13 +55,9 @@ button {
     background-color:transparent;
     padding: 10px;
     width: 400px;
-    height: 250px;
+    height: 350px;
     color:#FFC980;
 }
-
-    .win-item:hover {
-        border: 2px solid #FFC980;
-    }
 
 #profiles-list.win-listview .win-item div {
 font-size:18px;
@@ -88,9 +87,7 @@ font-size:18px;
 }
 
 #profiles-list {
-    left: 50px;
-    top: 50px;
-    width: 1200px;
+    top:30px;
     height: 700px;
-    border: solid 2px rgba(0, 0, 0, 0.13);
+    /*border: solid 2px rgba(0, 0, 0, 0.13);*/
 }

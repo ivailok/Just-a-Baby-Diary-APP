@@ -3,6 +3,16 @@
     margin-right: 120px;
 }
 
+#login-button {
+display:block;
+}
+
+#login-form {
+position:relative;
+top:25%;
+left:5%;
+}
+
 @media screen and (-ms-view-state: snapped) {
     .login section[role=main] {
         margin-left: 20px;

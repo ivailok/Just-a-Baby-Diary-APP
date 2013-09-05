@@ -18,7 +18,7 @@
     var utils = WinJS.Utilities;
     var searchPageURI = "/search/searchEvents.html";
     var searchPane = appModel.Search.SearchPane.getForCurrentView();
-    searchPane.placeholderText = "Search for a profile name";
+    searchPane.placeholderText = "Search for a baby event";
 
 
     ui.Pages.define(searchPageURI, {
