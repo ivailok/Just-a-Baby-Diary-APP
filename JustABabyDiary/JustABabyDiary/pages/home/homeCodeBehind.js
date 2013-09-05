@@ -17,10 +17,10 @@
     }
 
     var goToProfileAddPage = function () {
-        //var appBar = document.getElementById("home-app-bar").winControl;
-        //if (appBar) {
-        //    appBar.hide();
-        //}
+        var appBar = document.getElementById("home-app-bar").winControl;
+        if (appBar) {
+            appBar.hide();
+        }
         WinJS.Navigation.navigate("/pages/addProfile/addProfile.html");
     }
 

@@ -22,6 +22,11 @@
 
             var updateEventBtn = document.getElementById("update-event");
             updateEventBtn.addEventListener("click", function () {
+                var appBar = document.getElementById("event-detail-app-bar").winControl;
+                if (appBar) {
+                    appBar.hide();
+                }
+
                 WinJS.Navigation.navigate("/pages/updateBabyEvent/updateBabyEvent.html", {
                     indexInEventsList: indexInEventsList,
                     indexInProfilesList: indexInProfilesList

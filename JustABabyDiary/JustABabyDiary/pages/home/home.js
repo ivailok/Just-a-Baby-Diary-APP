@@ -40,7 +40,6 @@
                         });
                     }
 
-
                     if (ViewModels.Profiles.profiles.dataSource.list.length === 0) {
                         var message = document.getElementById("no-layout-responsive-container");
                         message.style.display = "block";
@@ -56,8 +55,6 @@
                 HomeCodeBehind.goToLoginPage();
                
             }
-
-            
 
             var logOutBtn = document.getElementById("log-out-button");
             logOutBtn.addEventListener("click", function () {
