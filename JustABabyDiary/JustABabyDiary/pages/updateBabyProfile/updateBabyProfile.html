@@ -39,7 +39,10 @@
 
                     <div>
                         <label for="gender-input">Gender:</label>
-                        <input type="text" id="gender-input" data-win-bind="value:gender">
+                        <select id="gender-input" data-win-bind="value: gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
                     </div>
 
                     <div>
@@ -69,6 +72,12 @@
                 </div>
 
                 <button id="update-profile-button">Update</button>
+
+                <div id="picture-menu" data-win-control="WinJS.UI.Menu">
+                    <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'take-picture',label:'Take picture with camera',type:'toggle'}"></button>
+                    <hr data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'separator',type:'separator'}" />
+                    <button data-win-control="WinJS.UI.MenuCommand" data-win-options="{id:'upload-picture', label:'Upload picture from file'}"></button>
+                </div>
             </div>
         </section>
     </div>

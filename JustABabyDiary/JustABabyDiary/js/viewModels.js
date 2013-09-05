@@ -86,6 +86,64 @@
         });
     }
 
+    var updateProfile = function (indexInProfileArray, name, birthDay, gender, mother, father, imgUrl, townOfBirth, weight, height) {
+        var oldProfile = profiles.dataSource.list.getAt(indexInProfileArray);
+        var profileName = profiles.dataSource.list.getAt(indexInProfileArray).name;
+        var newModel = new Models.ProfileModel("", name, birthDay, gender, mother, father, imgUrl, townOfBirth, weight, height, "");
+
+        return Data.Profiles.updateProfile(profileName, newModel).then(function () {
+            newModel.name = oldProfile.name;
+            newModel.birthDay = oldProfile.birthDay;
+            newModel.father = oldProfile.father;
+            newModel.mother = oldProfile.mother;
+            newModel.height = oldProfile.height;
+            newModel.weight = oldProfile.weight;
+            newModel.gender = oldProfile.gender;
+            newModel.path = oldProfile.path;
+            newModel.imgUrl = oldProfile.imgUrl;
+
+            if (name !== null) {
+                newModel.name = name;
+            }
+
+            if (birthDay !== null) {
+                newModel.birthDay = birthDay;
+            }
+
+            if (father !== null) {
+                newModel.father = father;
+            }
+
+            if (mother !== null) {
+                newModel.mother = mother;
+            }
+
+            if (height !== 0) {
+                newModel.height = height;
+            }
+
+            if (weight !== null) {
+                newModel.weight = weight;
+            }
+
+            if (gender !== null) {
+                newModel.gender = gender;
+            }
+
+            if (imgUrl !== null) {
+                newModel.path = imgUrl;
+                newModel.imgUrl = "#";
+                loadProfileImage(newModel, profiles.length - 1, profiles.dataSource.list);
+            }
+
+            profiles.dataSource.list.setAt(indexInProfileArray, newModel);
+        }, function (error) {
+            var object = JSON.parse(error.responseText);
+            var messageDialog = new Windows.UI.Popups.MessageDialog(object.Message);
+            messageDialog.showAsync();
+        });
+    }
+
 
 
     // events of profile func
@@ -297,6 +355,7 @@
         loadProfiles: loadProfiles,
         profiles: profiles,
         addProfile: addProfile,
+        updateProfile: updateProfile,
         currentProfileIndex: currentProfileIndex
     });
 

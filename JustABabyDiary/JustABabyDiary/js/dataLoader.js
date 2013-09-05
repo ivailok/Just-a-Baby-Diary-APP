@@ -35,9 +35,9 @@
         });
     }
 
-    var updateProfile = function (profileModel) {
+    var updateProfile = function (oldName, profileModel) {
         return WinJS.xhr({
-            url: "http://justababydiarywebapi.apphb.com/api/babyprofiles",
+            url: "http://justababydiarywebapi.apphb.com/api/babyprofiles?name=" + oldName,
             type: "PUT",
             headers: {
                 "X-sessionKey": UserLoginData.getData().sessionKey,

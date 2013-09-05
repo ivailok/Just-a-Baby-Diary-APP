@@ -15,6 +15,10 @@
         return Loader.Profiles.addProfile(profileModel);
     }
 
+    var updateProfile = function (oldName, profileModel) {
+        return Loader.Profiles.updateProfile(oldName, profileModel);
+    }
+
     var getEvents = function (id) {
         return Loader.Events.getEvents(id);
     }
@@ -43,7 +47,8 @@
 
     WinJS.Namespace.defineWithParent(Data, "Profiles", {
         getProfiles: getProfiles,
-        addProfile: addProfile
+        addProfile: addProfile,
+        updateProfile: updateProfile
     });
 
     WinJS.Namespace.defineWithParent(Data, "Events", {

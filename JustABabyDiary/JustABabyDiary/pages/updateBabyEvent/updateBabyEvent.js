@@ -14,7 +14,7 @@
             var dateChangeBtn = document.getElementById("date-change");
             dateChangeBtn.addEventListener("click", UpdateBabyCodeBehind.showChangeDateInput);
 
-            var updateBtn = document.getElementById("update-profile-button");
+            var updateBtn = document.getElementById("update-event-button");
             
             updateBtn.addEventListener("click", function () {
                 var titleInput = document.getElementById("title-input").value;
@@ -23,12 +23,17 @@
                 var dateInput = new Date(date.getFullYear(), date.getMonth(), date.getDate(), time.getHours(), time.getMinutes());
                 var descriptionInput = document.getElementById("description-textarea").value;
 
+                var correctDateFormat = null;
+
                 if (titleInput === "" || titleInput === undefined) {
                     titleInput = null;
                 }
 
                 if (document.getElementById("date-input").style.display === "none") {
                     dateInput = null;
+                }
+                else {
+                    correctDateFormat = dateInput.toLocaleDateString() + " " + dateInput.toLocaleTimeString();
                 }
 
                 if (dateInput === "" || dateInput === undefined) {
@@ -38,8 +43,6 @@
                 if (descriptionInput === "" || descriptionInput === undefined) {
                     descriptionInput = null;
                 }
-
-                var correctDateFormat = dateInput.toLocaleDateString() + " " + dateInput.toLocaleTimeString();
 
                 ViewModels.Events.updateEvent(indexInProfilesList, indexInEventsList, titleInput, correctDateFormat, descriptionInput).then(function () {
                     var messageDialog = new Windows.UI.Popups.MessageDialog("Baby event successfully updated");
