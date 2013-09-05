@@ -6,6 +6,8 @@
 
     var indexInProfilesList = 0;
 
+    var storagePermissions = Windows.Storage.AccessCache.StorageApplicationPermissions;
+
     var addPicture = function () {
         var currentLoadedImagePath;
             var filePicker = new Windows.Storage.Pickers.FileOpenPicker();
@@ -15,8 +17,9 @@
             filePicker.suggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.picturesLibrary;
             filePicker.pickSingleFileAsync().then(function (file) {
                 if (file) {
+                    var fileUrl = URL.createObjectURL(file);
                     var token = storagePermissions.futureAccessList.add(file);
-                    currentLoadedImagePath = file.path;
+                    imagePath = file.path;
                 }
             }, function (error) {
                 var messageDialog = new Windows.UI.Popups.MessageDialog("The selected image failed to load properly.");

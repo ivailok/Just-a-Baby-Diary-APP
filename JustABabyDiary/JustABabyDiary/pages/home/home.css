@@ -16,7 +16,7 @@ button {
 #profiles-list.win-listview {
     width: 70%;
     height: 50%;
-    border: 2px solid #1191B3;
+    border:none;
     padding: 30px;
 }
 
