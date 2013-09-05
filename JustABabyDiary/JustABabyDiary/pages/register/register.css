@@ -3,6 +3,12 @@
     margin-right: 120px;
 }
 
+#register-form {
+position:relative;
+top:25%;
+left:5%;
+}
+
 @media screen and (-ms-view-state: snapped) {
     .register section[role=main] {
         margin-left: 20px;
