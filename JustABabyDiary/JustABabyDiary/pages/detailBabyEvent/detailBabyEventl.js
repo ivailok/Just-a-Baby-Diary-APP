@@ -56,9 +56,9 @@
                 request.data.properties.title = dataPackageTitle;
 
                 // The description is optional.
-                var dataPackageDescription = document.getElementById("date").value;
+                var dataPackageDescription = document.getElementById("date").innerText;
                 if ((typeof dataPackageDescription === "string") && (dataPackageDescription !== "")) {
-                    request.data.properties.description = dataPackageDescription;
+                    request.data.properties.description = "Happend on: " + dataPackageDescription;
                 }
                 request.data.setText(dataPackageText);
             } else {
