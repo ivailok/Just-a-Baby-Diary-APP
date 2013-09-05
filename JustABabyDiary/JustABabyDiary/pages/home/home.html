@@ -38,7 +38,7 @@
             <div id="no-layout-responsive-container">
                 <p id="no-layout-responsive-message">You have no baby profiles at the moment. It's recommended to create one.</p>
             </div>
-            
+
             <button id="go-to-login">Go to login page</button>
 
             <!--<label id="progress-ring" class="progressRingText">
@@ -54,17 +54,21 @@
                 }">
             </div>
 
-            <div id="home-app-bar" data-win-control="WinJS.UI.AppBar">
-                <button data-win-control="WinJS.UI.AppBarCommand"
-                    data-win-options="{
+            <div id="app-bar-container">
+                <div id="home-app-bar" data-win-control="WinJS.UI.AppBar">
+                    <button data-win-control="WinJS.UI.AppBarCommand"
+                        data-win-options="{
                 label:'Add profile', icon:'add', 
                 onclick: HomeCodeBehind.goToProfileAddPage
                 }"
-                    type="button">
-                </button>
-                <button data-win-control="WinJS.UI.AppBarCommand" id="log-out-button" data-win-options="{
+                        type="button">
+                    </button>
+                    <button data-win-control="WinJS.UI.AppBarCommand" id="log-out-button" data-win-options="{
                     label:'Logout', icon:'go'
-                    }" type="button"></button>
+                    }"
+                        type="button">
+                    </button>
+                </div>
             </div>
         </section>
     </div>

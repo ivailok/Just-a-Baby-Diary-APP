@@ -24,6 +24,9 @@
             try {
                 var credential = vault.findAllByResource("babyDiary").first();
                 if (credential != null) {
+                    var appBar = document.getElementById("app-bar-container");
+                    appBar.style.display = "block";
+
                     var loginFormBtn = document.getElementById("go-to-login");
                     loginFormBtn.style.display = "none";
                     // Retrieves the actual userName and password.
@@ -44,8 +47,12 @@
                     }
                 }
             } catch (WinRTError) {
+                var appBar = document.getElementById("app-bar-container");
+                appBar.style.display = "none";
+
                 var logoutBtn = document.getElementById("log-out-button");
                 logoutBtn.style.display = "none";
+
                 HomeCodeBehind.goToLoginPage();
                
             }

@@ -79,9 +79,7 @@
                 });
             }, function (error) {
                 var messageDialog = new Windows.UI.Popups.MessageDialog("The profile is not registered.");
-                messageDialog.showAsync().done(function () {
-                    error("Try again");
-                });
+                messageDialog.showAsync();
             });
         });
     }
