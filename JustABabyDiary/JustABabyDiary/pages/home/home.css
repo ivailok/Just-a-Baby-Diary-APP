@@ -2,6 +2,7 @@
     color: #FFC980;
     background-image:url("/images/sky-background.jpg");
     background-size:cover;
+    font-family:cursive;
 }
 
 .win-backbutton, #home-app-bar {
@@ -17,21 +18,30 @@
 button {
     color: #FFC980;
     border: 2px solid #FFC980;
+    font-family:cursive;
 } 
 
 #profiles-list.win-listview {
+    background-color:transparent;
     width: 70%;
     height: 50%;
     border:none;
     padding: 30px;
 }
 
+.win-container {
+     background-color:transparent !important;
+}
+
+#short-profile-template {
+    background-color:transparent;
+}
 #profiles-list.win-listview .win-item {
-    background-color: #FFC980;
+    background-color:transparent;
     padding: 10px;
     width: 400px;
     height: 250px;
-    color:#063FFF;
+    color:#FFC980;
 }
 
     .win-item:hover {

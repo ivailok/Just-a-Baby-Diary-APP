@@ -38,8 +38,6 @@
             <div id="no-layout-responsive-container">
                 <p id="no-layout-responsive-message">You have no baby profiles at the moment. It's recommended to create one.</p>
             </div>
-
-            <button id="log-out-button">Logout</button>
             
             <button id="go-to-login">Go to login page</button>
 
@@ -64,6 +62,9 @@
                 }"
                     type="button">
                 </button>
+                <button data-win-control="WinJS.UI.AppBarCommand" id="log-out-button" data-win-options="{
+                    label:'Logout', icon:'go'
+                    }" type="button"></button>
             </div>
         </section>
     </div>
