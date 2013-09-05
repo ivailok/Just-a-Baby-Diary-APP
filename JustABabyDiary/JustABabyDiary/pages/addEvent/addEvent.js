@@ -50,9 +50,12 @@
                 var title = document.getElementById("title-input").value;
                 var date = document.getElementById("event-date-input").winControl.current;
                 var time = document.getElementById("event-time-input").winControl.current;
-                var eventDate = new Date(date.getYear(), date.getMonth(), date.getDate(), time.getHours(), time.getMinutes());
+                var eventDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), time.getHours(), time.getMinutes());
                 var description = document.getElementById("description-input").value;
-                AddEventCodeBehind.createEvent(currentProfileIndex, title, eventDate, description, images);
+
+                var correctDateFormat = eventDate.toLocaleDateString() + " " + eventDate.toLocaleTimeString();
+
+                AddEventCodeBehind.createEvent(currentProfileIndex, title, correctDateFormat, description, images);
             });
 
             var loadButton = document.getElementById("image-loader");

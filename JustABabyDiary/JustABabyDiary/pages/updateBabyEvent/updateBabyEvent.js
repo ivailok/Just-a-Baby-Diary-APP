@@ -20,7 +20,7 @@
                 var titleInput = document.getElementById("title-input").value;
                 var date = document.getElementById("event-date-input").winControl.current;
                 var time = document.getElementById("event-time-input").winControl.current;
-                var dateInput = new Date(date.getYear(), date.getMonth(), date.getDate(), time.getHours(), time.getMinutes());
+                var dateInput = new Date(date.getFullYear(), date.getMonth(), date.getDate(), time.getHours(), time.getMinutes());
                 var descriptionInput = document.getElementById("description-textarea").value;
 
                 if (titleInput === "" || titleInput === undefined) {
@@ -39,7 +39,9 @@
                     descriptionInput = null;
                 }
 
-                ViewModels.Events.updateEvent(indexInProfilesList, indexInEventsList, titleInput, dateInput, descriptionInput).then(function () {
+                var correctDateFormat = dateInput.toLocaleDateString() + " " + dateInput.toLocaleTimeString();
+
+                ViewModels.Events.updateEvent(indexInProfilesList, indexInEventsList, titleInput, correctDateFormat, descriptionInput).then(function () {
                     var messageDialog = new Windows.UI.Popups.MessageDialog("Baby event successfully updated");
                     messageDialog.showAsync().then(function () {
                         WinJS.Navigation.back();

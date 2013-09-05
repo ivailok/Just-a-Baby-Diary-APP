@@ -23,7 +23,7 @@
             },
             data: JSON.stringify({
                 "name": profileModel.name,
-                "birthDay": profileModel.birthDay.toString(),
+                "birthDay": profileModel.birthDay,
                 "gender": profileModel.gender,
                 "mother": profileModel.mother,
                 "father": profileModel.father,
@@ -45,7 +45,7 @@
             },
             data: JSON.stringify({
                 "name": profileModel.name,
-                "birthDay": profileModel.birthDay.toString(),
+                "birthDay": profileModel.birthDay,
                 "gender": profileModel.gender,
                 "mother": profileModel.mother,
                 "father": profileModel.father,
@@ -77,7 +77,7 @@
             },
             data: JSON.stringify({
                 "title": eventModel.title,
-                "date": eventModel.date.toString(),
+                "date": eventModel.date,
                 "description": eventModel.description,
                 "pictureNames": eventModel.pictures
             })
@@ -94,7 +94,7 @@
             },
             data: JSON.stringify({
                 "title": eventModel.title,
-                "date": eventModel.date.toString(),
+                "date": eventModel.date,
                 "description": eventModel.description,
                 "pictureNames": JSON.stringify(eventModel.pictures)
             })

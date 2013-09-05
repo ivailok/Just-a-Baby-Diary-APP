@@ -63,7 +63,8 @@
                 var name = document.getElementById("name-input").value;
                 var date = document.getElementById("birthday-date-input").winControl.current;
                 var time = document.getElementById("birthday-time-input").winControl.current;
-                var birthDate = new Date(date.getYear(), date.getMonth(), date.getDate(), time.getHours(), time.getMinutes());
+                var birthDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), time.getHours(), time.getMinutes());
+                //birthDate.setHours(birthDate.getHours() - birthDate.getTimezoneOffset() / 60);
                 var gender = document.getElementById("gender-input").value;
                 var mother = document.getElementById("mother-name-input").value;
                 var father = document.getElementById("father-name-input").value;
@@ -71,7 +72,10 @@
                 var height = parseInt(document.getElementById("height-input").value);
                 var weight = parseInt(document.getElementById("weight-input").value);
                 var imageUrl = imagePath;
-                ViewModels.Profiles.addProfile("", name, birthDate, gender, mother, father, imageUrl, townOfBirth, weight, height).then(function () {
+
+                var correctDateFormat = birthDate.toLocaleDateString() + " " + birthDate.toLocaleTimeString();
+
+                ViewModels.Profiles.addProfile("", name, correctDateFormat, gender, mother, father, imageUrl, townOfBirth, weight, height).then(function () {
                     AddProfileCodeBehind.goToHomePage();
                 }, function (error) {
                 });
