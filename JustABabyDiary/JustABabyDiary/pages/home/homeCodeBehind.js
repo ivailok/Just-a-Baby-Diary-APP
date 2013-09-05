@@ -3,9 +3,17 @@
 
 (function () {
     var goToProfileDetailsPage = function (invokeEvent) {
-        WinJS.Navigation.navigate("/pages/detailBabyProfile/detailBabyProfile.html", {
-            indexInProfilesList: invokeEvent.detail.itemIndex
-        });
+        var vault = new Windows.Security.Credentials.PasswordVault();
+        try {
+            var credential = vault.findAllByResource("babyDiary");
+            WinJS.Navigation.navigate("/pages/detailBabyProfile/detailBabyProfile.html", {
+                indexInProfilesList: invokeEvent.detail.itemIndex
+            });
+        } catch (WinRTError) {
+            var messageDialog = new Windows.UI.Popups.MessageDialog("You are currently logged out. Please login first!");
+            messageDialog.showAsync();
+            WinJS.Navigation.navigate("/pages/login/login.html");
+        }
     }
 
     var goToProfileAddPage = function () {

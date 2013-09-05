@@ -24,6 +24,8 @@
             try {
                 var credential = vault.findAllByResource("babyDiary").first();
                 if (credential != null) {
+                    var loginFormBtn = document.getElementById("go-to-login");
+                    loginFormBtn.style.display = "none";
                     // Retrieves the actual userName and password.
                     username = credential.current.userName;
                     authCode = vault.retrieve("babyDiary", username).password;
@@ -34,19 +36,28 @@
                             HomeCodeBehind.callLoadProfiles();
                         });
                     }
+
+
+                    if (ViewModels.Profiles.profiles.dataSource.list.length === 0) {
+                        var message = document.getElementById("no-layout-responsive-container");
+                        message.style.display = "block";
+                    }
                 }
             } catch (WinRTError) {
+                var logoutBtn = document.getElementById("log-out-button");
+                logoutBtn.style.display = "none";
                 HomeCodeBehind.goToLoginPage();
+               
             }
 
-            if (ViewModels.Profiles.profiles.dataSource.list.length === 0) {
-                var message = document.getElementById("no-layout-responsive-container");
-                message.style.display = "block";
-            }
+            
 
             var logOutBtn = document.getElementById("log-out-button");
             logOutBtn.addEventListener("click", function () {
                 ViewModels.Users.logout().then(function () {
+                    var vault = Windows.Security.Credentials.PasswordVault();
+                    var credetential = vault.retrieve("babyDiary", username);
+                    vault.remove(credetential);
                     WinJS.Navigation.navigate("/pages/login/login.html");
                 }, function (error) {
                     var object = JSON.parse(error.responseText);
