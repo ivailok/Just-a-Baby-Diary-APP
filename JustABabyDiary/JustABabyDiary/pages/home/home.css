@@ -1,6 +1,12 @@
 ﻿body {
-    color: #1191B3;
-    background-color: #FFC980;
+    color: #FFC980;
+    background-image:url("/images/sky-background.jpg");
+    background-size:cover;
+}
+
+.win-backbutton, #home-app-bar {
+     color: #FFC980;
+     border-color:#FFC980;
 }
 
 .homepage section[role=main] {
@@ -9,8 +15,8 @@
 }
 
 button {
-    color: #1191B3;
-    border: 2px solid #1191B3;
+    color: #FFC980;
+    border: 2px solid #FFC980;
 } 
 
 #profiles-list.win-listview {
@@ -25,10 +31,11 @@ button {
     padding: 10px;
     width: 400px;
     height: 250px;
+    color:#063FFF;
 }
 
     .win-item:hover {
-        border: 2px solid #1191B3;
+        border: 2px solid #FFC980;
     }
 
 #profiles-list.win-listview .win-item div {
