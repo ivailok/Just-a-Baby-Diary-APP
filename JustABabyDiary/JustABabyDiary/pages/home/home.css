@@ -5,6 +5,18 @@
     font-family:cursive;
 }
 
+#go-to-login {
+    font-size: 30px;
+    border: none;
+    position:relative;
+    left:15%;
+    top:35%;
+}
+
+    #go-to-login:hover {
+     font-style:italic;
+     background-color:transparent;
+    }
 .win-backbutton, #home-app-bar {
      color: #FFC980;
      border-color:#FFC980;
