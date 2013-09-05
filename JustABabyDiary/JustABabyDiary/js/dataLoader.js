@@ -77,7 +77,7 @@
             },
             data: JSON.stringify({
                 "title": eventModel.title,
-                "date": eventModel.date,
+                "date": eventModel.date.toString(),
                 "description": eventModel.description,
                 "pictureNames": eventModel.pictures
             })
@@ -94,7 +94,7 @@
             },
             data: JSON.stringify({
                 "title": eventModel.title,
-                "date": eventModel.date,
+                "date": eventModel.date.toString(),
                 "description": eventModel.description,
                 "pictureNames": JSON.stringify(eventModel.pictures)
             })

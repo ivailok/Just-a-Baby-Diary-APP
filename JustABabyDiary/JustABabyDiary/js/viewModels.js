@@ -55,6 +55,8 @@
             if (profileDTOs.length > 0) {
                 profiles.forEach(loadProfileImage);
             }
+        }, function (error) {
+            console.log(JSON.parse(error.responseText).Message);
         });
     }
 

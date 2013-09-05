@@ -24,7 +24,7 @@
             <div>
                 <img height="200" width="350" src="#" data-win-bind="src: imgUrl" />
                 <div data-win-bind="innerText: name"></div>
-                <div data-win-bind="innerText: birthDay"></div>
+                <div data-win-bind="innerText: birthDay.toString()"></div>
             </div>
         </div>
 
@@ -37,9 +37,15 @@
         <section aria-label="Main content" role="main">
             <div id="no-layout-responsive-container">
                 <p id="no-layout-responsive-message">You have no baby profiles at the moment. It's recommended to create one.</p>
-                <button id="log-out-button">Logout</button>
             </div>
+
+            <button id="log-out-button">Logout</button>
+            
             <button id="go-to-login">Go to login page</button>
+
+            <!--<label id="progress-ring" class="progressRingText">
+            <progress class="win-ring withText"></progress>Processing</label>-->
+
             <div id="profiles-list" data-win-control="WinJS.UI.ListView"
                 data-win-options="{
                     itemDataSource: ViewModels.Profiles.profiles.dataSource,
@@ -49,6 +55,7 @@
                     selectionMode: 'none',
                 }">
             </div>
+
             <div id="home-app-bar" data-win-control="WinJS.UI.AppBar">
                 <button data-win-control="WinJS.UI.AppBarCommand"
                     data-win-options="{

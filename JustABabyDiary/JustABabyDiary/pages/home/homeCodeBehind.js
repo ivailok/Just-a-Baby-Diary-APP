@@ -39,7 +39,7 @@
 
     WinJS.Namespace.define("HomeCodeBehind", {
         callLoadProfiles: function () {
-            return ViewModels.Profiles.loadProfiles();
+            ViewModels.Profiles.loadProfiles();
         },
 
         goToProfileDetailsPage: goToProfileDetailsPage,

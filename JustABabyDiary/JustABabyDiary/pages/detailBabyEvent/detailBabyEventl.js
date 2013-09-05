@@ -14,11 +14,11 @@
             WinJS.Binding.processAll(element, ViewModels.Events.events.getAt(indexInEventsList));
             ViewModels.Events.loadPictures(indexInEventsList);
 
-            var addPictureBtn = document.getElementById("add-picture");
-            addPictureBtn.addEventListener("click", DetailEventCodeBehind.addPicture);
+            //var addPictureBtn = document.getElementById("add-picture");
+            //addPictureBtn.addEventListener("click", DetailEventCodeBehind.addPicture);
 
-            var removePictureBtn = document.getElementById("remove-picture");
-            removePictureBtn.addEventListener("click", DetailEventCodeBehind.removePicture);
+            //var removePictureBtn = document.getElementById("remove-picture");
+            //removePictureBtn.addEventListener("click", DetailEventCodeBehind.removePicture);
 
             var updateEventBtn = document.getElementById("update-event");
             updateEventBtn.addEventListener("click", function () {
