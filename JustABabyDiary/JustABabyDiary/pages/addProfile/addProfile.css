@@ -2,25 +2,130 @@
     margin-left: 120px;
 }
 
-#form-name {
+#create-profile-form {
     position: relative;
-    left: 100px;
+    left: 5%;
+    top: 5%;
 }
 
 #profile-image {
-    position: absolute;
-    height: 339.46px;
-    width: 312.97px;
-    left: 1.3px;
-    top: 126.23px;
+	position: relative;
+    display: block;
+	width: 320px;
+	height: 240px;
+}
+
+#image-loader {
+    position: relative;
+    margin-top: 1%;
+    font-size: large;
 }
 
 #input-container {
+	position: absolute;
+    display: block;
+    top: -1%;
+    font-size: large;
+    left: 25%;
+}
+
+#name-field {
     position: relative;
-    left: 400px;
+}
+
+#name-input {
+    position: relative;
+    display: block;
+    left: 10%
+}
+
+#birthday-field {
+    position: relative;
+    margin-top: 5%;
+}
+
+#birthday-input {
+    position: relative;
+    left: 10%;
+}
+
+#birthday-date-input {
+    position: relative;
+    display: block;
+}
+
+#birthday-time-input {
+    position: relative;
+}
+
+#gender-field {
+    position: relative;
+    margin-top: 5%;
+}
+
+#gender-input {
+    position: relative;
+    display: block;
+    left: 10%;
+}
+
+#mother-field {
+    position: relative;
+    margin-top: 5%;
+}
+
+#mother-name-input {
+    position: relative;
+    display: block;
+    left: 10%;
+}
+
+#father-field {
+    position: relative;
+    margin-top: 5%;
+}
+
+#father-name-input {
+    position: relative;
+    display: block;
+    left: 10%;
+}
+
+#town-field {
+    position: relative;
+    margin-top: 5%;
+}
+
+#town-of-birth-input {
+    position: relative;
+    display: block;
+    left: 10%;
+}
+
+#height-field {
+    position: relative;
+    margin-top: 5%;
+}
+
+#height-input {
+    position: relative;
+    display: block;
+    left: 10%;
+}
+
+#weight-field {
+    position: relative;
+    margin-top: 5%;
+}
+
+#weight-input {
+    position: relative;
+    display: block;
+    left: 10%;
 }
 
 #create-profile-button {
-    position: relative;
-    left: 500px;
+    margin-top: 5%;
+    font-size: large;
 }
+	

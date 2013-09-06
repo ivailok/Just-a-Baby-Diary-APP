@@ -19,7 +19,7 @@
             var loadButton = document.getElementById("image-loader");
             loadButton.addEventListener("click", function () {
                 var menu = document.getElementById("picture-menu").winControl;
-                menu.show(loadButton);
+                menu.show(loadButton, "bottom", "left");
             });
 
             var takePicBtn = document.getElementById("take-picture");
