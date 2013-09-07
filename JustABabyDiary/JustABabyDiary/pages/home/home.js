@@ -24,9 +24,6 @@
             try {
                 var credential = vault.findAllByResource("babyDiary").first();
                 if (credential != null) {
-                    var appBar = document.getElementById("app-bar-container");
-                    appBar.style.display = "block";
-
                     var loginFormBtn = document.getElementById("go-to-login");
                     loginFormBtn.style.display = "none";
                     // Retrieves the actual userName and password.
@@ -46,9 +43,6 @@
                     }
                 }
             } catch (WinRTError) {
-                var appBar = document.getElementById("app-bar-container");
-                appBar.style.display = "none";
-
                 var logoutBtn = document.getElementById("log-out-button");
                 logoutBtn.style.display = "none";
 
@@ -59,6 +53,11 @@
             var logOutBtn = document.getElementById("log-out-button");
             logOutBtn.addEventListener("click", function () {
                 ViewModels.Users.logout().then(function () {
+                    var appBar = document.getElementById("home-app-bar").winControl;
+                    if (appBar) {
+                        appBar.hide();
+                    }
+
                     var vault = Windows.Security.Credentials.PasswordVault();
                     var credetential = vault.retrieve("babyDiary", username);
                     vault.remove(credetential);

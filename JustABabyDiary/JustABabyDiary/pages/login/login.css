@@ -3,6 +3,10 @@
     margin-right: 120px;
 }
 
+#not-registered-text {
+    display: inline;
+}
+
 #login-button {
 display:block;
 }

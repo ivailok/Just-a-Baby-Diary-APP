@@ -29,7 +29,7 @@
         </div>
 
         <header aria-label="Header content" role="banner">
-            <button class="win-backbutton" aria-label="Back" disabled type="button" style="display:none"></button>
+            <button class="win-backbutton" aria-label="Back" disabled type="button" style="display: none"></button>
             <h1 class="titlearea win-type-ellipsis">
                 <span class="pagetitle">Welcome to JustABabyDiary!</span>
             </h1>
@@ -54,21 +54,19 @@
                 }">
             </div>
 
-            <div id="app-bar-container">
-                <div id="home-app-bar" data-win-control="WinJS.UI.AppBar">
-                    <button data-win-control="WinJS.UI.AppBarCommand"
-                        data-win-options="{
+            <div id="home-app-bar" data-win-control="WinJS.UI.AppBar">
+                <button data-win-control="WinJS.UI.AppBarCommand"
+                    data-win-options="{
                 label:'Add profile', icon:'add', 
                 onclick: HomeCodeBehind.goToProfileAddPage
                 }"
-                        type="button">
-                    </button>
-                    <button data-win-control="WinJS.UI.AppBarCommand" id="log-out-button" data-win-options="{
+                    type="button">
+                </button>
+                <button data-win-control="WinJS.UI.AppBarCommand" id="log-out-button" data-win-options="{
                     label:'Logout', icon:'go'
                     }"
-                        type="button">
-                    </button>
-                </div>
+                    type="button">
+                </button>
             </div>
         </section>
     </div>
