@@ -18,38 +18,38 @@
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Profile of <span data-win-bind="innerText:name"></span></span>
+                <span class="pagetitle">Profile of "<span data-win-bind="innerText:name"></span>"</span>
             </h1>
         </header>
         <section aria-label="Main content" role="main">
             <div>
-                <img src="#" data-win-bind="src:imgUrl" width="400" height="300" />
+                <img id="details-profile-image" src="#" data-win-bind="src:imgUrl" width="400" height="300" />
                 <div id="info-holder">
-                    <div class="inner-info-holder">
-                        <h3>Name: <span data-win-bind="innerText: name"></span></h3>
-                        
-                        <br />
-                        <h3>Birthday: </h3>
-                        <p data-win-bind="innerText: birthDay"></p>
-                        <br />
-                        <h3>Gender: </h3>
-                        <p data-win-bind="innerText: gender"></p>
-                        <br />
-                        <h3>Weight: </h3>
-                        <p data-win-bind="innerText: weight"></p>
+                    <div id="inner-left-info-holder">
+                        <label for="name-field">Name:</label>
+                        <p id="name-field" data-win-bind="innerText: name"></p>
+                        <label for="birthday-field">Birthday:</label>
+                        <p id="birthday-field" data-win-bind="innerText: birthDay"></p>
+                        <label for="gender-field">Gender:</label>
+                        <p id="gender-field" data-win-bind="innerText: gender"></p>
+                        <label for="town-field">Town:</label>
+                        <p id="town-field" data-win-bind="innerText: townOfBirth"></p>
                     </div>
-                    <div class="inner-info-holder">
-                        <h3>Height: </h3>
-                        <p data-win-bind="innerText: height"></p>
-                        <br />
-                        <h3>Mother: </h3>
-                        <p data-win-bind="innerText: mother"></p>
-                        <br />
-                        <h3>Father: </h3>
-                        <p data-win-bind="innerText: father"></p>
+                    <div id="inner-right-info-holder">
+                        <label for="weight-field">Weight: </label>
+                        <p id="weight-field" data-win-bind="innerText: weight"></p>
+                        <label for="height-field">Height: </label>
+                        <p id="height-field" data-win-bind="innerText: height"></p>
+                        <label for="mother-field">Mother: </label>
+                        <p id="mother-field" data-win-bind="innerText: mother"></p>
+                        <label for="father-field">Father: </label>
+                        <p id="father-field" data-win-bind="innerText: father"></p>
                     </div>
                 </div>
             </div>
+
+            <h2 id="events-start">Events:</h2>
+
             <div id="events-list-template" data-win-control="WinJS.Binding.Template">
                 <div style="width: 150px; height: 100px;">
                     <!-- Displays the "picture" field. -->

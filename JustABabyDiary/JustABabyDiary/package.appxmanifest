@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="1ff9412e-31a3-4d53-b78e-09df9439d997" Version="1.0.0.0" Publisher="CN=Ivaylo" />
+  <Identity Name="1ff9412e-31a3-4d53-b78e-09df9439d997" Version="1.0.0.3" Publisher="CN=Ivaylo" />
   <Properties>
     <DisplayName>JustABabyDiary</DisplayName>
     <PublisherDisplayName>Ivaylo</PublisherDisplayName>
@@ -17,14 +17,30 @@
     <Application Id="App" StartPage="default.html">
       <VisualElements DisplayName="JustABabyDiary" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="JustABabyDiary" ForegroundText="light" BackgroundColor="#464646">
         <DefaultTile ShowName="allLogos" />
-        <SplashScreen Image="images\splashscreen.png" />
+        <SplashScreen Image="images\splashscreen.png" BackgroundColor="#1B72A8" />
       </VisualElements>
       <Extensions>
         <Extension Category="windows.search" />
+        <Extension Category="windows.fileSavePicker">
+          <FileSavePicker>
+            <SupportedFileTypes>
+              <FileType>.jpg</FileType>
+            </SupportedFileTypes>
+          </FileSavePicker>
+        </Extension>
+        <Extension Category="windows.fileOpenPicker">
+          <FileOpenPicker>
+            <SupportedFileTypes>
+              <FileType>.png</FileType>
+              <FileType>.jpg</FileType>
+            </SupportedFileTypes>
+          </FileOpenPicker>
+        </Extension>
       </Extensions>
     </Application>
   </Applications>
   <Capabilities>
+    <Capability Name="picturesLibrary" />
     <Capability Name="internetClient" />
     <DeviceCapability Name="webcam" />
   </Capabilities>

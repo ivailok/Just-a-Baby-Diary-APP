@@ -1,5 +1,4 @@
 ﻿/// <reference path="//Microsoft.WinJS.1.0/js/ui.js" />
-/// <reference path="imageLoader.js" />
 /// <reference path="//Microsoft.WinJS.1.0/js/base.js" />
 /// <reference path="dataLayer.js" />
 
@@ -153,7 +152,7 @@
             value.firstPic = url;
             events.dataSource.list.setAt(index, value);
         }, function () {
-            value.firstPic = "/images/baby-idea-icon.png";
+            value.firstPic = "/images/baby-cot-icon.png";
             events.dataSource.list.setAt(index, value);
         })
     }
