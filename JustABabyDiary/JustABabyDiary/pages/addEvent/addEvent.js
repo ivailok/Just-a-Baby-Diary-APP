@@ -15,36 +15,6 @@
             var images = [];
             AddEventCodeBehind.clearImagesList();
 
-            var currentLoadedImagePath;
-            var eventImage = document.getElementById("event-image");
-            //var imageLoader = document.getElementById("image-loader");
-            //imageLoader.addEventListener("click", function () {
-            //    var filePicker = new Windows.Storage.Pickers.FileOpenPicker();
-            //    filePicker.commitButtonText = "Load image";
-            //    filePicker.fileTypeFilter.append(".jpg");
-            //    filePicker.fileTypeFilter.append(".png");
-            //    filePicker.suggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.picturesLibrary;
-            //    filePicker.pickSingleFileAsync().then(function (file) {
-            //        if (file) {
-            //            var fileUrl = URL.createObjectURL(file);
-            //            var token = storagePermissions.futureAccessList.add(file);
-            //            eventImage.src = fileUrl;
-            //            currentLoadedImagePath = file.path;
-            //        }
-            //    }, function (error) {
-            //        var messageDialog = new Windows.UI.Popups.MessageDialog("The selected image failed to load properly.");
-            //        messageDialog.showAsync();
-            //    });
-            //});
-
-            var imageAttacher = document.getElementById("image-attacher");
-            imageAttacher.addEventListener("click", function () {
-                if (currentLoadedImagePath) {
-                    AddEventCodeBehind.addImage({ "UrlName": eventImage.src });
-                    images.push({ "UrlName": currentLoadedImagePath });
-                }
-            });
-
             var createEventButton = document.getElementById("create-event-button");
             createEventButton.addEventListener("click", function () {
                 var title = document.getElementById("title-input").value;
@@ -78,8 +48,9 @@
                             capturedItem.moveAndReplaceAsync(file).then(function () {
                                 var fileUrl = URL.createObjectURL(capturedItem);
                                 var token = storagePermissions.futureAccessList.add(capturedItem);
-                                eventImage.src = fileUrl;
-                                currentLoadedImagePath = capturedItem.path;
+
+                                AddEventCodeBehind.addImage({ "UrlName": fileUrl });
+                                images.push({ "UrlName": capturedItem.path });
                             });
                         });
                     }
@@ -92,19 +63,23 @@
             var uploadPic = document.getElementById("upload-picture");
             uploadPic.addEventListener("click", function () {
                 var filePicker = new Windows.Storage.Pickers.FileOpenPicker();
-                filePicker.commitButtonText = "Load image";
+                filePicker.commitButtonText = "Load pictures";
                 filePicker.fileTypeFilter.append(".jpg");
                 filePicker.fileTypeFilter.append(".png");
                 filePicker.suggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.picturesLibrary;
-                filePicker.pickSingleFileAsync().then(function (file) {
-                    if (file) {
-                        var fileUrl = URL.createObjectURL(file);
-                        var token = storagePermissions.futureAccessList.add(file);
-                        eventImage.src = fileUrl;
-                        currentLoadedImagePath = file.path;
+                filePicker.pickMultipleFilesAsync().then(function (files) {
+                    for (var i = 0; i < files.length; i++) {
+                        var currentFile = files.getAt(i);
+                        if (currentFile) {
+                            var fileUrl = URL.createObjectURL(currentFile);
+                            var token = storagePermissions.futureAccessList.add(currentFile);
+
+                            AddEventCodeBehind.addImage({ "UrlName": fileUrl });
+                            images.push({ "UrlName": currentFile.path });
+                        }
                     }
                 }, function (error) {
-                    var messageDialog = new Windows.UI.Popups.MessageDialog("The selected image failed to load properly.");
+                    var messageDialog = new Windows.UI.Popups.MessageDialog("The selected images failed to load properly.");
                     messageDialog.showAsync();
                 });
             });
