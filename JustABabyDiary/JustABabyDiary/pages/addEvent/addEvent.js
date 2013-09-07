@@ -69,10 +69,19 @@
                 var captureUI = new Windows.Media.Capture.CameraCaptureUI();
                 captureUI.captureFileAsync(Windows.Media.Capture.CameraCaptureUIMode.photo).then(function (capturedItem) {
                     if (capturedItem) {
-                        var fileUrl = URL.createObjectURL(capturedItem);
-                        var token = storagePermissions.futureAccessList.add(capturedItem);
-                        eventImage.src = fileUrl;
-                        currentLoadedImagePath = capturedItem.path;
+                        var savePicker = new Windows.Storage.Pickers.FileSavePicker();
+                        savePicker.commitButtonText = "Save image";
+                        savePicker.suggestedFileName = "My image";
+                        savePicker.fileTypeChoices.insert("Camera image", [".jpg"]);
+
+                        savePicker.pickSaveFileAsync().then(function (file) {
+                            capturedItem.moveAndReplaceAsync(file).then(function () {
+                                var fileUrl = URL.createObjectURL(capturedItem);
+                                var token = storagePermissions.futureAccessList.add(capturedItem);
+                                eventImage.src = fileUrl;
+                                currentLoadedImagePath = capturedItem.path;
+                            });
+                        });
                     }
                     //else {
                     //    document.getElementById("message").innerHTML = "User didn't capture a photo."
