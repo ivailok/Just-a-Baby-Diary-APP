@@ -28,53 +28,57 @@
                 <button id="image-loader">Load image</button>
 
                 <div id="input-container">
-                    <div id="name-field">
-                        <label for="name-input">Name:</label>
-                        <input id="name-input" type="text" />
+                    <div id="left-form">
+                        <div id="name-field">
+                            <label for="name-input">Name:</label>
+                            <input id="name-input" type="text" />
+                        </div>
+
+                        <div id="birthday-field">
+                            <label for="birthday-input">Birthday:</label>
+                            <div id="birthday-input">
+                                <div id="birthday-date-input" data-win-control="WinJS.UI.DatePicker"></div>
+                                <div id="birthday-time-input" data-win-control="WinJS.UI.TimePicker"></div>
+                            </div>
+                        </div>
+
+                        <div id="gender-field">
+                            <label for="gender-input">Gender:</label>
+                            <select id="gender-input">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+
+                        <div id="mother-field">
+                            <label for="mother-name-input">Mother:</label>
+                            <input id="mother-name-input" type="text" />
+                        </div>
+
+                        <div id="father-field">
+                            <label for="father-name-input">Father:</label>
+                            <input id="father-name-input" type="text" />
+                        </div>
+
+                        <button id="create-profile-button">Submit</button>
                     </div>
 
-                    <div id="birthday-field">
-                        <label for="birthday-input">Birthday:</label>
-                        <div id="birthday-input">
-                            <div id="birthday-date-input" data-win-control="WinJS.UI.DatePicker"></div>
-                            <div id="birthday-time-input" data-win-control="WinJS.UI.TimePicker"></div>
+                    <div id="right-form">
+                        <div id="town-field">
+                            <label for="town-of-birth-input">Town of birth:</label>
+                            <input id="town-of-birth-input" type="text" />
+                        </div>
+
+                        <div id="height-field">
+                            <label for="height-input">Height:</label>
+                            <input id="height-input" type="number" />
+                        </div>
+
+                        <div id="weight-field">
+                            <label for="weight-input">Weight:</label>
+                            <input id="weight-input" type="number" />
                         </div>
                     </div>
-
-                    <div id="gender-field">
-                        <label for="gender-input">Gender:</label>
-                        <select id="gender-input">
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                        </select>
-                    </div>
-
-                    <div id="mother-field">
-                        <label for="mother-name-input">Mother:</label>
-                        <input id="mother-name-input" type="text" />
-                    </div>
-
-                    <div id="father-field">
-                        <label for="father-name-input">Father:</label>
-                        <input id="father-name-input" type="text" />
-                    </div>
-
-                    <div id="town-field">
-                        <label for="town-of-birth-input">Town of birth:</label>
-                        <input id="town-of-birth-input" type="text" />
-                    </div>
-
-                    <div id="height-field">
-                        <label for="height-input">Height:</label>
-                        <input id="height-input" type="number" />
-                    </div>
-
-                    <div id="weight-field">
-                        <label for="weight-input">Weight:</label>
-                        <input id="weight-input" type="number" />
-                    </div>
-
-                    <button id="create-profile-button">Submit</button>
                 </div>
 
                 <div id="picture-menu" data-win-control="WinJS.UI.Menu">
