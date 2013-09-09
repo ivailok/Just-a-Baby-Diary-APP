@@ -17,7 +17,7 @@
     <Application Id="App" StartPage="default.html">
       <VisualElements DisplayName="JustABabyDiary" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="JustABabyDiary" ForegroundText="dark" BackgroundColor="transparent">
         <DefaultTile ShowName="allLogos" />
-        <SplashScreen Image="images\splashscreen.png" BackgroundColor="#1B72A8" />
+        <SplashScreen Image="images\sleeping-baby.jpg" BackgroundColor="#1B72A8" />
       </VisualElements>
       <Extensions>
         <Extension Category="windows.search" />
