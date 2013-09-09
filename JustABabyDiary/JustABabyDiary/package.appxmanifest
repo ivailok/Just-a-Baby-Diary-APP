@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="JustABabyDiary" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="JustABabyDiary" ForegroundText="light" BackgroundColor="#464646">
+      <VisualElements DisplayName="JustABabyDiary" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="JustABabyDiary" ForegroundText="dark" BackgroundColor="transparent">
         <DefaultTile ShowName="allLogos" />
         <SplashScreen Image="images\splashscreen.png" BackgroundColor="#1B72A8" />
       </VisualElements>
