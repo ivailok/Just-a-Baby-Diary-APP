@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='C:\ProgramData\Windows App Certification Kit\results.xsl'?>
+<REPORT OVERALL_RESULT="PASS" VERSION="2.2" LATEST_VERSION="TRUE" UPDATE_DOWNLOAD_URL="" TOOLSET_ARCHITECTURE="X64" SecureBoot="FALSE" APP_TYPE="WindowsStore" PUBLISHER_DISPLAY_NAME="Ivaylo" OSVERSION="6.2.9200.0" OS="Microsoft Windows 8 Pro" PER_USER_APPLICATION="" PARTIAL_RUN="FALSE" LCID="1026" VALIDATION_TYPE="CommandLine" ReportGenerationTime="7.9.2013 г. 20:10:29" ID="4d7b9cdb88c0aa7e2294d3fca6a20286">
+  <REQUIREMENTS>
+    <REQUIREMENT NUMBER="1" TITLE="Clean reversible install test" RATIONALE="A clean, reversible, installation allows users to successfully manage (deploy, and remove) applications on their system." />
+    <REQUIREMENT NUMBER="2" TITLE="Install to the correct folders test" RATIONALE="Windows provides specific locations in the file system to store programs and software components, shared application data, and application data specific to a user." />
+    <REQUIREMENT NUMBER="3" TITLE="Digitally signed file test" RATIONALE="An Authenticode digital signature allows users to be sure that the software is genuine. It also allows detection if a file has been tampered with e.g. infected by a virus." />
+    <REQUIREMENT NUMBER="4" TITLE="Support x64 Windows test" RATIONALE="To maintain compatibility with 64-bit versions of Windows, it is necessary that applications should natively support 64-bit or at minimum 32-bit Windows based applications to run seamlessly on 64-bit." />
+    <REQUIREMENT NUMBER="5" TITLE="OS version checking test" RATIONALE="Applications must not perform version checks for equality (== 5.1). If you need a specific feature, check whether the feature is available. If you need Windows XP, check for Windows XP or later (&gt;= 5.1), This way, your detection code will continue to work on future versions of Windows. Driver installers and uninstall modules should never check the OS version." />
+    <REQUIREMENT NUMBER="6" TITLE="User account control (UAC) test" RATIONALE="Most applications do not require administrator privileges at run time, and should be just fine running as a standard-user. Windows applications must have a manifest (embedded or external) to define its execution level that tells OS the privileges needed to run the application." />
+    <REQUIREMENT NUMBER="7" TITLE="Adhere to system restart manager messages" RATIONALE="In a critical shutdown, applications that return FALSE to WM_QUERYENDSESSION will be sent WM_ENDSESSION and closed, while those that time out in response to WM_QUERYENDSESSION will be terminated." />
+    <REQUIREMENT NUMBER="8" TITLE="Safe mode test" RATIONALE="By default, most drivers and services that did not come preinstalled with Windows are not started in Safe Mode. They should remain disabled unless they are needed for basic operations of the system or for diagnostic and recovery purposes." />
+    <REQUIREMENT NUMBER="9" TITLE="Multiuser session test" RATIONALE="Windows users should be able to run concurrent sessions without conflict or disruption.  Applications must ensure that when running in multiple sessions either locally or remotely, the normal functionality of the application should not be impacted. Application settings and data files should not be persisted across users. A user’s privacy and preferences should be isolated to the user’s session." />
+    <REQUIREMENT NUMBER="10" TITLE="Crashes and hangs test" RATIONALE="Application failures such as crashes and hangs are a major disruption to users and cause frustration. Eliminating such failures improves application stability and reliability, and overall, provides users with a better application experience.">
+      <TEST INDEX="47" NAME="App launch tests" DESCRIPTION="App launch tests." EXECUTIONTIME="00h:00m:21s.89ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="21" NAME="Crashes and hangs" DESCRIPTION="Do not crash or hang during the testing process." EXECUTIONTIME="00h:00m:04s.01ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="11" TITLE="Compatibility and resiliency test" RATIONALE="When Windows detects that an application has operated in an incompatible manner, it applies a compatibility fix that causes the application to behave correctly, ensuring a positive user experience. Applications should not rely on this behavior since it is only provided to allow legacy applications to work correctly on Windows." />
+    <REQUIREMENT NUMBER="12" TITLE="App manifest compliance test" RATIONALE="The package manifest was missing one or more required attributes.">
+      <TEST INDEX="31" NAME="App manifest" DESCRIPTION="App manifest must include valid entries for all required fields." EXECUTIONTIME="00h:00m:02s.22ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="13" TITLE="Windows security best practices test" RATIONALE="An application should not change the default Windows security settings." />
+    <REQUIREMENT NUMBER="14" TITLE="Windows security features test" RATIONALE="Applications must opt-into Windows security features.">
+      <TEST INDEX="33" NAME="Binary analyzer" DESCRIPTION="Analysis of security features enabled on binaries" EXECUTIONTIME="00h:00m:01s.45ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="62" NAME="Private Code Signing" DESCRIPTION="App should not package private code signing key files." EXECUTIONTIME="00h:00m:01s.15ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="15" TITLE="Supported API test" RATIONALE="The application should only refer to the APIs allowed by the Windows SDK for Windows Store Apps.">
+      <TEST INDEX="38" NAME="Supported APIs" DESCRIPTION="Windows Store App must only use supported platform APIs." EXECUTIONTIME="00h:00m:02s.70ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="17" TITLE="Performance test" RATIONALE="The application should have a fast and responsive launch and suspend experience while consuming a reasonable amount of system resources (CPU, File IO, Memory etc.) to enable fast switching and multitasking between previously unopened applications.">
+      <TEST INDEX="50" NAME="Bytecode generation" DESCRIPTION="Byte code generation should be able to complete successfully for packages containing an HTML5 Windows Store app." EXECUTIONTIME="00h:00m:01s.38ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="60" NAME="Optimized Binding References" DESCRIPTION="When using bindings, WinJS.Binding.optimizeBindingReferences should be set to true to optimize the memory usage." EXECUTIONTIME="00h:00m:01s.46ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="43" NAME="Performance launch" DESCRIPTION="Application should have a responsive launch time with reasonable CPU, File IO and Memory usage" EXECUTIONTIME="00h:01m:22s.34ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="44" NAME="Performance suspend" DESCRIPTION="Application should have a responsive suspend with reasonable CPU and File IO usage" EXECUTIONTIME="00h:01m:20s.76ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="19" TITLE="App manifest resources test" RATIONALE="The Appx Package Manifest should have valid resources defined in the resources.pri file, as per the Appx Packaging Specification and Appx Manifest Schema.">
+      <TEST INDEX="45" NAME="App resources validation" DESCRIPTION="The package should have valid resources defined in the resources.pri file." EXECUTIONTIME="00h:00m:00s.64ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="61" NAME="Branding validation" DESCRIPTION="App should not use the default images packed by windows SDK samples or Visual Studio." EXECUTIONTIME="00h:00m:02s.00ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="20" TITLE="Debug configuration test" RATIONALE="The App should not install any debug binaries.">
+      <TEST INDEX="46" NAME="Debug configuration" DESCRIPTION="The App should not install any debug binaries." EXECUTIONTIME="00h:00m:02s.11ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="21" TITLE="File encoding" RATIONALE="Packages containing an HTML5 Windows Store app must have correct file encoding.">
+      <TEST INDEX="49" NAME="UTF-8 file encoding" DESCRIPTION="Packages containing an HTML5 Windows Store app must have correct file encoding." EXECUTIONTIME="00h:00m:01s.31ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="22" TITLE="Direct3D feature level support" RATIONALE="Applications must render content on Direct3D feature level 9.1 hardware.">
+      <TEST INDEX="51" NAME="Direct3D feature level support" DESCRIPTION="Applications must render content on Direct3D feature level 9.1 hardware." EXECUTIONTIME="00h:00m:00s.68ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="23" TITLE="App Capabilities test" RATIONALE="Packages declaring special-use capabilities will have to provide justifications during the onboarding process.">
+      <TEST INDEX="52" NAME="Special Use Capabilities" DESCRIPTION="Packages declaring special-use capabilities will have to provide justifications during the onboarding process." EXECUTIONTIME="00h:00m:01s.31ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="24" TITLE="Windows Runtime metadata validation" RATIONALE="Metadata needs to be conformant and consistent across all generation sources.">
+      <TEST INDEX="56" NAME="ExclusiveTo attribute test" DESCRIPTION="A class must not implement an interface that is marked ExclusiveTo another class." EXECUTIONTIME="00h:00m:01s.02ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="57" NAME="Type location test" DESCRIPTION="Types must be defined in the metadata file with the longest matching namespace." EXECUTIONTIME="00h:00m:00s.61ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="55" NAME="Type name case-sensitivity test" DESCRIPTION="Namespace and type names must not vary only by casing." EXECUTIONTIME="00h:00m:00s.61ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="54" NAME="Type name correctness test" DESCRIPTION="Only system types can be in the Windows namespace and no types can be in the global namespace." EXECUTIONTIME="00h:00m:00s.61ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="58" NAME="General metadata correctness test" DESCRIPTION="Metadata files must meet various requirements in order to be valid and correct." EXECUTIONTIME="00h:00m:01s.02ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="53" NAME="Properties test" DESCRIPTION="Write-only and indexer properties may not be used. Corresponding getter and setter methods must match in type." EXECUTIONTIME="00h:00m:00s.59ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+  </REQUIREMENTS>
+  <APPLICATIONS>
+    <Installed_Programs>
+      <Program Name="1ff9412e-31a3-4d53-b78e-09df9439d997" Type="Application" Source="AppxPackage" Publisher="CN=Ivaylo" Version="1.0.0.3" Language="1033" OnSystemDrive="true" RootDirPath="C:\Program Files\WindowsApps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg" PathEvidenceId="0x18d8" RNP="0x1" DNP="0xd" EvidenceId="0x18d8" Id="00005cb3ba51262d5795b2abd8e793b0eefc00000904">
+        <Indicators>
+          <DirectoryIndicators>
+            <Directory Name="updatebabyevent" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\updatebabyevent" RNP="0x9" DNP="0xb" UniqueId="0x1905" Id="00002dcd31982f690f59669ab83e71a1ea8477879f27" />
+            <Directory Name="addprofile" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\addprofile" RNP="0x9" DNP="0xb" UniqueId="0x18ed" Id="00000c9ba9b3a10a2e892288afcbe1a9ae565a25a98e" />
+            <Directory Name="js" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js" RNP="0x9" DNP="0xb" UniqueId="0x18dd" Id="0000ed830a2cad918e620bb3cae846c3985ea8ddae26" />
+            <Directory Name="register" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\register" RNP="0x9" DNP="0xb" UniqueId="0x1901" Id="0000b45e22daa0daadc67bd833b2b389736ec1c8c849" />
+            <Directory Name="home" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\home" RNP="0x9" DNP="0xb" UniqueId="0x18f9" Id="00007eb0baafbaaf8336d49e7c3224114d4f05b6a749" />
+            <Directory Name="detailbabyprofile" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\detailbabyprofile" RNP="0x9" DNP="0xb" UniqueId="0x18f5" Id="00009569f47b1dfb7701b74301b87102f8a073655c62" />
+            <Directory Name="pages" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages" RNP="0x9" DNP="0xb" UniqueId="0x18e8" Id="000019ff601290dc13568ff4c70ea07fd47a73f13ab3" />
+            <Directory Name="login" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\login" RNP="0x9" DNP="0xb" UniqueId="0x18fd" Id="000005290cae846f7d4afc5ea62cb969fae61177d4bb" />
+            <Directory Name="addevent" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\addevent" RNP="0x9" DNP="0xb" UniqueId="0x18e9" Id="0000e5c6c2a0a59f69aa827734512424eab6a8fca1fd" />
+            <Directory Name="1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg" RNP="0x9" DNP="0xb" UniqueId="0x18d9" Id="0000cf11016a7d97f7335be7f6d05eb5ca76b9397684" />
+            <Directory Name="updatebabyprofile" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\updatebabyprofile" RNP="0x9" DNP="0xb" UniqueId="0x1909" Id="00004df83bb6bcf2916cecf359afe078366d1b3bc039" />
+            <Directory Name="search" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\search" RNP="0x9" DNP="0xb" UniqueId="0x190d" Id="00005baf6023754dd66911dda566ec62e76f13623490" />
+            <Directory Name="detailbabyevent" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\detailbabyevent" RNP="0x9" DNP="0xb" UniqueId="0x18f1" Id="0000726da67e5acb0bb05a8fd5ec270a7bf97a1ebc84" />
+          </DirectoryIndicators>
+          <PackageManifestIndicator>
+            <PackageManifest PackageFullName="1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg" />
+            <Identity Name="1ff9412e-31a3-4d53-b78e-09df9439d997" Version="1.0.0.3" Publisher="CN=Ivaylo" ProcessorArchitecture="neutral" />
+            <Extension Category="windows.search" />
+            <Extension Category="windows.fileSavePicker">
+              <FileSavePicker>
+                <SupportedFileTypes>
+                  <FileType>.jpg</FileType>
+                </SupportedFileTypes>
+              </FileSavePicker>
+            </Extension>
+            <Extension Category="windows.fileOpenPicker">
+              <FileOpenPicker>
+                <SupportedFileTypes>
+                  <FileType>.png</FileType>
+                  <FileType>.jpg</FileType>
+                </SupportedFileTypes>
+              </FileOpenPicker>
+            </Extension>
+            <Dependencies>
+              <PackageDependency Name="Microsoft.WinJS.1.0" MinVersion="1.0.9200.20789" />
+            </Dependencies>
+            <Properties>
+              <DisplayName>JustABabyDiary</DisplayName>
+              <PublisherDisplayName>Ivaylo</PublisherDisplayName>
+              <Logo>images\storelogo.png</Logo>
+            </Properties>
+            <Resources>
+              <Resource Language="EN-US" />
+            </Resources>
+            <Prerequisites>
+              <OSMinVersion>6.2.1</OSMinVersion>
+              <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+            </Prerequisites>
+            <Capabilities>
+              <Capability Name="picturesLibrary" />
+              <Capability Name="internetClient" />
+              <DeviceCapability Name="webcam" />
+            </Capabilities>
+          </PackageManifestIndicator>
+        </Indicators>
+        <StaticProperties>
+          <Files Id="00001c6d27f234c25bbbb710321c250e5b723fcc4912">
+            <File Name="searchEvents.html" Id="0000be83ad3189d030549e8d3c703777c44ad48b0943" ShortName="SEARCH~1.HTM" Size="0xb76" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\search" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\search\searchevents.html" LongPathHash="0000308f13851ae4fe6f120bfa092fd02aa2bacaa4da" UniqueId="0x190e" />
+            <File Name="detailBabyProfile.html" Id="000046ae089aa5dbe5011cb63c224bb96a7691ff078a" ShortName="DETAIL~1.HTM" Size="0xec3" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\detailbabyprofile" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\detailbabyprofile\detailbabyprofile.html" LongPathHash="0000706aab6c59f8ac457a1c15c445d9f25e70406b04" UniqueId="0x18f6" />
+            <File Name="detailBabyProfile.js" Id="000026f8a8bd5347275c1d106e8f2464526161263179" ShortName="DETAIL~1.JS" Size="0x719" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\detailbabyprofile" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\detailbabyprofile\detailbabyprofile.js" LongPathHash="0000bffcc2860403b1ff8d269306120e028a91910a1a" UniqueId="0x18f7" />
+            <File Name="login.js" Id="0000774d783dd933ac8eaac8d422c464fb3ab117f6b0" Size="0x46a" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\login" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\login\login.js" LongPathHash="00002a07c888924197db98a244cd9fd798554f543ba4" UniqueId="0x18ff" />
+            <File Name="default.js" Id="0000542138585d99e69f5f1b2ccdf274edf2dba4fa3a" Size="0x71d" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js\default.js" LongPathHash="00001ded27afc4799b58e32229f8e059345eb59d6b25" UniqueId="0x18e0" />
+            <File Name="addEventCodeBehind.js" Id="0000bfc10968358ef179f8274d302af2ce6a52e5a010" ShortName="ADDEVE~1.JS" Size="0x4c3" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\addEvent" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\addevent\addeventcodebehind.js" LongPathHash="0000b48f9e99c761d16808ec3f016d6c564c8878bc3b" UniqueId="0x18ec" />
+            <File Name="dataLayer.js" Id="0000834eb0166fdad613e482d72d58faf5e4178c4069" ShortName="DATALA~1.JS" Size="0x734" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js\datalayer.js" LongPathHash="00006864bb814708238a460a56d6f3a6ed764454e0a0" UniqueId="0x18de" />
+            <File Name="detailBabyProfileCodeBehind.js" Id="0000b1f28349a00e3ba8755a3a009066b01cb232d3e4" ShortName="DETAIL~2.JS" Size="0x714" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\detailbabyprofile" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\detailbabyprofile\detailbabyprofilecodebehind.js" LongPathHash="0000db51cae22288213025e79ca3dc1693ead1f9d927" UniqueId="0x18f8" />
+            <File Name="homeCodeBehind.js" Id="000087fff7a403d6161cabf67379114e9801665cb156" ShortName="HOMECO~1.JS" Size="0x78e" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\home" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\home\homecodebehind.js" LongPathHash="000086d05350642b2a49753e09860c7b35954acbf254" UniqueId="0x18fc" />
+            <File Name="updateBabyEvent.html" Id="0000878a9cad61ba58b78fef3bfc30bb623e624fb19c" ShortName="UPDATE~1.HTM" Size="0x77b" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\updatebabyevent" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\updatebabyevent\updatebabyevent.html" LongPathHash="0000fc47d1cc038d31a2207c1c1461dbf100af8040c5" UniqueId="0x1906" />
+            <File Name="updateBabyProfile.html" Id="00002902bbecc0dbadc10747dfe1bb3a762e1599947e" ShortName="UPDATE~1.HTM" Size="0xfa8" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\updatebabyprofile" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\updatebabyprofile\updatebabyprofile.html" LongPathHash="00006639b699808206bf3d0b991f58dba26d9731e9e6" UniqueId="0x190a" />
+            <File Name="register.html" Id="0000fecf02d43f0e01578f79c71901fad5bdf09d74d3" ShortName="REGIST~1.HTM" Size="0x686" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\register" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\register\register.html" LongPathHash="00001bad88d55aed509b3e85993e8dd09b651730a81e" UniqueId="0x1902" />
+            <File Name="addEvent.js" Id="000032679a1aaa3db1287c599461c3cbb21a31b3c199" Size="0x142d" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\addEvent" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\addevent\addevent.js" LongPathHash="000054b0e900a2d95949f15e98f51c96da7547b5c75f" UniqueId="0x18eb" />
+            <File Name="sha1.js" Id="00002dc565eb6838df0ab7d35381785bf6a6ba80f238" Size="0x13ff" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js\sha1.js" LongPathHash="0000368b2e2e16ec9219fe9a1ab39a8bbfbd0d0e15de" UniqueId="0x18e3" />
+            <File Name="addProfile.html" Id="0000293cb50fe450ebdf329613b4d3328e1265f2098f" ShortName="ADDPRO~1.HTM" Size="0x1068" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\addprofile" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\addprofile\addprofile.html" LongPathHash="00001bd5d72ba15e4aced13b5039ee64b8a558790a6b" UniqueId="0x18ee" />
+            <File Name="addProfile.js" Id="0000ab3d70cbf0babc71cc387721fe1f8ddeb0029200" ShortName="ADDPRO~1.JS" Size="0x1633" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\addprofile" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\addprofile\addprofile.js" LongPathHash="00007532bc0a4194e5152600931c19c81b67bc76750e" UniqueId="0x18ef" />
+            <File Name="navigator.js" Id="00001ed04bbe3daf1223648e4faf6af1b6e357bfb9c4" ShortName="NAVIGA~1.JS" Size="0x1928" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js\navigator.js" LongPathHash="00009ddbaac47e9a97049597be27a1d43eb7b78614ba" UniqueId="0x18e2" />
+            <File Name="detailBabyEventl.html" Id="00005acf0e4fcdd16d704603462bb69381279933ec16" ShortName="DETAIL~1.HTM" Size="0xcbf" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\detailbabyevent" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\detailbabyevent\detailbabyeventl.html" LongPathHash="00005658c79e6b4c63acf0daada8b46852cd6c3c1cf9" UniqueId="0x18f3" />
+            <File Name="loginCodeBehind.js" Id="0000b010a29aa2dfcdf49e8245d37db18e926fc02bab" ShortName="LOGINC~1.JS" Size="0x53d" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\login" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\login\logincodebehind.js" LongPathHash="00009ecc12ab08af1b75b5bff53c11c7f740ded2cb28" UniqueId="0x1900" />
+            <File Name="registerCodeBehind.js" Id="0000ba4cda6ae9abc01f8352c204d9ca0756471750cb" ShortName="REGIST~1.JS" Size="0x578" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\register" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\register\registercodebehind.js" LongPathHash="000033f0cc038028568b3c8dbd60458d2ddcf3bb3f66" UniqueId="0x1904" />
+            <File Name="dataLoader.js" Id="0000da8bc6ed406a0e034776c4f65f12570a2097edfe" ShortName="DATALO~1.JS" Size="0x1a56" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js\dataloader.js" LongPathHash="0000d958b3a26e2069d6aa2c499c51ca879cf6e79026" UniqueId="0x18df" />
+            <File Name="detailBabyEventl.js" Id="00003f8c72ffd2abce4771c5fdaf7d9674eb6372171b" ShortName="DETAIL~2.JS" Size="0xf28" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\detailbabyevent" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\detailbabyevent\detailbabyeventl.js" LongPathHash="0000f8d326aebea6a9ee8fcffe64b35275713ebd69f9" UniqueId="0x18f4" />
+            <File Name="updateBabyProfile.js" Id="0000ccb443af9fa910e38c1642b62ab931e119a7a676" ShortName="UPDATE~1.JS" Size="0x19f0" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\updatebabyprofile" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\updatebabyprofile\updatebabyprofile.js" LongPathHash="0000caeb5aa9182983082a5de6b78e7273ae6bf820bc" UniqueId="0x190b" />
+            <File Name="searchEvents.js" Id="0000897f7bfa478060db991250afc36c97a62febc55f" ShortName="SEARCH~1.JS" Size="0x8d4" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\search" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\search\searchevents.js" LongPathHash="0000e981fade19910a116123b0187bb6954b54858c59" UniqueId="0x190f" />
+            <File Name="updateBabyEventCodeBehind.js" Id="00007c20316fd0ebcfceb22d6c66273eb4d79ca1ea6b" ShortName="UPDATE~2.JS" Size="0x168" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\updatebabyevent" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\updatebabyevent\updatebabyeventcodebehind.js" LongPathHash="0000ce95d7a7ddec6cdd113314154e1f28d31d04d84f" UniqueId="0x1908" />
+            <File Name="addEvent.html" Id="0000aff8d5732168ef4d848e1eebaf60bdf2f649e174" ShortName="ADDEVE~1.HTM" Size="0xbbe" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\addEvent" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\addevent\addevent.html" LongPathHash="0000c55d40438b6108cd1fae283cdf593a6162666169" UniqueId="0x18ea" />
+            <File Name="register.js" Id="00008cb3cc805c311d95687e4a0e4a82da8e701e49f4" Size="0x3ca" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\register" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\register\register.js" LongPathHash="0000c16d7476d384698b72b8cbb828a8450e529550e4" UniqueId="0x1903" />
+            <File Name="updateBabyEvent.js" Id="0000f34016ad800e0441a8526cd2744fae2a0e23d3df" ShortName="UPDATE~1.JS" Size="0xc47" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\updatebabyevent" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\updatebabyevent\updatebabyevent.js" LongPathHash="0000940cbd467ede75c78b7d05c0aee57bf91934aee9" UniqueId="0x1907" />
+            <File Name="home.html" Id="00000958eb3b12fab71dc4223481d38d779eb372edc8" ShortName="HOME~1.HTM" Size="0xc4d" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\home" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\home\home.html" LongPathHash="0000bb41c5c8ab452251975b3ea7d6799dcd17475b80" UniqueId="0x18fa" />
+            <File Name="home.js" Id="000005efedfb6f8bd11715eeaedab3daec2db3a1f538" Size="0xc2f" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\home" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\home\home.js" LongPathHash="0000ed410750847108553fe2e3c751053121b4cf4c09" UniqueId="0x18fb" />
+            <File Name="viewModels.js" Id="0000ce766a383f6e1012732d018c6b115a1f47c07e23" ShortName="VIEWMO~1.JS" Size="0x3563" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js\viewmodels.js" LongPathHash="00004b9064d4d751b6a5619aab5058b90e67ac3abb07" UniqueId="0x18e5" />
+            <File Name="default.html" Id="000090d34a6f115a0689ebcbc006591deeed4df659e8" ShortName="DEFAUL~1.HTM" Size="0x4b1" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\default.html" LongPathHash="0000f162a8bf047f6e2f64c2333b32dd28874d8cae34" UniqueId="0x18da" />
+            <File Name="detailBabyEventCodeBehind.js" Id="0000b97238a1741b025402124a18682abb31cc46540d" ShortName="DETAIL~1.JS" Size="0x736" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\detailbabyevent" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\detailbabyevent\detailbabyeventcodebehind.js" LongPathHash="000092a632c20e231aec0e0561d74eaf2feb0ddfeba0" UniqueId="0x18f2" />
+            <File Name="userLoginData.js" Id="0000f0ba12025639490d42b711972011b48b23dd782a" ShortName="USERLO~1.JS" Size="0x192" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js\userlogindata.js" LongPathHash="000041b396229afe4a65cc272eaabea291f8783c3c21" UniqueId="0x18e4" />
+            <File Name="models.js" Id="00000f64699de7975b54693f89d68eb561f978b9616e" Size="0x82a" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\js\models.js" LongPathHash="0000e61b30493f0a4f6eec7f2d52534f841495a47845" UniqueId="0x18e1" />
+            <File Name="addProfileCodeBehind.js" Id="0000bf1701b3ec32e598b90548656e5f02c4ecf1cde1" ShortName="ADDPRO~2.JS" Size="0x15a" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\addprofile" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\addprofile\addprofilecodebehind.js" LongPathHash="0000790734df72af6ec594228b045e820991caeaecdb" UniqueId="0x18f0" />
+            <File Name="updateBabyProfileCodeBehind.js" Id="00006585b24e695c0242797477b21bb73df57e55798d" ShortName="UPDATE~2.JS" Size="0x168" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\updatebabyprofile" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\updatebabyprofile\updatebabyprofilecodebehind.js" LongPathHash="0000aa8272b5279d50b3f9df544ff37011baf0364e65" UniqueId="0x190c" />
+            <File Name="login.html" Id="00004a09e55a5e23d2c25eb00e718acef35848c4193b" ShortName="LOGIN~1.HTM" Size="0x5e2" BinaryType="UNKNOWN" Created="09/07/2013 17:06:37" Modified="09/07/2013 17:06:37" Path="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\login" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg\pages\login\login.html" LongPathHash="00000147ffad36898a92f14904a4ffe633f3b9db20d6" UniqueId="0x18fe" />
+          </Files>
+        </StaticProperties>
+      </Program>
+    </Installed_Programs>
+  </APPLICATIONS>
+  <DEPENDENCY_INFORMATION>
+    <AitStaticAnalysis ProgramId="00005cb3ba51262d5795b2abd8e793b0eefc00000904" AnalysisVersion="1.54" DictionaryVersion="1.6" Type="Package" Id="1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.3_neutral__zx5rf1w1p0xxg">
+      <AitFile ErrorCode="0" Name="home.js" Id="000005efedfb6f8bd11715eeaedab3daec2db3a1f538">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.UI.Pages.define" />
+          <AitFeature Name="Windows.Security.Credentials.PasswordVault" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="home.html" Id="00000958eb3b12fab71dc4223481d38d779eb372edc8">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Binding.Template" />
+          <AitFeature Name="WinJS.UI.AppBar" />
+          <AitFeature Name="WinJS.UI.AppBarCommand" />
+          <AitFeature Name="WinJS.UI.GridLayout" />
+          <AitFeature Name="WinJS.UI.ListView" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="models.js" Id="00000f64699de7975b54693f89d68eb561f978b9616e">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Class.define" />
+          <AitFeature Name="WinJS.Namespace.define" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="navigator.js" Id="00001ed04bbe3daf1223648e4faf6af1b6e357bfb9c4">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Class.define" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Navigation" />
+          <AitFeature Name="WinJS.Promise" />
+          <AitFeature Name="WinJS.Promise.as" />
+          <AitFeature Name="WinJS.Promise.timeout" />
+          <AitFeature Name="WinJS.UI.Animation.enterPage" />
+          <AitFeature Name="WinJS.UI.Pages.render" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationView" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="detailBabyProfile.js" Id="000026f8a8bd5347275c1d106e8f2464526161263179">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Binding.processAll" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.UI.Pages.define" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="updateBabyProfile.html" Id="00002902bbecc0dbadc10747dfe1bb3a762e1599947e">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.UI.DatePicker" />
+          <AitFeature Name="WinJS.UI.Menu" />
+          <AitFeature Name="WinJS.UI.MenuCommand" />
+          <AitFeature Name="WinJS.UI.TimePicker" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="addProfile.html" Id="0000293cb50fe450ebdf329613b4d3328e1265f2098f">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.UI.DatePicker" />
+          <AitFeature Name="WinJS.UI.Menu" />
+          <AitFeature Name="WinJS.UI.MenuCommand" />
+          <AitFeature Name="WinJS.UI.TimePicker" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="sha1.js" Id="00002dc565eb6838df0ab7d35381785bf6a6ba80f238">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Namespace.define" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="addEvent.js" Id="000032679a1aaa3db1287c599461c3cbb21a31b3c199">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Binding.processAll" />
+          <AitFeature Name="WinJS.UI.Pages.define" />
+          <AitFeature Name="Windows.Media.Capture.CameraCaptureUI" />
+          <AitFeature Name="Windows.Media.Capture.CameraCaptureUIMode.photo" />
+          <AitFeature Name="Windows.Storage.AccessCache.StorageApplicationPermissions" />
+          <AitFeature Name="Windows.Storage.Pickers.FileOpenPicker" />
+          <AitFeature Name="Windows.Storage.Pickers.FileSavePicker" />
+          <AitFeature Name="Windows.Storage.Pickers.PickerLocationId.picturesLibrary" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="detailBabyEventl.js" Id="00003f8c72ffd2abce4771c5fdaf7d9674eb6372171b">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Binding.processAll" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.UI.Pages.define" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.DataTransferManager.getForCurrentView" />
+          <AitFeature Name="Windows.ApplicationModel.DataTransfer.DataTransferManager.showShareUI" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="detailBabyProfile.html" Id="000046ae089aa5dbe5011cb63c224bb96a7691ff078a">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Binding.Template" />
+          <AitFeature Name="WinJS.UI.AppBar" />
+          <AitFeature Name="WinJS.UI.AppBarCommand" />
+          <AitFeature Name="WinJS.UI.ListView" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="login.html" Id="00004a09e55a5e23d2c25eb00e718acef35848c4193b">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.1.0" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="default.js" Id="0000542138585d99e69f5f1b2ccdf274edf2dba4fa3a">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Application" />
+          <AitFeature Name="WinJS.Binding.optimizeBindingReferences" />
+          <AitFeature Name="WinJS.Navigation" />
+          <AitFeature Name="WinJS.UI.processAll" />
+          <AitFeature Name="Windows.ApplicationModel.Activation" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="detailBabyEventl.html" Id="00005acf0e4fcdd16d704603462bb69381279933ec16">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Binding.Template" />
+          <AitFeature Name="WinJS.UI.AppBar" />
+          <AitFeature Name="WinJS.UI.AppBarCommand" />
+          <AitFeature Name="WinJS.UI.ListView" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="updateBabyProfileCodeBehind.js" Id="00006585b24e695c0242797477b21bb73df57e55798d">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Namespace.define" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="login.js" Id="0000774d783dd933ac8eaac8d422c464fb3ab117f6b0">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.UI.Pages.define" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="updateBabyEventCodeBehind.js" Id="00007c20316fd0ebcfceb22d6c66273eb4d79ca1ea6b">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Namespace.define" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="dataLayer.js" Id="0000834eb0166fdad613e482d72d58faf5e4178c4069">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Namespace.defineWithParent" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="updateBabyEvent.html" Id="0000878a9cad61ba58b78fef3bfc30bb623e624fb19c">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.UI.DatePicker" />
+          <AitFeature Name="WinJS.UI.TimePicker" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="homeCodeBehind.js" Id="000087fff7a403d6161cabf67379114e9801665cb156">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.Utilities.markSupportedForProcessing" />
+          <AitFeature Name="WinJS.Utilities.requireSupportedForProcessing" />
+          <AitFeature Name="Windows.Security.Credentials.PasswordVault" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="searchEvents.js" Id="0000897f7bfa478060db991250afc36c97a62febc55f">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Application.addEventListener" />
+          <AitFeature Name="WinJS.Binding.List" />
+          <AitFeature Name="WinJS.Binding.optimizeBindingReferences" />
+          <AitFeature Name="WinJS.Binding.processAll" />
+          <AitFeature Name="WinJS.Navigation" />
+          <AitFeature Name="WinJS.UI" />
+          <AitFeature Name="WinJS.Utilities" />
+          <AitFeature Name="Windows.ApplicationModel" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationViewState" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="register.js" Id="00008cb3cc805c311d95687e4a0e4a82da8e701e49f4">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.UI.Pages.define" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="default.html" Id="000090d34a6f115a0689ebcbc006591deeed4df659e8">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.UI.AppBar" />
+          <AitFeature Name="WinJS.UI.AppBarCommand" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="addProfile.js" Id="0000ab3d70cbf0babc71cc387721fe1f8ddeb0029200">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.UI.Pages.define" />
+          <AitFeature Name="Windows.Media.Capture.CameraCaptureUI" />
+          <AitFeature Name="Windows.Media.Capture.CameraCaptureUIMode.photo" />
+          <AitFeature Name="Windows.Storage.AccessCache.StorageApplicationPermissions" />
+          <AitFeature Name="Windows.Storage.Pickers.FileOpenPicker" />
+          <AitFeature Name="Windows.Storage.Pickers.FileSavePicker" />
+          <AitFeature Name="Windows.Storage.Pickers.PickerLocationId.picturesLibrary" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="addEvent.html" Id="0000aff8d5732168ef4d848e1eebaf60bdf2f649e174">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Binding.Template" />
+          <AitFeature Name="WinJS.UI.DatePicker" />
+          <AitFeature Name="WinJS.UI.ListView" />
+          <AitFeature Name="WinJS.UI.Menu" />
+          <AitFeature Name="WinJS.UI.MenuCommand" />
+          <AitFeature Name="WinJS.UI.TimePicker" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="loginCodeBehind.js" Id="0000b010a29aa2dfcdf49e8245d37db18e926fc02bab">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Navigation.back" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.Utilities.markSupportedForProcessing" />
+          <AitFeature Name="Windows.Security.Credentials.PasswordCredential" />
+          <AitFeature Name="Windows.Security.Credentials.PasswordVault" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="detailBabyProfileCodeBehind.js" Id="0000b1f28349a00e3ba8755a3a009066b01cb232d3e4">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.Utilities.markSupportedForProcessing" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="detailBabyEventCodeBehind.js" Id="0000b97238a1741b025402124a18682abb31cc46540d">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="Windows.Storage.AccessCache.StorageApplicationPermissions" />
+          <AitFeature Name="Windows.Storage.Pickers.FileOpenPicker" />
+          <AitFeature Name="Windows.Storage.Pickers.PickerLocationId.picturesLibrary" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="registerCodeBehind.js" Id="0000ba4cda6ae9abc01f8352c204d9ca0756471750cb">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Navigation.back" />
+          <AitFeature Name="Windows.Security.Credentials.PasswordCredential" />
+          <AitFeature Name="Windows.Security.Credentials.PasswordVault" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="searchEvents.html" Id="0000be83ad3189d030549e8d3c703777c44ad48b0943">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Binding.Template" />
+          <AitFeature Name="WinJS.UI.ListView" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="addProfileCodeBehind.js" Id="0000bf1701b3ec32e598b90548656e5f02c4ecf1cde1">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.Utilities.markSupportedForProcessing" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="addEventCodeBehind.js" Id="0000bfc10968358ef179f8274d302af2ce6a52e5a010">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Binding.List" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Navigation.back" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="updateBabyProfile.js" Id="0000ccb443af9fa910e38c1642b62ab931e119a7a676">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Binding.processAll" />
+          <AitFeature Name="WinJS.Navigation.back" />
+          <AitFeature Name="WinJS.UI.Pages.define" />
+          <AitFeature Name="Windows.Media.Capture.CameraCaptureUI" />
+          <AitFeature Name="Windows.Media.Capture.CameraCaptureUIMode.photo" />
+          <AitFeature Name="Windows.Storage.AccessCache.StorageApplicationPermissions" />
+          <AitFeature Name="Windows.Storage.Pickers.FileOpenPicker" />
+          <AitFeature Name="Windows.Storage.Pickers.PickerLocationId.picturesLibrary" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="viewModels.js" Id="0000ce766a383f6e1012732d018c6b115a1f47c07e23">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Binding.List" />
+          <AitFeature Name="WinJS.Binding.as" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Namespace.defineWithParent" />
+          <AitFeature Name="WinJS.Promise" />
+          <AitFeature Name="Windows.Storage.StorageFile.getFileFromPathAsync" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="dataLoader.js" Id="0000da8bc6ed406a0e034776c4f65f12570a2097edfe">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Namespace.defineWithParent" />
+          <AitFeature Name="WinJS.xhr" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="userLoginData.js" Id="0000f0ba12025639490d42b711972011b48b23dd782a">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.Namespace.define" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="updateBabyEvent.js" Id="0000f34016ad800e0441a8526cd2744fae2a0e23d3df">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Binding.processAll" />
+          <AitFeature Name="WinJS.Navigation.back" />
+          <AitFeature Name="WinJS.UI.Pages.define" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="register.html" Id="0000fecf02d43f0e01578f79c71901fad5bdf09d74d3">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.1.0" />
+        </AitCategory>
+      </AitFile>
+    </AitStaticAnalysis>
+  </DEPENDENCY_INFORMATION>
+</REPORT>

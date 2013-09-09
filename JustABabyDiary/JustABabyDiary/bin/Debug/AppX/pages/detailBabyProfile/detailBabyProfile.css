@@ -15,12 +15,14 @@ section {
     padding: 30px;
 }
 
+
+
     #basicListView.win-listview .win-item {
+        background-color:transparent;
         width: 250px;
         height: 90px;
         padding: 10px;
         display: inline-block;
-        background-color: #FFC980;
         padding: 10px;
     }
 

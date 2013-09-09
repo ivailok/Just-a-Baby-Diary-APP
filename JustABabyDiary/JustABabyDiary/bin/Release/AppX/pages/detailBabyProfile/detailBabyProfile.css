@@ -1,0 +1,74 @@
+﻿.detailBabyProfile p {
+    margin-left: 120px;
+}
+
+section {
+    padding: 40px;
+}
+
+#basicListView.win-listview {
+    height: 30%;
+    padding: 30px;
+}
+
+    #basicListView.win-listview .win-item {
+        background-color:transparent;
+        width: 150px;
+        height: 90px;
+        padding: 10px;
+        display: inline-block;
+        padding: 10px;
+    }
+
+        /*#basicListView.win-listview .win-item h4, #basicListView.win-listview .win-item img {
+            display: inline-block;
+        }*/
+
+        #basicListView.win-listview .win-item h4 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+#details-profile-image {
+    display: inline;
+    position: relative;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+}
+
+#info-holder {
+    display: inline;
+    position: absolute;
+    margin-left: 50px;
+}
+
+#inner-left-info-holder {
+    display: inline;
+    position: relative;
+}
+
+#inner-right-info-holder {
+    display: inline;
+    position: absolute;
+    left: 120%;
+    top: 0%;
+}
+
+#events-start {
+    margin-top: 75px;
+}
+
+.inner-info-holder:first-of-type h3:first-of-type {
+    
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+}

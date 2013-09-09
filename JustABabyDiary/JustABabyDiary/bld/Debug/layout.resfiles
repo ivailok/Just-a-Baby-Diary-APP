@@ -1,10 +1,12 @@
 css\default.css
 default.html
+images\baby-cot-icon.png
 images\baby-idea-icon.png
-images\logo.png
-images\smalllogo.png
-images\splashscreen.png
-images\storelogo.png
+images\logo.scale-100.png
+images\sky-background.jpg
+images\smalllogo.scale-100.png
+images\splashscreen.scale-100.png
+images\storelogo.scale-100.png
 js\dataLayer.js
 js\dataLoader.js
 js\default.js

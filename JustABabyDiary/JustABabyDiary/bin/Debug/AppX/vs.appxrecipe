@@ -1,260 +1,268 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>LINA</Machine>
-    <WindowsUser>Lina</WindowsUser>
+    <Machine>WORK-PC</Machine>
+    <WindowsUser>Ivaylo</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>E9E575221F92D8872BDFA2A9E7CBAC94FCABD5C59B4215EF83078A7238453001</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.0_neutral__zx5rf1w1p0xxg</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>84AB1C87CECFB6CB273926D0BD15B50938F1FF8CE7E462E2828163AFEA7514E1</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>1ff9412e-31a3-4d53-b78e-09df9439d997_1.0.0.1_neutral__zx5rf1w1p0xxg</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>1ff9412e-31a3-4d53-b78e-09df9439d997_zx5rf1w1p0xxg!App</RegisteredUserModeAppID>
     <RegisteredPackageID>1ff9412e-31a3-4d53-b78e-09df9439d997</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=Ivaylo</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <RegisteredVersion>1.0.0.1</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-09-03T10:51:44.345</Modified>
+      <Modified>2013-09-07T15:55:32.783</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\css\default.css">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\css\default.css">
       <PackagePath>css\default.css</PackagePath>
-      <Modified>2013-09-02T15:03:06.543</Modified>
+      <Modified>2013-09-05T16:10:48.314</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addEvent\addEvent.css">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addEvent\addEvent.css">
       <PackagePath>pages\addEvent\addEvent.css</PackagePath>
-      <Modified>2013-08-31T11:00:39.898</Modified>
+      <Modified>2013-08-31T12:13:47.828</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addProfile\addProfile.css">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addProfile\addProfile.css">
       <PackagePath>pages\addProfile\addProfile.css</PackagePath>
-      <Modified>2013-09-02T06:23:52.294</Modified>
+      <Modified>2013-09-07T12:53:43.653</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyEvent\detailBabyEventl.css">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyEvent\detailBabyEventl.css">
       <PackagePath>pages\detailBabyEvent\detailBabyEventl.css</PackagePath>
-      <Modified>2013-08-31T11:02:37.996</Modified>
+      <Modified>2013-08-31T12:13:47.833</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyProfile\detailBabyProfile.css">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyProfile\detailBabyProfile.css">
       <PackagePath>pages\detailBabyProfile\detailBabyProfile.css</PackagePath>
-      <Modified>2013-09-03T07:35:45.818</Modified>
+      <Modified>2013-09-06T18:11:35.659</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\home\home.css">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\home\home.css">
       <PackagePath>pages\home\home.css</PackagePath>
-      <Modified>2013-09-03T07:30:09.494</Modified>
+      <Modified>2013-09-05T16:10:55.020</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\login\login.css">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\login\login.css">
       <PackagePath>pages\login\login.css</PackagePath>
-      <Modified>2013-09-02T14:13:55.913</Modified>
+      <Modified>2013-09-07T14:03:43.539</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\register\register.css">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\register\register.css">
       <PackagePath>pages\register\register.css</PackagePath>
-      <Modified>2013-09-02T14:13:55.922</Modified>
+      <Modified>2013-09-05T16:18:08.882</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyEvent\updateBabyEvent.css">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyEvent\updateBabyEvent.css">
       <PackagePath>pages\updateBabyEvent\updateBabyEvent.css</PackagePath>
-      <Modified>2013-08-31T11:04:04.313</Modified>
+      <Modified>2013-08-31T12:13:47.842</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyProfile\updateBabyProfile.css">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyProfile\updateBabyProfile.css">
       <PackagePath>pages\updateBabyProfile\updateBabyProfile.css</PackagePath>
-      <Modified>2013-08-31T10:56:05.894</Modified>
+      <Modified>2013-08-31T12:13:47.846</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\search\searchEvents.css">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\search\searchEvents.css">
       <PackagePath>search\searchEvents.css</PackagePath>
-      <Modified>2013-09-03T09:46:13.981</Modified>
+      <Modified>2013-09-06T18:11:35.720</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\images\baby-idea-icon.png">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\images\baby-cot-icon.png">
+      <PackagePath>images\baby-cot-icon.png</PackagePath>
+      <Modified>2013-09-07T14:43:22.583</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\images\baby-idea-icon.png">
       <PackagePath>images\baby-idea-icon.png</PackagePath>
-      <Modified>2013-09-03T07:42:27.516</Modified>
+      <Modified>2013-09-03T11:04:12.847</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\images\logo.png">
-      <PackagePath>images\logo.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\images\logo.scale-100.png">
+      <PackagePath>images\logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-08-31T10:41:44.910</Modified>
+      <Modified>2013-09-07T15:05:08.072</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\images\smalllogo.png">
-      <PackagePath>images\smalllogo.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\images\smalllogo.scale-100.png">
+      <PackagePath>images\smalllogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-08-31T10:41:44.911</Modified>
+      <Modified>2013-09-07T15:48:01.915</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\images\splashscreen.png">
-      <PackagePath>images\splashscreen.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\images\splashscreen.scale-100.png">
+      <PackagePath>images\splashscreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-08-31T10:41:44.912</Modified>
+      <Modified>2013-09-07T15:25:34.098</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\images\storelogo.png">
-      <PackagePath>images\storelogo.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\images\storelogo.scale-100.png">
+      <PackagePath>images\storelogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-08-31T10:41:44.913</Modified>
+      <Modified>2013-09-07T15:22:02.286</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\dataLayer.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\images\sky-background.jpg">
+      <PackagePath>images\sky-background.jpg</PackagePath>
+      <Modified>2013-09-05T14:40:44.014</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\dataLayer.js">
       <PackagePath>js\dataLayer.js</PackagePath>
-      <Modified>2013-09-02T20:07:44.915</Modified>
+      <Modified>2013-09-05T13:51:54.831</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\dataLoader.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\dataLoader.js">
       <PackagePath>js\dataLoader.js</PackagePath>
-      <Modified>2013-09-02T22:09:03.968</Modified>
+      <Modified>2013-09-05T13:51:30.517</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\default.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2013-09-02T15:25:11.557</Modified>
+      <Modified>2013-09-07T15:50:02.508</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\defaultCodeBehindjs.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\defaultCodeBehindjs.js">
       <PackagePath>js\defaultCodeBehindjs.js</PackagePath>
-      <Modified>2011-12-12T01:07:18.000</Modified>
+      <Modified>2013-08-31T12:54:00.697</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\models.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\models.js">
       <PackagePath>js\models.js</PackagePath>
-      <Modified>2013-09-02T20:31:01.603</Modified>
+      <Modified>2013-09-04T19:41:55.968</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\navigator.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\navigator.js">
       <PackagePath>js\navigator.js</PackagePath>
-      <Modified>2013-08-31T10:41:44.919</Modified>
+      <Modified>2013-09-06T18:11:35.540</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\sha1.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\sha1.js">
       <PackagePath>js\sha1.js</PackagePath>
-      <Modified>2013-09-02T08:12:34.444</Modified>
+      <Modified>2013-09-06T18:11:35.574</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\userLoginData.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\userLoginData.js">
       <PackagePath>js\userLoginData.js</PackagePath>
-      <Modified>2013-09-02T16:52:39.153</Modified>
+      <Modified>2013-09-02T17:12:18.207</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\viewModels.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\js\viewModels.js">
       <PackagePath>js\viewModels.js</PackagePath>
-      <Modified>2013-09-03T10:51:23.577</Modified>
+      <Modified>2013-09-07T14:45:32.490</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addEvent\addEvent.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addEvent\addEvent.js">
       <PackagePath>pages\addEvent\addEvent.js</PackagePath>
-      <Modified>2013-09-02T22:22:01.281</Modified>
+      <Modified>2013-09-07T13:55:16.250</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addEvent\addEventCodeBehind.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addEvent\addEventCodeBehind.js">
       <PackagePath>pages\addEvent\addEventCodeBehind.js</PackagePath>
-      <Modified>2013-09-02T22:09:03.978</Modified>
+      <Modified>2013-09-04T14:24:31.587</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addProfile\addProfile.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addProfile\addProfile.js">
       <PackagePath>pages\addProfile\addProfile.js</PackagePath>
-      <Modified>2013-09-03T10:33:51.665</Modified>
+      <Modified>2013-09-07T13:26:01.533</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addProfile\addProfileCodeBehind.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addProfile\addProfileCodeBehind.js">
       <PackagePath>pages\addProfile\addProfileCodeBehind.js</PackagePath>
-      <Modified>2013-09-02T06:23:52.344</Modified>
+      <Modified>2013-09-02T02:50:36.646</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyEvent\detailBabyEventCodeBehind.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyEvent\detailBabyEventCodeBehind.js">
       <PackagePath>pages\detailBabyEvent\detailBabyEventCodeBehind.js</PackagePath>
-      <Modified>2013-09-03T05:40:39.857</Modified>
+      <Modified>2013-09-05T09:01:15.771</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyEvent\detailBabyEventl.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyEvent\detailBabyEventl.js">
       <PackagePath>pages\detailBabyEvent\detailBabyEventl.js</PackagePath>
-      <Modified>2013-09-03T05:40:39.860</Modified>
+      <Modified>2013-09-05T15:35:28.242</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyProfile\detailBabyProfile.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyProfile\detailBabyProfile.js">
       <PackagePath>pages\detailBabyProfile\detailBabyProfile.js</PackagePath>
-      <Modified>2013-09-03T10:47:52.796</Modified>
+      <Modified>2013-09-04T21:36:21.524</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyProfile\detailBabyProfileCodeBehind.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyProfile\detailBabyProfileCodeBehind.js">
       <PackagePath>pages\detailBabyProfile\detailBabyProfileCodeBehind.js</PackagePath>
-      <Modified>2013-09-02T19:19:41.396</Modified>
+      <Modified>2013-09-04T21:24:35.110</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\home\home.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\home\home.js">
       <PackagePath>pages\home\home.js</PackagePath>
-      <Modified>2013-09-02T17:47:43.231</Modified>
+      <Modified>2013-09-07T14:07:29.586</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\home\homeCodeBehind.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\home\homeCodeBehind.js">
       <PackagePath>pages\home\homeCodeBehind.js</PackagePath>
-      <Modified>2013-09-02T15:33:17.933</Modified>
+      <Modified>2013-09-07T14:02:28.541</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\login\login.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\login\login.js">
       <PackagePath>pages\login\login.js</PackagePath>
-      <Modified>2013-09-02T16:07:48.528</Modified>
+      <Modified>2013-09-02T17:12:18.226</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\login\loginCodeBehind.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\login\loginCodeBehind.js">
       <PackagePath>pages\login\loginCodeBehind.js</PackagePath>
-      <Modified>2013-09-02T20:07:44.928</Modified>
+      <Modified>2013-09-05T09:26:33.501</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\register\register.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\register\register.js">
       <PackagePath>pages\register\register.js</PackagePath>
-      <Modified>2013-09-02T16:10:34.202</Modified>
+      <Modified>2013-09-02T17:12:18.231</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\register\registerCodeBehind.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\register\registerCodeBehind.js">
       <PackagePath>pages\register\registerCodeBehind.js</PackagePath>
-      <Modified>2013-09-02T17:37:45.701</Modified>
+      <Modified>2013-09-02T17:32:00.314</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyEvent\updateBabyEvent.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyEvent\updateBabyEvent.js">
       <PackagePath>pages\updateBabyEvent\updateBabyEvent.js</PackagePath>
-      <Modified>2013-09-02T22:34:51.918</Modified>
+      <Modified>2013-09-05T13:25:49.956</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyEvent\updateBabyEventCodeBehind.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyEvent\updateBabyEventCodeBehind.js">
       <PackagePath>pages\updateBabyEvent\updateBabyEventCodeBehind.js</PackagePath>
-      <Modified>2013-09-02T20:46:51.855</Modified>
+      <Modified>2013-09-02T22:07:22.383</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyProfile\updateBabyProfile.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyProfile\updateBabyProfile.js">
       <PackagePath>pages\updateBabyProfile\updateBabyProfile.js</PackagePath>
-      <Modified>2013-09-01T14:15:09.921</Modified>
+      <Modified>2013-09-05T14:29:01.414</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyProfile\updateBabyProfileCodeBehind.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyProfile\updateBabyProfileCodeBehind.js">
       <PackagePath>pages\updateBabyProfile\updateBabyProfileCodeBehind.js</PackagePath>
-      <Modified>2013-09-01T14:16:01.918</Modified>
+      <Modified>2013-09-05T11:00:34.479</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\search\searchEvents.js">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\search\searchEvents.js">
       <PackagePath>search\searchEvents.js</PackagePath>
-      <Modified>2013-09-03T10:38:13.032</Modified>
+      <Modified>2013-09-05T16:10:55.035</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addEvent\addEvent.html">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addEvent\addEvent.html">
       <PackagePath>pages\addEvent\addEvent.html</PackagePath>
-      <Modified>2013-09-02T22:09:03.971</Modified>
+      <Modified>2013-09-07T13:50:55.290</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addProfile\addProfile.html">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\addProfile\addProfile.html">
       <PackagePath>pages\addProfile\addProfile.html</PackagePath>
-      <Modified>2013-09-03T10:15:36.694</Modified>
+      <Modified>2013-09-07T12:41:01.736</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyEvent\detailBabyEventl.html">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyEvent\detailBabyEventl.html">
       <PackagePath>pages\detailBabyEvent\detailBabyEventl.html</PackagePath>
-      <Modified>2013-09-03T07:40:58.999</Modified>
+      <Modified>2013-09-05T09:36:56.915</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyProfile\detailBabyProfile.html">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\detailBabyProfile\detailBabyProfile.html">
       <PackagePath>pages\detailBabyProfile\detailBabyProfile.html</PackagePath>
-      <Modified>2013-09-03T07:08:54.243</Modified>
+      <Modified>2013-09-06T18:11:35.688</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\home\home.html">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\home\home.html">
       <PackagePath>pages\home\home.html</PackagePath>
-      <Modified>2013-09-03T07:45:07.455</Modified>
+      <Modified>2013-09-07T14:02:40.440</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\default.html">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2013-09-03T07:55:52.641</Modified>
+      <Modified>2013-09-03T11:19:55.479</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\login\login.html">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\login\login.html">
       <PackagePath>pages\login\login.html</PackagePath>
-      <Modified>2013-09-02T17:37:45.691</Modified>
+      <Modified>2013-09-07T13:57:26.158</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\register\register.html">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\register\register.html">
       <PackagePath>pages\register\register.html</PackagePath>
-      <Modified>2013-09-02T17:37:45.698</Modified>
+      <Modified>2013-09-02T17:32:18.446</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyEvent\updateBabyEvent.html">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyEvent\updateBabyEvent.html">
       <PackagePath>pages\updateBabyEvent\updateBabyEvent.html</PackagePath>
-      <Modified>2013-09-02T20:46:26.447</Modified>
+      <Modified>2013-09-05T13:20:18.826</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyProfile\updateBabyProfile.html">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\pages\updateBabyProfile\updateBabyProfile.html">
       <PackagePath>pages\updateBabyProfile\updateBabyProfile.html</PackagePath>
-      <Modified>2013-09-01T14:16:32.846</Modified>
+      <Modified>2013-09-05T14:17:07.364</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\search\searchEvents.html">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\search\searchEvents.html">
       <PackagePath>search\searchEvents.html</PackagePath>
-      <Modified>2013-09-03T10:41:57.350</Modified>
+      <Modified>2013-09-06T18:11:35.749</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lina\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Ivaylo\Documents\GitHub\Just-a-Baby-Diary-APP\JustABabyDiary\JustABabyDiary\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-09-03T10:51:44.215</Modified>
+      <Modified>2013-09-07T15:55:32.732</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\">
       <Name>Microsoft.WinJS.1.0</Name>
-      <Version>1.0.8514.0</Version>
+      <Version>1.0.9200.20789</Version>
       <Architecture>Neutral</Architecture>
-      <FrameworkIdentity>Name=Microsoft.WinJS.1.0, MinVersion=1.0.8514.0</FrameworkIdentity>
+      <FrameworkIdentity>Name=Microsoft.WinJS.1.0, MinVersion=1.0.9200.20789</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\Microsoft.WinJS.1.0.appx</AppxLocation>
     </ResolvedSDKReference>
   </ItemGroup>

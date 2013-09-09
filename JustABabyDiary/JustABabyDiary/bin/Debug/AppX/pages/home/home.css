@@ -1,6 +1,25 @@
 ﻿body {
-    color: #1191B3;
-    background-color: #FFC980;
+    color: #FFC980;
+    background-image:url("/images/sky-background.jpg");
+    background-size:cover;
+    font-family:cursive;
+}
+
+#go-to-login {
+    font-size: 30px;
+    border: none;
+    position:relative;
+    left:15%;
+    top:35%;
+}
+
+    #go-to-login:hover {
+     font-style:italic;
+     background-color:transparent;
+    }
+.win-backbutton, #home-app-bar {
+     color: #FFC980;
+     border-color:#FFC980;
 }
 
 .homepage section[role=main] {
@@ -9,34 +28,36 @@
 }
 
 button {
-    color: #1191B3;
-    border: 2px solid #1191B3;
+    color: #FFC980;
+    border: 2px solid #FFC980;
+    font-family:cursive;
 }
 
-    button#create-new-profile-button {
-        width: 180px;
-        height: 100px;
-        margin-left: 890px;
-        font-size:20px;
-    }
-
+div {
+    
+}
 #profiles-list.win-listview {
-    width: 70%;
-    height: 50%;
-    border: 2px solid #1191B3;
-    padding: 30px;
+    background-color:transparent;
+    height: 60%;
+    width:90%;
+    border:none;
+    padding: 20px;
 }
 
+.win-container {
+     background-color:transparent !important;
+}
+
+#short-profile-template {
+    background-color:transparent;
+}
 #profiles-list.win-listview .win-item {
-    background-color: #FFC980;
+    background-color:transparent;
     padding: 10px;
     width: 400px;
-    height: 250px;
+    height: 350px;
+    color:#FFC980;
 }
-
-    .win-item:hover {
-        border: 2px solid #1191B3;
-    }
 
 #profiles-list.win-listview .win-item div {
 font-size:18px;
@@ -66,9 +87,7 @@ font-size:18px;
 }
 
 #profiles-list {
-    left: 50px;
-    top: 50px;
-    width: 1200px;
+    top:30px;
     height: 700px;
-    border: solid 2px rgba(0, 0, 0, 0.13);
+    /*border: solid 2px rgba(0, 0, 0, 0.13);*/
 }

@@ -19,18 +19,28 @@
             var loadButton = document.getElementById("image-loader");
             loadButton.addEventListener("click", function () {
                 var menu = document.getElementById("picture-menu").winControl;
-                menu.show(loadButton);
+                menu.show(loadButton, "bottom", "left");
             });
 
             var takePicBtn = document.getElementById("take-picture");
             takePicBtn.addEventListener("click", function () {
                 var captureUI = new Windows.Media.Capture.CameraCaptureUI();
+                
                 captureUI.captureFileAsync(Windows.Media.Capture.CameraCaptureUIMode.photo).then(function (capturedItem) {
                     if (capturedItem) {
-                        var fileUrl = URL.createObjectURL(capturedItem);
-                        var token = storagePermissions.futureAccessList.add(capturedItem);
-                        profileImage.src = fileUrl;
-                        imagePath = capturedItem.path;
+                        var savePicker = new Windows.Storage.Pickers.FileSavePicker();
+                        savePicker.commitButtonText = "Save image";
+                        savePicker.suggestedFileName = "My image";
+                        savePicker.fileTypeChoices.insert("Camera image", [".jpg"]);
+
+                        savePicker.pickSaveFileAsync().then(function (file) {
+                            capturedItem.moveAndReplaceAsync(file).then(function () {
+                                var fileUrl = URL.createObjectURL(capturedItem);
+                                var token = storagePermissions.futureAccessList.add(capturedItem);
+                                profileImage.src = fileUrl;
+                                imagePath = capturedItem.path;    
+                            });
+                        });
                     }
                     //else {
                     //    document.getElementById("message").innerHTML = "User didn't capture a photo."
@@ -63,7 +73,8 @@
                 var name = document.getElementById("name-input").value;
                 var date = document.getElementById("birthday-date-input").winControl.current;
                 var time = document.getElementById("birthday-time-input").winControl.current;
-                var birthDate = new Date(date.getYear(), date.getMonth(), date.getDate(), time.getHours(), time.getMinutes());
+                var birthDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), time.getHours(), time.getMinutes());
+                //birthDate.setHours(birthDate.getHours() - birthDate.getTimezoneOffset() / 60);
                 var gender = document.getElementById("gender-input").value;
                 var mother = document.getElementById("mother-name-input").value;
                 var father = document.getElementById("father-name-input").value;
@@ -71,7 +82,10 @@
                 var height = parseInt(document.getElementById("height-input").value);
                 var weight = parseInt(document.getElementById("weight-input").value);
                 var imageUrl = imagePath;
-                ViewModels.Profiles.addProfile("", name, birthDate, gender, mother, father, imageUrl, townOfBirth, weight, height).then(function () {
+
+                var correctDateFormat = birthDate.toLocaleDateString() + " " + birthDate.toLocaleTimeString();
+
+                ViewModels.Profiles.addProfile("", name, correctDateFormat, gender, mother, father, imageUrl, townOfBirth, weight, height).then(function () {
                     AddProfileCodeBehind.goToHomePage();
                 }, function (error) {
                 });

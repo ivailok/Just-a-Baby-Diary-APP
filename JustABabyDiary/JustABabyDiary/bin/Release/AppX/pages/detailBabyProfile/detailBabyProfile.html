@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>detailBabyProfile</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="detailBabyProfile.css" rel="stylesheet" />
+    <script src="detailBabyProfileCodeBehind.js"></script>
+    <script src="detailBabyProfile.js"></script>
+</head>
+<body>
+    <div class="detailBabyProfile fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Profile of "<span data-win-bind="innerText:name"></span>"</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div>
+                <img id="details-profile-image" src="#" data-win-bind="src:imgUrl" width="400" height="300" />
+                <div id="info-holder">
+                    <div id="inner-left-info-holder">
+                        <label for="name-field">Name:</label>
+                        <p id="name-field" data-win-bind="innerText: name"></p>
+                        <label for="birthday-field">Birthday:</label>
+                        <p id="birthday-field" data-win-bind="innerText: birthDay"></p>
+                        <label for="gender-field">Gender:</label>
+                        <p id="gender-field" data-win-bind="innerText: gender"></p>
+                        <label for="town-field">Town:</label>
+                        <p id="town-field" data-win-bind="innerText: townOfBirth"></p>
+                    </div>
+                    <div id="inner-right-info-holder">
+                        <label for="weight-field">Weight: </label>
+                        <p id="weight-field" data-win-bind="innerText: weight"></p>
+                        <label for="height-field">Height: </label>
+                        <p id="height-field" data-win-bind="innerText: height"></p>
+                        <label for="mother-field">Mother: </label>
+                        <p id="mother-field" data-win-bind="innerText: mother"></p>
+                        <label for="father-field">Father: </label>
+                        <p id="father-field" data-win-bind="innerText: father"></p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 id="events-start">Events:</h2>
+
+            <div id="events-list-template" data-win-control="WinJS.Binding.Template">
+                <div style="width: 150px; height: 100px;">
+                    <!-- Displays the "picture" field. -->
+                    <img src="#" style="width: 60px; height: 60px;"
+                        data-win-bind="src: firstPic" alt="pic" />
+                    <h4 data-win-bind="innerText: title"></h4>
+                </div>
+            </div>
+            <div id="basicListView" data-win-control="WinJS.UI.ListView"
+                data-win-options="{itemDataSource : ViewModels.Events.events.dataSource, 
+            itemTemplate: select('#events-list-template'),
+                    selectionMode: 'none'}">
+            </div>
+        </section>
+        <div id="detail-profile-app-bar" data-win-control="WinJS.UI.AppBar" data-win-options="">
+            <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{id:'add-event',label:'Add event',
+                icon:'add',section:'global',tooltip:'Add new baby event',
+                 onclick: DetailProfileCodeBehind.addEvent}">
+            </button>
+            <button data-win-control="WinJS.UI.AppBarCommand"
+                data-win-options="{id:'update-profile',label:'Update profile',
+                icon:'refresh',section:'global',tooltip:'Update baby profile',
+                 onclick: DetailProfileCodeBehind.updateProfile}">
+            </button>
+        </div>
+    </div>
+</body>
+</html>

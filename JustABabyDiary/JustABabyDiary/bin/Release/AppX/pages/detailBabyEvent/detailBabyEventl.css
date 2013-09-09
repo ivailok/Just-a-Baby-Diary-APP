@@ -1,0 +1,11 @@
+﻿.detailBabyEventl p {
+    margin-left: 120px;
+}
+
+
+
+#detailEvent-basicListView .win-item {
+    width: 480px;
+    height: 328px;
+    padding: 20px;
+}
