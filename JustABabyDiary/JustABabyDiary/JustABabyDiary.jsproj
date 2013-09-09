@@ -107,6 +107,7 @@
     <Content Include="pages\updateBabyProfile\updateBabyProfile.html" />
     <Content Include="pages\updateBabyProfile\updateBabyProfile.js" />
     <Content Include="pages\updateBabyProfile\updateBabyProfileCodeBehind.js" />
+    <Content Include="search\searchCodeBehind.js" />
     <Content Include="search\searchEvents.css" />
     <Content Include="search\searchEvents.html" />
     <Content Include="search\searchEvents.js" />

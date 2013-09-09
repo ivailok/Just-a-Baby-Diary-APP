@@ -23,28 +23,31 @@
         </header>
         <section aria-label="Main content" role="main">
             <div id="create-profile-form">
-                <img id="profile-image" src="#" style="width: 60px; height: 60px;" data-win-bind="src:imgUrl"/>
-                <button id="image-loader">Load image</button>
-                <div id="input-container">
-                    <div>
-                        <label for="name-input" >Name:</label>
-                        <input id="name-input" type="text" data-win-bind="value:name"/>
-                    </div>
+                <div id="first-column">
+                    <img id="profile-image" src="#" style="width: 150px; height: 150px;" data-win-bind="src:imgUrl" />
+                    <button id="image-loader">Load image</button>
+                    <div id="input-container">
+                        <div>
+                            <label for="name-input">Name:</label>
+                            <input id="name-input" type="text" data-win-bind="value:name" />
+                        </div>
 
-                    <button id="birthday-change">Change Birthday</button>
-                    <div id="birthday-input" style="display:none">
-                        <div id="birthday-date-input" data-win-control="WinJS.UI.DatePicker"></div>
-                        <div id="birthday-time-input" data-win-control="WinJS.UI.TimePicker"></div>
-                    </div>
+                        <button id="birthday-change">Change Birthday</button>
+                        <div id="birthday-input" style="display: none">
+                            <div id="birthday-date-input" data-win-control="WinJS.UI.DatePicker"></div>
+                            <div id="birthday-time-input" data-win-control="WinJS.UI.TimePicker"></div>
+                        </div>
 
-                    <div>
-                        <label for="gender-input">Gender:</label>
-                        <select id="gender-input" data-win-bind="value: gender">
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                        </select>
+                        <div>
+                            <label for="gender-input">Gender:</label>
+                            <select id="gender-input" data-win-bind="value: gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
                     </div>
-
+                </div> 
+                <div id="second-column">
                     <div>
                         <label for="mother-input">Mother:</label>
                         <input id="mother-input" type="text" data-win-bind="value:mother" />
@@ -62,7 +65,7 @@
 
                     <div>
                         <label for="height-input">Height:</label>
-                        <input id="height-input" type="text" data-win-bind="value:height"  />
+                        <input id="height-input" type="text" data-win-bind="value:height" />
                     </div>
 
                     <div>
@@ -70,7 +73,6 @@
                         <input id="town-input" type="text" data-win-bind="value:townOfBirth" />
                     </div>
                 </div>
-
                 <button id="update-profile-button">Update</button>
 
                 <div id="picture-menu" data-win-control="WinJS.UI.Menu">

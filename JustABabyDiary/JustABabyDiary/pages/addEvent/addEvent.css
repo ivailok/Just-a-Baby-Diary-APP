@@ -1,3 +1,21 @@
 ﻿.addEvent p {
     margin-left: 120px;
 }
+/*div#add-event-form label {
+font-size:20px;
+}*/
+
+#add-event-image-loader, #create-event-button {
+    font-size: 18px;
+    width: 250px;
+    text-align: center;
+}
+
+#add-event-image-loader {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#images-list {
+height:150px;
+}

@@ -25,21 +25,7 @@
         ready: function (element, options) {
             WinJS.Binding.processAll(element, ViewModels);
             ViewModels.Search.submitSearchText(options.queryText);
-            //this._searchData(options.queryText);
         },
-
-        //_searchData: function (queryText) {
-        //    var originalResults;
-        //    // TODO: Perform the appropriate search on your data.
-        //    if (window.Data) {
-        //        originalResults =ViewModels.Events.events.createFiltered(function (item) {
-        //            return (item.title.indexOf(queryText) >= 0);
-        //        });
-        //    } else {
-        //        originalResults = new WinJS.Binding.List();
-        //    }
-        //    return originalResults;
-        //}
     });
 
     WinJS.Application.addEventListener("activated", function (args) {

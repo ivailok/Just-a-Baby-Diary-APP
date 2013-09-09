@@ -28,7 +28,7 @@
                 AddEventCodeBehind.createEvent(currentProfileIndex, title, correctDateFormat, description, images);
             });
 
-            var loadButton = document.getElementById("image-loader");
+            var loadButton = document.getElementById("add-event-image-loader");
             loadButton.addEventListener("click", function () {
                 var menu = document.getElementById("picture-menu").winControl;
                 menu.show(loadButton);
