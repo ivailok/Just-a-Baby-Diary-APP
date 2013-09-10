@@ -70,10 +70,23 @@ font-size:18px;
     display: none;
 }
 
+#snapped-logo {
+    display: none;
+}
+
 @media screen and (-ms-view-state: snapped) {
     .homepage section[role=main] {
         margin-left: 20px;
         margin-right: 20px;
+    }
+
+    .homepage {
+        display: none;
+    }
+
+    #snapped-logo {
+        display: inline;
+        margin: 150% 25%;
     }
 }
 

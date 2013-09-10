@@ -1,4 +1,24 @@
-﻿.detailBabyEventl p {
+﻿#snapped-logo {
+    display: none;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .detailBabyEventl section[role=main] {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .detailBabyEventl {
+        display: none;
+    }
+
+    #snapped-logo {
+        display: inline;
+        margin: 150% 25%;
+    }
+}
+
+.detailBabyEventl p {
     margin-left: 120px;
 }
 

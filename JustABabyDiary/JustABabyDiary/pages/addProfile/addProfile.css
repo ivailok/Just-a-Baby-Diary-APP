@@ -1,4 +1,24 @@
-﻿.addProfile p {
+﻿#snapped-logo {
+    display: none;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .addProfile section[role=main] {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .addProfile {
+        display: none;
+    }
+
+    #snapped-logo {
+        display: inline;
+        margin: 150% 25%;
+    }
+}
+
+.addProfile p {
     margin-left: 120px;
 }
 

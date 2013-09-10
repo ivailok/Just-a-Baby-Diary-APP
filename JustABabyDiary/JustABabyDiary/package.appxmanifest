@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="1ff9412e-31a3-4d53-b78e-09df9439d997" Version="1.0.0.3" Publisher="CN=Ivaylo" />
+  <Identity Name="41001IvayloKirilov.JustaBabyDiary" Version="1.0.0.0" Publisher="CN=292F82B6-6F23-4F37-9E88-6BE86C17AED3" />
   <Properties>
-    <DisplayName>JustABabyDiary</DisplayName>
-    <PublisherDisplayName>Ivaylo</PublisherDisplayName>
-    <Logo>images\storelogo.png</Logo>
+    <DisplayName>Just a Baby Diary</DisplayName>
+    <PublisherDisplayName>Ivaylo Kirilov</PublisherDisplayName>
+    <Logo>images\storelogo.jpg</Logo>
   </Properties>
   <Prerequisites>
     <OSMinVersion>6.2.1</OSMinVersion>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <VisualElements DisplayName="JustABabyDiary" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="JustABabyDiary" ForegroundText="dark" BackgroundColor="transparent">
+      <VisualElements DisplayName="Just a Baby Diary" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="JustABabyDiary" ForegroundText="dark" BackgroundColor="#FFFBF4">
         <DefaultTile ShowName="allLogos" />
         <SplashScreen Image="images\sleeping-baby.jpg" BackgroundColor="#1B72A8" />
       </VisualElements>
