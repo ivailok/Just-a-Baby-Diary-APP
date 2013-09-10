@@ -21,6 +21,7 @@
                 // Restore application state here.
             }
 
+
             if (app.sessionState.history) {
                 nav.history = app.sessionState.history;
             }
@@ -32,6 +33,11 @@
                     return nav.navigate(Application.navigator.home);
                 }
             }));
+
+            WinJS.Application.onsettings = function (e) {
+                e.detail.applicationcommands = { "help": { title: "Privacy policy", href: "/pages/privacy.html" } };
+                WinJS.UI.SettingsFlyout.populateSettings(e);
+            };
         }
     });
 

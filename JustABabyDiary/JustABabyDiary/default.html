@@ -25,5 +25,19 @@
     <!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
         <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>
     </div> -->
+
+    <div data-win-control="WinJS.UI.SettingsFlyout" aria-label="Help settings flyout" data-win-options="{settingsCommandId:'help',width:'narrow'}">
+        <div class="win-ui-light win-header">
+            <button type="button" onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton"></button>
+            <div class="win-label">Privacy policy</div>
+        </div>
+
+        <div class="win-content">
+            <div class="win-settings-section">
+                <a href="http://justababydiarywebapi.apphb.com/privacypolicy" target="fix_link_too">View privacy statement online</a>
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>
