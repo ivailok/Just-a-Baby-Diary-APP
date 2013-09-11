@@ -2,7 +2,7 @@
 (function () {
 
     var showChangeDateInput = function () {
-        var dateInput = document.getElementById("date-input");
+        var dateInput = document.getElementById("update-event-date-input");
         dateInput.style.display = "block";
     }
 

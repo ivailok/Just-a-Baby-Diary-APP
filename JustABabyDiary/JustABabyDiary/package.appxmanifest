@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="41001IvayloKirilov.JustaBabyDiary" Version="1.0.0.0" Publisher="CN=292F82B6-6F23-4F37-9E88-6BE86C17AED3" />
+  <Identity Name="41001IvayloKirilov.JustaBabyDiary" Version="1.0.0.1" Publisher="CN=292F82B6-6F23-4F37-9E88-6BE86C17AED3" />
   <Properties>
     <DisplayName>Just a Baby Diary</DisplayName>
     <PublisherDisplayName>Ivaylo Kirilov</PublisherDisplayName>

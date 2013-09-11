@@ -33,7 +33,17 @@
                     var data = UserLoginData.getData();
                     if (!data.sessionKey) {
                         ViewModels.Users.login(username, authCode).then(function () {
-                            HomeCodeBehind.callLoadProfiles();
+                            var progressRing = document.getElementById("progressRing");
+                            progressRing.style.display = "block";
+                            HomeCodeBehind.callLoadProfiles().then(function () {
+                                progressRing.style.display = "none";
+                            }, function (error) {
+                                var message = new Windows.UI.Popups.MessageDialog("Unable to get data. Check your internet connection.");
+                                message.showAsync();
+                            })
+                        }, function () {
+                            var message = new Windows.UI.Popups.MessageDialog("Unable to get data. Check your internet connection.");
+                            message.showAsync();
                         });
                     }
 
@@ -46,8 +56,10 @@
                 var logoutBtn = document.getElementById("log-out-button");
                 logoutBtn.style.display = "none";
 
+                var progressRing = document.getElementById("progressRing");
+                progressRing.style.display = "none";
+
                 HomeCodeBehind.goToLoginPage();
-               
             }
 
             var logOutBtn = document.getElementById("log-out-button");

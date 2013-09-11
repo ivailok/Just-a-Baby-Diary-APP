@@ -2,7 +2,7 @@
 (function () {
 
     var changeBirthday = function () {
-        var birthdayInput = document.getElementById("birthday-input");
+        var birthdayInput = document.getElementById("update-birthday-input");
         birthdayInput.style.display = "block";
     }
 

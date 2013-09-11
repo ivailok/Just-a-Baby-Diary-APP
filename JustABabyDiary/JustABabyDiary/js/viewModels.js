@@ -26,7 +26,7 @@
             }
         }
 
-        Data.Profiles.getProfiles().then(function (request) {
+        return Data.Profiles.getProfiles().then(function (request) {
             var object = JSON.parse(request.responseText);
             var profileDTOs = object;
             var currentCount = profiles.dataSource.list.length
@@ -55,7 +55,6 @@
                 profiles.forEach(loadProfileImage);
             }
         }, function (error) {
-            console.log(JSON.parse(error.responseText).Message);
         });
     }
 
@@ -261,7 +260,7 @@
             value.url = url;
             pictures.dataSource.list.setAt(index, value);
         }, function () {
-            value.url = "/images/baby-idea-icon.png";
+            value.url = "/images/baby-cot-icon.png";
             pictures.dataSource.list.setAt(index, value);
         })
     }

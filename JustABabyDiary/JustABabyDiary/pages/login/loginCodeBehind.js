@@ -11,15 +11,29 @@
             vault.add(credential);
             goBackToHomePage();
         }, function (error) {
-            var object = JSON.parse(error.responseText);
-            var messageDialog = new Windows.UI.Popups.MessageDialog(object.Message);
-            messageDialog.showAsync();
+            if (error.responseText) {
+                var object = JSON.parse(error.responseText);
+                var messageDialog = new Windows.UI.Popups.MessageDialog(object.Message);
+                messageDialog.showAsync();
+            }
+            else {
+                var message = new Windows.UI.Popups.MessageDialog("Unable to get data. Check your internet connection.");
+                message.showAsync();
+            }
         });
     }
 
     var goBackToHomePage = function () {
-        HomeCodeBehind.callLoadProfiles();
-        WinJS.Navigation.back();
+        WinJS.Navigation.back().then(function () {
+            var progressRing = document.getElementById("progressRing");
+            progressRing.style.display = "block";
+            HomeCodeBehind.callLoadProfiles().then(function () {
+                progressRing.style.display = "none";
+            }, function () {
+                var message = new Windows.UI.Popups.MessageDialog("Unable to get data. Check your internet connection.");
+                message.showAsync();
+            });
+        });
     }
 
     var goToRegisterPage = function () {

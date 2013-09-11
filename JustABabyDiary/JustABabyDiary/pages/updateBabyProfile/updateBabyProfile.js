@@ -9,16 +9,16 @@
         ready: function (element, options) {
             var currentProfileIndex = options.currentProfileIndex;
             WinJS.Binding.processAll(element, ViewModels.Profiles.profiles.getAt(currentProfileIndex));
-            var birthdayChangeBtn = document.getElementById("birthday-change");
+            var birthdayChangeBtn = document.getElementById("update-birthday-change");
             birthdayChangeBtn.addEventListener("click", UpdateProfileCodeBehind.changeBirthday);
 
             var storagePermissions = Windows.Storage.AccessCache.StorageApplicationPermissions;
 
             var image = "";
 
-            var imageHolder = document.getElementById("profile-image");
+            var imageHolder = document.getElementById("update-profile-image");
 
-            var imageLoader = document.getElementById("image-loader");
+            var imageLoader = document.getElementById("update-image-loader");
             imageLoader.addEventListener("click", function () {
                 var menu = document.getElementById("picture-menu").winControl;
                 menu.show(imageLoader);
@@ -29,10 +29,19 @@
                 var captureUI = new Windows.Media.Capture.CameraCaptureUI();
                 captureUI.captureFileAsync(Windows.Media.Capture.CameraCaptureUIMode.photo).then(function (capturedItem) {
                     if (capturedItem) {
-                        var fileUrl = URL.createObjectURL(capturedItem);
-                        var token = storagePermissions.futureAccessList.add(capturedItem);
-                        imageHolder.src = fileUrl;
-                        image = capturedItem.path;
+                        var savePicker = new Windows.Storage.Pickers.FileSavePicker();
+                        savePicker.commitButtonText = "Save image";
+                        savePicker.suggestedFileName = "My image";
+                        savePicker.fileTypeChoices.insert("Camera image", [".jpg"]);
+
+                        savePicker.pickSaveFileAsync().then(function (file) {
+                            capturedItem.moveAndReplaceAsync(file).then(function () {
+                                var fileUrl = URL.createObjectURL(capturedItem);
+                                var token = storagePermissions.futureAccessList.add(capturedItem);
+                                imageHolder.src = fileUrl;
+                                image = capturedItem.path;
+                            });
+                        });
                     }
                     //else {
                     //    document.getElementById("message").innerHTML = "User didn't capture a photo."
@@ -62,16 +71,16 @@
 
             var updateBtn = document.getElementById("update-profile-button");
             updateBtn.addEventListener("click", function () {
-                var name = document.getElementById("name-input").value;
-                var date = document.getElementById("birthday-date-input").winControl.current;
-                var time = document.getElementById("birthday-time-input").winControl.current;
+                var name = document.getElementById("update-name-input").value;
+                var date = document.getElementById("update-birthday-date-input").winControl.current;
+                var time = document.getElementById("update-birthday-time-input").winControl.current;
                 var birthDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), time.getHours(), time.getMinutes());
-                var gender = document.getElementById("gender-input").value;
-                var mother = document.getElementById("mother-input").value;
-                var father = document.getElementById("father-input").value;
-                var townOfBirth = document.getElementById("town-input").value;
-                var height = parseInt(document.getElementById("height-input").value);
-                var weight = parseInt(document.getElementById("weight-input").value);
+                var gender = document.getElementById("update-gender-input").value;
+                var mother = document.getElementById("update-mother-input").value;
+                var father = document.getElementById("update-father-input").value;
+                var townOfBirth = document.getElementById("update-town-input").value;
+                var height = parseInt(document.getElementById("update-height-input").value);
+                var weight = parseInt(document.getElementById("update-weight-input").value);
                 var imageUrl = image;
 
                 var correctDateFormat = null;
@@ -80,7 +89,7 @@
                     name = null;
                 }
 
-                if (document.getElementById("birthday-input").style.display === "none") {
+                if (document.getElementById("update-birthday-input").style.display === "none") {
                     birthDate = null;
                 }
                 else {

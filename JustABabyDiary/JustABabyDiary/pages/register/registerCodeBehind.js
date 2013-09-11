@@ -12,11 +12,16 @@
             vault.add(credential);
             var messageDialog = new Windows.UI.Popups.MessageDialog("User created and logged in successfully!");
             messageDialog.showAsync().then(goBackToHomePage);
-           
         }, function (error) {
-            var object = JSON.parse(error.responseText);
-            var messageDialog = new Windows.UI.Popups.MessageDialog(object.Message);
-            messageDialog.showAsync();
+            if (error.responseText) {
+                var object = JSON.parse(error.responseText);
+                var messageDialog = new Windows.UI.Popups.MessageDialog(object.Message);
+                messageDialog.showAsync();
+            }
+            else {
+                var message = new Windows.UI.Popups.MessageDialog("Unable to get data. Check your internet connection.");
+                message.showAsync();
+            }
         });
     }
 

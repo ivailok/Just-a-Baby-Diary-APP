@@ -22,11 +22,11 @@
     margin-left: 120px;
 }
 
-div#first-column, div#second-column {
+div#update-first-column, div#update-second-column {
     display: inline-block;
 }
 
-div#first-column {
+div#update-first-column {
     margin-right: 100px;
 }
 
@@ -34,7 +34,7 @@ div#first-column {
     display: block;
 }
 
-#image-loader, #birthday-change, #update-profile-button {
+#update-image-loader, #update-birthday-change, #update-profile-button {
 width:150px;
 margin-bottom:10px;
 margin-top:10px;

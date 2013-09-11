@@ -11,17 +11,17 @@
             var indexInEventsList = options.indexInEventsList;
             var indexInProfilesList = options.indexInProfilesList;
             WinJS.Binding.processAll(element, ViewModels.Events.events.getAt(indexInEventsList));
-            var dateChangeBtn = document.getElementById("date-change");
+            var dateChangeBtn = document.getElementById("update-event-date-change");
             dateChangeBtn.addEventListener("click", UpdateBabyCodeBehind.showChangeDateInput);
 
             var updateBtn = document.getElementById("update-event-button");
             
             updateBtn.addEventListener("click", function () {
-                var titleInput = document.getElementById("title-input").value;
-                var date = document.getElementById("event-date-input").winControl.current;
-                var time = document.getElementById("event-time-input").winControl.current;
+                var titleInput = document.getElementById("update-event-title-input").value;
+                var date = document.getElementById("update-event-event-date-input").winControl.current;
+                var time = document.getElementById("update-event-event-time-input").winControl.current;
                 var dateInput = new Date(date.getFullYear(), date.getMonth(), date.getDate(), time.getHours(), time.getMinutes());
-                var descriptionInput = document.getElementById("description-textarea").value;
+                var descriptionInput = document.getElementById("update-event-description-textarea").value;
 
                 var correctDateFormat = null;
 
@@ -29,7 +29,7 @@
                     titleInput = null;
                 }
 
-                if (document.getElementById("date-input").style.display === "none") {
+                if (document.getElementById("update-event-date-input").style.display === "none") {
                     dateInput = null;
                 }
                 else {

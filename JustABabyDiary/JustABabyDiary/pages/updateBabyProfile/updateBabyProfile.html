@@ -22,55 +22,55 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <div id="create-profile-form">
-                <div id="first-column">
-                    <img id="profile-image" src="#" style="width: 150px; height: 150px;" data-win-bind="src:imgUrl" />
-                    <button id="image-loader">Load image</button>
-                    <div id="input-container">
+            <div id="update-profile-form">
+                <div id="update-first-column">
+                    <img id="update-profile-image" src="#" style="width: 150px; height: 150px;" data-win-bind="src:imgUrl" />
+                    <button id="update-image-loader">Load image</button>
+                    <div id="update-input-container">
                         <div>
-                            <label for="name-input">Name:</label>
-                            <input id="name-input" type="text" data-win-bind="value:name" />
+                            <label for="update-name-input">Name:</label>
+                            <input id="update-name-input" type="text" data-win-bind="value:name" />
                         </div>
 
-                        <button id="birthday-change">Change Birthday</button>
-                        <div id="birthday-input" style="display: none">
-                            <div id="birthday-date-input" data-win-control="WinJS.UI.DatePicker"></div>
-                            <div id="birthday-time-input" data-win-control="WinJS.UI.TimePicker"></div>
+                        <button id="update-birthday-change">Change Birthday</button>
+                        <div id="update-birthday-input" style="display: none">
+                            <div id="update-birthday-date-input" data-win-control="WinJS.UI.DatePicker"></div>
+                            <div id="update-birthday-time-input" data-win-control="WinJS.UI.TimePicker"></div>
                         </div>
 
                         <div>
-                            <label for="gender-input">Gender:</label>
-                            <select id="gender-input" data-win-bind="value: gender">
+                            <label for="update-gender-input">Gender:</label>
+                            <select id="update-gender-input" data-win-bind="value: gender">
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
                         </div>
                     </div>
                 </div> 
-                <div id="second-column">
+                <div id="update-second-column">
                     <div>
-                        <label for="mother-input">Mother:</label>
-                        <input id="mother-input" type="text" data-win-bind="value:mother" />
+                        <label for="update-mother-input">Mother:</label>
+                        <input id="update-mother-input" type="text" data-win-bind="value:mother" />
                     </div>
 
                     <div>
-                        <label for="father-input">Father:</label>
-                        <input id="father-input" type="text" data-win-bind="value:father" />
+                        <label for="update-father-input">Father:</label>
+                        <input id="update-father-input" type="text" data-win-bind="value:father" />
                     </div>
 
                     <div>
-                        <label for="weight-input">Weight:</label>
-                        <input id="weight-input" type="text" data-win-bind="value:weight" />
+                        <label for="update-weight-input">Weight:</label>
+                        <input id="update-weight-input" type="text" data-win-bind="value:weight" />
                     </div>
 
                     <div>
-                        <label for="height-input">Height:</label>
-                        <input id="height-input" type="text" data-win-bind="value:height" />
+                        <label for="update-height-input">Height:</label>
+                        <input id="update-height-input" type="text" data-win-bind="value:height" />
                     </div>
 
                     <div>
-                        <label for="town-input">Town of birth:</label>
-                        <input id="town-input" type="text" data-win-bind="value:townOfBirth" />
+                        <label for="update-town-input">Town of birth:</label>
+                        <input id="update-town-input" type="text" data-win-bind="value:townOfBirth" />
                     </div>
                 </div>
                 <button id="update-profile-button">Update</button>
