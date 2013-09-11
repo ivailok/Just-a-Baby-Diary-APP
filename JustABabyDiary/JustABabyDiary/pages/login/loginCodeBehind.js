@@ -29,6 +29,9 @@
             progressRing.style.display = "block";
             HomeCodeBehind.callLoadProfiles().then(function () {
                 progressRing.style.display = "none";
+                if (ViewModels.Profiles.profiles.dataSource.list.length == 0) {
+                    document.getElementById("no-layout-responsive-message").style.display = "block";
+                }
             }, function () {
                 var message = new Windows.UI.Popups.MessageDialog("Unable to get data. Check your internet connection.");
                 message.showAsync();

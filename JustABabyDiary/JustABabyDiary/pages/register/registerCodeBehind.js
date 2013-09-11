@@ -27,7 +27,11 @@
 
     var goBackToHomePage = function () {
         HomeCodeBehind.callLoadProfiles();
-        WinJS.Navigation.back(2);
+        WinJS.Navigation.back(2).then(function () {
+            if (ViewModels.Profiles.profiles.dataSource.list.length == 0) {
+                document.getElementById("no-layout-responsive-message").style.display = "block";
+            }
+        });
     }
 
     WinJS.Namespace.define("RegisterCodeBehind", {
